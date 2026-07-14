@@ -1,0 +1,146 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+//
+// Device Tree for Brewie B20
+// Generated from script.fex analysis
+//
+// Based on sun5i-a13-q8-tablet.dts
+// LCD timing from fbset: 480x272 r5g6b5, ~9MHz pixel clock
+// Touch: ft5x06 at 0x38 (I2C2, PG11 interrupt, PC03 reset)
+// RTC: PCF8563 at 0x51 (I2C0)
+// PMIC: AXP209 at 0x34 (I2C0)
+//
+/dts-v1/;
+
+#include "allwinner/sun5i-a13.dtsi"
+#include "allwinner/sunxi-common-regulators.dtsi"
+
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/pwm/pwm.h>
+#include <dt-bindings/interrupt-controller/irq.h>
+
+/ {
+    model = "Brewie B20";
+    compatible = "brewie,b20", "allwinner,sun5i-a13";
+
+    aliases {
+        serial0 = &uart1;
+    };
+
+    chosen {
+        stdout-path = "serial0:115200n8";
+    };
+
+    /* LCD backlight - uses PWM0 on PB2 for brightness control */
+    backlight: backlight {
+        compatible = "pwm-backlight";
+        pwms = <&pwm 0 9000 PWM_POLARITY_INVERTED>; /* ~10kHz PWM */
+        brightness-levels = <0 10 20 30 40 50 60 70 80 90 100>;
+        default-brightness-level = <5>;
+        enable-gpios = <&axp_gpio 1 GPIO_ACTIVE_HIGH>; /* AXP209 GPIO1 (power1) */
+        power-supply = <&reg_vcc3v3>;
+    };
+
+    /* Simple framebuffer for early console */
+    framebuffer-lcd0@40000000 {
+        compatible = "allwinner,simple-framebuffer", "simple-framebuffer";
+        allwinner,pipeline = "de_be0-lcd0";
+        reg = <0x40000000 0x3fc00>; /* 480x272x16bpp */
+        width = <480>;
+        height = <272>;
+        stride = <960>; /* 480 x 16bpp */
+        format = "r5g6b5";
+        clocks = <&ccu CLK_AHB_LCD>, <&ccu CLK_AHB_DE_BE>, <&ccu CLK_DE_BE>,
+                 <&ccu CLK_TCON_CH0>, <&ccu CLK_DRAM_DE_BE>;
+        /* Timing from fbset output: hfp=10, hbp=5, vfp=3, vbp=8, hspw=30, vspw=5 */
+    };
+};
+
+/* LCD RGB24 pins (PD0-PD27) - 24-bit color mode */
+&pio {
+    lcd_rgb24_pins: lcd-rgb24-pins {
+        pins = "PD0", "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7",
+               "PD8", "PD9", "PD10", "PD11", "PD12", "PD13", "PD14", "PD15",
+               "PD16", "PD17", "PD18", "PD19", "PD20", "PD21", "PD22", "PD23",
+               "PD24", "PD25", "PD26", "PD27";
+        function = "lcd0";
+    };
+};
+
+&i2c0 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&i2c0_pins>;
+    status = "okay";
+
+    axp209: pmic@34 {
+        compatible = "x-powers,axp209";
+        reg = <0x34>;
+        interrupt-parent = <&pio>;
+        interrupts = <0 7 IRQ_TYPE_EDGE_FALLING>; /* PB7 */
+    };
+
+    rtc@51 {
+        compatible = "nxp,pcf8563";
+        reg = <0x51>;
+    };
+};
+
+#include "allwinner/axp209.dtsi"
+
+&i2c2 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&i2c2_pins>;
+    status = "okay";
+
+    ft5x06@38 {
+        compatible = "edt,edt-ft5x06";
+        reg = <0x38>;
+        interrupt-parent = <&pio>;
+        interrupts = <6 11 IRQ_TYPE_EDGE_FALLING>;
+        reset-gpios = <&pio 2 3 GPIO_ACTIVE_LOW>;
+    };
+};
+
+&uart1 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&uart1_pg_pins>;
+    status = "okay";
+};
+&uart3 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&uart3_pg_pins>;
+    status = "okay";
+};
+&mmc0 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&mmc0_pins>;
+    bus-width = <4>;
+    cd-gpios = <&pio 5 6 GPIO_ACTIVE_LOW>; /* PF6 */
+    status = "okay";
+};
+&spi2 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&spi2_pe_pins>, <&spi2_cs0_pe_pin>;
+    status = "okay";
+
+    spidev@0 {
+        compatible = "spidev";
+        reg = <0>;
+        spi-max-frequency = <1000000>;
+    };
+};
+&ehci0 {
+    status = "okay";
+};
+
+&ohci0 {
+    status = "okay";
+};
+&pwm {
+    pinctrl-names = "default";
+    pinctrl-0 = <&pwm0_pin>;
+    status = "okay";
+};
+&lradc {
+    vref-supply = <&reg_vcc3v0>;
+    status = "okay";
+};

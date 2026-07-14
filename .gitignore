@@ -1,0 +1,38 @@
+# Build artifacts
+*.dtb
+*.dtbo
+*.preprocessed.dts
+output/
+dl/
+tmp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Binary firmware artifacts
+SDcard/uImage
+SDcard/*.bin
+SDcard/*.img
+
+# Symlinks (recreate during build)
+board/brewie/allwinner
+board/brewie/dt-bindings
+board/brewie/boot
+board/brewie/include
+
+# Keep the source FEX but exclude compiled binaries
+SDcard/boot.scr
+SDcard/uEnv.txt
+SDcard/System Volume Information/
+
+# Large generated files
+*.log
+dot-config
+fex-analysis.json

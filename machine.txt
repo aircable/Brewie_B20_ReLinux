@@ -1,0 +1,208 @@
+# uname -a
+Linux brewie 3.4.90-Brewie #1 PREEMPT Tue Sep 20 19:35:57 CEST 2016 armv7l GNU/Linux
+# cat /proc/cpuinfo
+Processor	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 383.38
+Features	: swp half thumb fastmult vfp edsp neon vfpv3 tls 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: sun5i
+Revision	: 0000
+Serial		: 0000000000000000
+# cat /proc/cmdline
+console=ttyS0,115200 root=/dev/mmcblk0p2 rootwait loglevel= panic=1 quiet lpj=1916928
+# lsmod
+Module                  Size  Used by
+8188eu                473968  0 
+mali                   83535  4 
+ump                    25767  5 mali
+# cat /proc/mtd
+cat: can't open '/proc/mtd': No such file or directory
+# cat /proc/partitions 
+major minor  #blocks  name
+
+ 179        0   31166976 mmcblk0
+ 179        1      16384 mmcblk0p1
+ 179        2    7560192 mmcblk0p2
+# cat /sys/class/graphics/fb0/modes
+U:480x272p-59
+# dmesg | grep -i lcd
+[    0.000000] 	LCD  : 0x49000000 - 0x4affffff  (  32 MB)
+[    0.297011] [<c022df3c>] (OSAL_GPIO_Request+0x54/0x60) from [<c023fd20>] (BSP_disp_close_lcd_backlight+0x114/0x120)
+[    0.297072] [<c023fd20>] (BSP_disp_close_lcd_backlight+0x114/0x120) from [<c0239fc0>] (BSP_disp_init+0x13c/0x1cc)
+[    0.297211] [<c022ced4>] (Fb_Init+0x70/0xb44) from [<c0640220>] (lcd_module_init+0xec/0xf8)
+[    0.297253] [<c0640220>] (lcd_module_init+0xec/0xf8) from [<c0008650>] (do_one_initcall+0x11c/0x174)
+# cat /proc/bus/input/devices
+I: Bus=0018 Vendor=0000 Product=0000 Version=0000
+N: Name="brewie_ts"
+P: Phys=
+S: Sysfs=/devices/platform/sunxi-i2c.2/i2c-2/2-0038/input/input0
+U: Uniq=
+H: Handlers=mouse0 event0 
+B: PROP=0
+B: EV=b
+B: KEY=400 0 0 0 0 0 0 0 0 0 0
+B: ABS=6610000 1000003
+
+# fbset
+
+mode "480x272-60"
+    # D: 9.000 MHz, H: 17.143 kHz, V: 59.524 Hz
+    geometry 480 272 480 544 32
+    timings 111111 10 5 3 8 30 5
+    rgba 8/16,8/8,8/0,8/24
+endmode
+
+# cat /sys/class/graphics/fb0/virtual_size
+480,544
+i# ls /proc
+1              17             3              5              bus            fb             locks          stat
+10             18             304            59             ccmu           filesystems    meminfo        swaps
+11             19             305            6              cgroups        fs             misc           sys
+12             191            316            65             cmdline        interrupts     modules        sysrq-trigger
+124            2              318            66             consoles       iomem          mounts         sysvipc
+13             20             34             7              cpu            ioports        net            timer_list
+131            207            36             8              cpuinfo        irq            pagetypeinfo   tty
+132            21             37             86             crypto         kallsyms       partitions     uptime
+133            241            38             9              devices        kmsg           scsi           version
+14             260            39             95             diskstats      kpagecount     self           vmallocinfo
+153            261            40             asound         driver         kpageflags     slabinfo       vmstat
+16             288            45             buddyinfo      execdomains    loadavg        softirqs       zoneinfo
+
+# ls -ls /etc/init.d/
+     4 -rwxr-xr-x    1 root     root          1485 Sep 20  2016 S10udev
+     4 -rwxr-xr-x    1 root     root          1365 Jun 22  2016 S20urandom
+     4 -rwxr-xr-x    1 root     root           281 Jun 22  2016 S40network
+     4 -rwxr-xr-x    1 root     root           386 Sep 20  2016 S45connman
+     4 -rwxr-xr-x    1 root     root          1040 Sep 20  2016 S49ntp
+     4 -rwxr-xr-x    1 root     root           423 Jun 22  2016 rcK
+     4 -rwxr-xr-x    1 root     root           408 Jun 22  2016 rcS
+# systemctl list-unit-files
+UNIT FILE                              STATE   
+proc-sys-fs-binfmt_misc.automount      static  
+dev-hugepages.mount                    static  
+dev-mqueue.mount                       static  
+media.mount                            static  
+proc-sys-fs-binfmt_misc.mount          static  
+sys-fs-fuse-connections.mount          static  
+sys-kernel-config.mount                static  
+sys-kernel-debug.mount                 static  
+sys-kernel-security.mount              static  
+var-lock.mount                         static  
+var-run.mount                          static  
+systemd-ask-password-console.path      static  
+systemd-ask-password-wall.path         static  
+autovt@.service                        disabled
+brewie-gui.service                     enabled 
+brewie-init.service                    enabled 
+brewie-update.service                  enabled 
+connman.service                        disabled
+console-shell.service                  disabled
+dbus-org.freedesktop.hostname1.service static  
+dbus-org.freedesktop.locale1.service   static  
+dbus-org.freedesktop.login1.service    static  
+dbus-org.freedesktop.timedate1.service static  
+dbus.service                           static  
+dropbear.service                       enabled 
+emergency.service                      static  
+fsck-root.service                      static  
+fsck@.service                          static  
+getty@.service                         disabled
+halt.service                           static  
+kexec.service                          static  
+poweroff.service                       static  
+quotacheck.service                     static  
+quotaon.service                        static  
+reboot.service                         static  
+remount-rootfs.service                 static  
+rescue.service                         static  
+serial-getty@.service                  enabled 
+systemd-ask-password-console.service   static  
+systemd-ask-password-wall.service      static  
+systemd-binfmt.service                 static  
+systemd-hostnamed.service              static  
+systemd-initctl.service                static  
+systemd-journald.service               static  
+systemd-localed.service                static  
+systemd-logind.service                 static  
+systemd-modules-load.service           static  
+systemd-random-seed-load.service       static  
+systemd-random-seed-save.service       static  
+systemd-readahead-collect.service      disabled
+systemd-readahead-done.service         static  
+systemd-readahead-replay.service       disabled
+systemd-remount-api-vfs.service        static  
+systemd-shutdownd.service              static  
+systemd-sysctl.service                 static  
+systemd-timedated.service              static  
+systemd-tmpfiles-clean.service         static  
+systemd-tmpfiles-setup.service         static  
+systemd-update-utmp-runlevel.service   static  
+systemd-update-utmp-shutdown.service   static  
+systemd-user-sessions.service          static  
+systemd-vconsole-setup.service         static  
+timesync.service                       enabled 
+udev-settle.service                    disabled
+udev-trigger.service                   static  
+udev.service                           static  
+user@.service                          static  
+wpa_supplicant.service                 enabled 
+dbus.socket                            static  
+syslog.socket                          static  
+systemd-initctl.socket                 static  
+systemd-journald.socket                static  
+systemd-shutdownd.socket               static  
+udev-control.socket                    static  
+udev-kernel.socket                     static  
+basic.target                           static  
+bluetooth.target                       static  
+ctrl-alt-del.target                    disabled
+default.target                         enabled 
+emergency.target                       static  
+final.target                           static  
+getty.target                           static  
+graphical.target                       disabled
+halt.target                            disabled
+http-daemon.target                     static  
+kexec.target                           disabled
+local-fs-pre.target                    static  
+local-fs.target                        static  
+mail-transfer-agent.target             static  
+multi-user.target                      enabled 
+network.target                         static  
+nss-lookup.target                      static  
+poweroff.target                        disabled
+printer.target                         static  
+reboot.target                          disabled
+remote-fs-pre.target                   static  
+remote-fs.target                       enabled 
+rescue.target                          disabled
+rpcbind.target                         static  
+runlevel0.target                       disabled
+runlevel1.target                       disabled
+runlevel2.target                       disabled
+runlevel3.target                       disabled
+runlevel4.target                       disabled
+runlevel5.target                       disabled
+runlevel6.target                       disabled
+shutdown.target                        static  
+sigpwr.target                          static  
+smartcard.target                       static  
+sockets.target                         static  
+sound.target                           static  
+swap.target                            static  
+sysinit.target                         static  
+syslog.target                          static  
+time-sync.target                       static  
+umount.target                          static  
+systemd-readahead-done.timer           static  
+systemd-tmpfiles-clean.timer           static  
+
+118 unit files listed.
+#  
+
+

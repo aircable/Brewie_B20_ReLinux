@@ -1,0 +1,327 @@
+# dmesg
+[    0.000000] Booting Linux on physical CPU 0
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Linux version 3.4.90-Brewie (bayi@defiant) (gcc version 4.8.2 (Buildroot 2014.02-git-g7031e5d-dirty) ) #1 PREEMPT Tue Sep 20 19:35:57 CEST 2016
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine: sun5i
+[    0.000000] Malformed early option 'loglevel'
+[    0.000000] Memory Reserved:
+[    0.000000] 	SYS  : 0x43000000 - 0x4300ffff  (  64 kB)
+[    0.000000] 	VE   : 0x44000000 - 0x48ffffff  (  80 MB)
+[    0.000000] 	LCD  : 0x49000000 - 0x4affffff  (  32 MB)
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] sunxi: Allwinner A13 revision B (AW1625/sun5i) detected.
+[    0.000000] On node 0 totalpages: 131072
+[    0.000000] free_area_init_node: node 0, pgdat c06bfc60, node_mem_map d0000000
+[    0.000000]   DMA zone: 512 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 65024 pages, LIFO batch:15
+[    0.000000]   Normal zone: 512 pages used for memmap
+[    0.000000]   Normal zone: 65024 pages, LIFO batch:15
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 130048
+[    0.000000] Kernel command line: console=ttyS0,115200 root=/dev/mmcblk0p2 rootwait loglevel= panic=1 quiet lpj=1916928
+[    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 512MB = 512MB total
+[    0.000000] Memory: 397428k/397428k available, 126860k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xe0800000 - 0xff000000   ( 488 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xe0000000   ( 512 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc0630bc4   (6307 kB)
+[    0.000000]       .init : 0xc0631000 - 0xc0651000   ( 128 kB)
+[    0.000000]       .data : 0xc0652000 - 0xc06c0a20   ( 443 kB)
+[    0.000000]        .bss : 0xc06c0a44 - 0xc0762998   ( 648 kB)
+[    0.000000] SLUB: Genslabs=11, HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:128
+[    0.000000] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms
+[    0.000000] Console: colour dummy device 80x30
+[    0.000180] Calibrating delay loop (skipped) preset value.. 383.38 BogoMIPS (lpj=1916928)
+[    0.000214] pid_max: default: 32768 minimum: 301
+[    0.000457] Mount-cache hash table entries: 512
+[    0.001324] Initializing cgroup subsys cpuacct
+[    0.001354] Initializing cgroup subsys devices
+[    0.001383] Initializing cgroup subsys freezer
+[    0.001400] Initializing cgroup subsys blkio
+[    0.001544] CPU: Testing write buffer coherency: ok
+[    0.001841] hw perfevents: enabled with ARMv7 Cortex-A8 PMU driver, 5 counters available
+[    0.001955] Setting up static identity map for 0x404650c8 - 0x404650fc
+[    0.003091] devtmpfs: initialized
+[    0.005217] dummy: 
+[    0.005419] NET: Registered protocol family 16
+[    0.006265] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.007003] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.008250] Init eGon pin module V2.0
+[    0.008311] SOFTWINNER DMA Driver, (c) 2003-2004,2006 Simtec Electronics
+[    0.008429] Initialize DMAC OK
+[    0.016653] bio: create slab <bio-0> at 0
+[    0.017121] sunxi_gpio driver init ver 1.3
+[    0.017430] gpiochip_add: registered GPIOs 1 to 9 on device: A1X_GPIO
+[    0.018099] SCSI subsystem initialized
+[    0.018380] usbcore: registered new interface driver usbfs
+[    0.018489] usbcore: registered new interface driver hub
+[    0.018711] usbcore: registered new device driver usb
+[    0.019116] Advanced Linux Sound Architecture Driver Version 1.0.25.
+[    0.020475] Switching to clocksource aw_64bits_counter
+[    0.020749] FS-Cache: Loaded
+[    0.020996] CacheFiles: Loaded
+[    0.024420] cfg80211: Calling CRDA to update world regulatory domain
+[    0.030123] [usb_manager]: CONFIG_USB_SW_SUNXI_USB0_OTG
+[    0.030506] [sw_hcd0]: usb host driver initialize........
+[    0.030607] [sw_hcd0]: open_usb_clock
+[    0.050785] [sw_hcd0]: host_init_state = 1
+[    0.050801] [sw_hcd0]: platform is usb host
+[    0.050850] [sw_hcd0]: sw_hcd_host0: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx (X), HB-ISO Tx (X), SoftConn)
+[    0.050938] [sw_hcd0]: sw_hcd_init_controller: sw_hcd_host0: USB Host mode controller at f1c13000 using PIO, IRQ 38
+[    0.050984] sw_hcd_host0 sw_hcd_host0: sw_hcd host driver
+[    0.051015] sw_hcd_host0 sw_hcd_host0: new USB bus registered, assigned bus number 1
+[    0.051841] hub 1-0:1.0: USB hub found
+[    0.051885] hub 1-0:1.0: 1 port detected
+[    0.051924] wrn: hcd is not enable, need not start hcd
+[    0.052285] [sw_hcd0]: sw_usb_host0_disable start
+[    0.052308] -------sw_hcd0_soft_disconnect---------
+[    0.052329] is_on = 0, hcd0_set_vbus_cnt = 0
+[    0.052346] [sw_hcd_host0]: Set USB Power Off
+[    0.052363] wrn: hcd is not enable, need not stop hcd
+[    0.052410] [sw_hcd0]: close_usb_clock
+[    0.052483] [sw_hcd0]: sw_usb_host0_disable end
+[    0.052542] [sw_udc]: udc_init: version 20080411
+[    0.053035] NET: Registered protocol family 2
+[    0.053381] IP route cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.054072] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.054638] TCP bind hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.054973] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.054994] TCP: reno registered
+[    0.055015] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.055055] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.055463] NET: Registered protocol family 1
+[    0.056364] audit: initializing netlink socket (disabled)
+[    0.056432] type=2000 audit(0.039:1): initialized
+[    0.075338] NTFS driver 2.1.30 [Flags: R/W].
+[    0.075943] fuse init (API version 7.18)
+[    0.077014] msgmni has been set to 776
+[    0.083347] alg: comp: Compression test 1 failed for lzo-generic: output len = 57
+[    0.083559] alg: No test for stdrng (krng)
+[    0.084068] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    0.084101] io scheduler noop registered (default)
+[    0.084561] sunxi disp driver loaded (/dev/disp api 1.0)
+[    0.084859] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    0.085864] [uart]: used uart info.: 0x0a
+[    0.085998] [uart]: serial probe 1 irq 2 mapbase 0x01c28400
+[    0.106548] sunxi-uart.1: ttyS0 at MMIO 0x1c28400 (irq = 2) is a U6_16550A
+[    0.114306] console [ttyS0] enabled
+[    0.114644] [uart]: serial probe 3 irq 4 mapbase 0x01c28c00
+[    0.134959] sunxi-uart.3: ttyS1 at MMIO 0x1c28c00 (irq = 4) is a U6_16550A
+[    0.136235] brd: module loaded
+[    0.139882] loop: module loaded
+[    0.139960] [NAND] nand driver version: 0x2 0x9 
+[    0.148614] [SCAN_ERR] Reset boot nand flash chip failed!
+[    0.148634] [NAND]init_blklayer fail 
+[    0.148980] [spi]: sw spi init !!
+[    0.149009] [spi]: sw spi init fetch spi0 uning configuration failed
+[    0.149040] [spi]: Found 1 spi devices in config files
+[    0.149064] [spi]: boards num modalias         max_spd_hz       bus_num  cs   mode
+[    0.149100] [spi]: spi_board0 irq gpio not used
+[    0.149123] [spi]: 0          spidev           1000000          2        0    0x3   
+[    0.149303] [spi]: drivers/spi/spi_sunxi.c(L2000) get spi 2 para failed, err code = -4 
+[    0.149630] [spi]: source = sdram_pll_p, src_clk = 408000000, mclk 102000000
+[    0.149793] sun5i-spi sun5i-spi.2: master is unqueued, this is deprecated
+[    0.150172] [spi]: allwinners SoC SPI Driver loaded for Bus SPI-2 with 2 Slaves attached
+[    0.150201] [spi]: [spi-2]: driver probe succeed, base f1c17000, irq 12, dma_id 2!
+[    0.150309] ERR: script_parser_fetch usb_controller_type failed
+[    0.150455] usbcore: registered new interface driver rtl8192cu
+[    0.150477] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.150558] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.150804] [sw-ehci1]: open clock
+[    0.171076] [sw-ehci1]: Set USB Power ON
+[    0.171103] sw-ehci sw-ehci.1: SW USB2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.171181] sw-ehci sw-ehci.1: new USB bus registered, assigned bus number 2
+[    0.171361] sw-ehci sw-ehci.1: irq 39, io mem 0x01c14000
+[    0.190003] sw-ehci sw-ehci.1: USB 2.0 started, EHCI 1.00
+[    0.190027] ehci_irq: port change detect
+[    0.190884] hub 2-0:1.0: USB hub found
+[    0.190926] hub 2-0:1.0: 1 port detected
+[    0.191449] [sw-ohci1]: open clock
+[    0.211566] sw-ohci sw-ohci.1: SW USB2.0 'Open' Host Controller (OHCI) Driver
+[    0.211622] sw-ohci sw-ohci.1: new USB bus registered, assigned bus number 3
+[    0.211687] sw-ohci sw-ohci.1: irq 40, io mem 0x01c14400
+[    0.274787] hub 3-0:1.0: USB hub found
+[    0.274826] hub 3-0:1.0: 1 port detected
+[    0.275384] usbcore: registered new interface driver cdc_acm
+[    0.275404] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    0.275426] Initializing USB Mass Storage driver...
+[    0.275651] usbcore: registered new interface driver usb-storage
+[    0.275668] USB Mass Storage support registered.
+[    0.275745] usbcore: registered new interface driver ums-alauda
+[    0.275823] usbcore: registered new interface driver ums-cypress
+[    0.275900] usbcore: registered new interface driver ums-datafab
+[    0.275992] usbcore: registered new interface driver ums_eneub6250
+[    0.276067] usbcore: registered new interface driver ums-freecom
+[    0.276143] usbcore: registered new interface driver ums-isd200
+[    0.276219] usbcore: registered new interface driver ums-jumpshot
+[    0.276296] usbcore: registered new interface driver ums-karma
+[    0.276372] usbcore: registered new interface driver ums-onetouch
+[    0.276482] usbcore: registered new interface driver ums-realtek
+[    0.276559] usbcore: registered new interface driver ums-sddr09
+[    0.276638] usbcore: registered new interface driver ums-sddr55
+[    0.276726] usbcore: registered new interface driver ums-usbat
+[    0.276942] usbcore: registered new interface driver usbserial
+[    0.277051] usbcore: registered new interface driver usbserial_generic
+[    0.277131] USB Serial support registered for generic
+[    0.277152] usbserial: USB Serial Driver core
+[    0.277251] usbcore: registered new interface driver ftdi_sio
+[    0.277325] USB Serial support registered for FTDI USB Serial Device
+[    0.277563] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
+[    0.277678] usbcore: registered new interface driver option
+[    0.277753] USB Serial support registered for GSM modem (1-port)
+[    0.278169] usbcore: registered new interface driver pl2303
+[    0.278243] USB Serial support registered for pl2303
+[    0.278360] usbcore: registered new interface driver qcserial
+[    0.278436] USB Serial support registered for Qualcomm USB modem
+[    0.278745] mousedev: PS/2 mouse device common for all mice
+[    0.278900] ========RTC Inital ===================
+[    0.278950] rtc_fetch_sysconfig_para: after: rtc_twi_addr is 0x51, dirty_addr_buf: 0x51. dirty_addr_buf[1]: 0xfffe 
+[    0.278981] rtc_fetch_sysconfig_para: rtc_twi_id is 0. 
+[    0.278997] rtc_fetch_sysconfig_para:ok
+[    0.279015] pcf8563_init: after fetch_sysconfig_para:  normal_i2c: 0x51. normal_i2c[1]: 0xfffe 
+[    0.279097] i2c /dev entries driver
+[    0.279485] config i2c gpio with gpio_config api
+[    0.279916] rtc_detect,line:157,twi_id:0,adapter->nr:0
+[    0.279941] rtc_detect: Detected chip pcf8563 at adapter 0, address 0x51
+[    0.279960] rtc_detect,line:162
+[    0.280155] pcf8563_probe,line:666
+[    0.280176] pcf8563 0-0051: chip found, driver version 0.4.3
+[    0.280855] pcf8563_get_datetime,raw data is st1=08, st2=00, sec=21, min=42, hr=00, mday=13, wday=23, mon=27, year=16
+[    0.280892] pcf8563_get_datetime: tm is secs=21, mins=42, hours=0,mday=13, mon=6, year=126, wday=3
+[    0.281180] pcf8563 0-0051: rtc core: registered pcf8563 as rtc0
+[    0.281213] I2C: i2c-0: AW16XX I2C adapter
+[    0.281299] config i2c gpio with gpio_config api
+[    0.281707] rtc_detect,line:157,twi_id:0,adapter->nr:2
+[    0.281727] rtc_detect,line:166
+[    0.281743] I2C: i2c-2: AW16XX I2C adapter
+[    0.281862] [mmc-msg] sw_mci_init
+[    0.281980] [mmc-msg] MMC host used card: 0x1, boot card: 0x1, io_card 0
+[    0.282334] [mmc-msg] sdc0 set round clock 400000, src 24000000
+[    0.282568] [mmc-msg] sdc0 set ios: clk 0Hz bm OD pm OFF vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    0.283796] [mmc-msg] sdc0 Probe: base:0xf1c0f000 irq:32 sg_cpu:e08e5000(4fc00000) ret 0.
+[    0.283880] [mmc_pm]: no sdio card used in configuration
+[    0.285961] [mmc-msg] sdc0 set ios: clk 0Hz bm PP pm UP vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    0.285989] [mmc-msg] sdc0 power on
+[    0.286038] [ccmu] set sdc0 reset status to 0 failed!
+[    0.286060] [mmc-err] Failed to release sdc0 reset
+[    0.292044] TCP: cubic registered
+[    0.292063] Initializing XFRM netlink socket
+[    0.293283] NET: Registered protocol family 10
+[    0.294442] NET: Registered protocol family 17
+[    0.294512] NET: Registered protocol family 15
+[    0.294696] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.294754] Registering SWP/SWPB emulation handler
+[    0.296428] registered taskstats version 1
+[    0.296724] ------------[ cut here ]------------
+[    0.296783] WARNING: at drivers/video/sunxi/disp/OSAL_Pin.c:47 OSAL_GPIO_Request+0x54/0x60()
+[    0.296804] Modules linked in:
+[    0.296871] [<c0013fb4>] (unwind_backtrace+0x0/0xf4) from [<c002b084>] (warn_slowpath_common+0x54/0x64)
+[    0.296917] [<c002b084>] (warn_slowpath_common+0x54/0x64) from [<c002b130>] (warn_slowpath_null+0x1c/0x24)
+[    0.296961] [<c002b130>] (warn_slowpath_null+0x1c/0x24) from [<c022df3c>] (OSAL_GPIO_Request+0x54/0x60)
+[    0.297011] [<c022df3c>] (OSAL_GPIO_Request+0x54/0x60) from [<c023fd20>] (BSP_disp_close_lcd_backlight+0x114/0x120)
+[    0.297072] [<c023fd20>] (BSP_disp_close_lcd_backlight+0x114/0x120) from [<c0239fc0>] (BSP_disp_init+0x13c/0x1cc)
+[    0.297117] [<c0239fc0>] (BSP_disp_init+0x13c/0x1cc) from [<c0228c14>] (DRV_DISP_Init+0xe4/0xf8)
+[    0.297158] [<c0228c14>] (DRV_DISP_Init+0xe4/0xf8) from [<c022ced4>] (Fb_Init+0x70/0xb44)
+[    0.297211] [<c022ced4>] (Fb_Init+0x70/0xb44) from [<c0640220>] (lcd_module_init+0xec/0xf8)
+[    0.297253] [<c0640220>] (lcd_module_init+0xec/0xf8) from [<c0008650>] (do_one_initcall+0x11c/0x174)
+[    0.297293] [<c0008650>] (do_one_initcall+0x11c/0x174) from [<c0631934>] (kernel_init+0x1b4/0x24c)
+[    0.297339] [<c0631934>] (kernel_init+0x1b4/0x24c) from [<c000efec>] (kernel_thread_exit+0x0/0x8)
+[    0.297365] ---[ end trace c85525270e82184c ]---
+[    0.310038] [mmc-msg] sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    0.310120] [mmc-msg] sdc0 set round clock 400000, src 24000000
+[    0.420831] [mmc-err] smc 0 err, cmd 52,  RTO
+[    0.426039] [mmc-err] smc 0 err, cmd 52,  RTO
+[    0.430448] [mmc-msg] sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    0.432863] [mmc-msg] sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    0.435034] [mmc-err] smc 0 err, cmd 5,  RTO
+[    0.440131] [mmc-err] smc 0 err, cmd 5,  RTO
+[    0.445237] [mmc-err] smc 0 err, cmd 5,  RTO
+[    0.450334] [mmc-err] smc 0 err, cmd 5,  RTO
+[    0.455267] [mmc-msg] sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    0.455300] [mmc-msg] sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    0.457719] [mmc-msg] sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    0.510039] usb 2-1: new high-speed USB device number 2 using sw-ehci
+[    0.527019] [mmc-msg] sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing SD-HS(SDR25) dt B
+[    0.527053] [mmc-msg] sdc0 set ios: clk 50000000Hz bm PP pm ON vdd 3.3V width 1 timing SD-HS(SDR25) dt B
+[    0.527134] [mmc-msg] sdc0 set round clock 42857142, src 300000000
+[    0.600078] [mmc-msg] sdc0 set ios: clk 50000000Hz bm PP pm ON vdd 3.3V width 4 timing SD-HS(SDR25) dt B
+[    0.600123] mmc0: new high speed SDHC card at address aaaa
+[    0.600606] mmcblk0: mmc0:aaaa SL32G 29.7 GiB 
+[    0.606800]  mmcblk0: p1 p2
+[    1.011871] ===========================Brewie Touchscreen=====================
+[    1.011900] ctp_fetch_sysconfig_para. 
+[    1.011935] ctp_fetch_sysconfig_para: after: ctp_twi_addr is 0x38, dirty_addr_buf: 0x38. dirty_addr_buf[1]: 0xfffe 
+[    1.011963] ctp_fetch_sysconfig_para: ctp_twi_id is 2. 
+[    1.011987] ctp_fetch_sysconfig_para: screen_max_x = 480. 
+[    1.012027] ctp_fetch_sysconfig_para: screen_max_y = 272. 
+[    1.012051] ctp_fetch_sysconfig_para: revert_x_flag = 0. 
+[    1.012072] ctp_fetch_sysconfig_para: revert_y_flag = 0. 
+[    1.012093] ctp_fetch_sysconfig_para: exchange_x_y_flag = 0. 
+[    1.012114] ft5x_ts_init: after fetch_sysconfig_para:  normal_i2c: 0x38. normal_i2c[1]: 0xfffe 
+[    1.012148] ctp_init_platform_resource: tp_wakeup request gpio fail!
+[    1.012172] 
+[    1.012350] ctp_detect: Detected chip brewie_ts at adapter 2, address 0x38
+[    1.012484] ====ft5x_ts_probe begin=====.  
+[    1.013015] input: brewie_ts as /devices/platform/sunxi-i2c.2/i2c-2/2-0038/input/input0
+[    1.013573] ==ft5x_ts_probe over =
+[    1.013638] inicializing timer...
+[    1.014303] pcf8563_get_datetime,raw data is st1=08, st2=00, sec=21, min=42, hr=00, mday=13, wday=23, mon=27, year=16
+[    1.014340] pcf8563_get_datetime: tm is secs=21, mins=42, hours=0,mday=13, mon=6, year=126, wday=3
+[    1.014393] pcf8563 0-0051: setting system clock to 2026-07-13 00:42:21 UTC (1783903341)
+[    1.014522] ALSA device list:
+[    1.014538]   #0: sunxi-CODEC  Audio Codec
+[    2.687819] kjournald starting.  Commit interval 5 seconds
+[    2.688947] EXT3-fs (mmcblk0p2): using internal journal
+[    2.690213] EXT3-fs (mmcblk0p2): recovery complete
+[    2.690238] EXT3-fs (mmcblk0p2): mounted filesystem with ordered data mode
+[    2.690334] VFS: Mounted root (ext3 filesystem) on device 179:2.
+[    2.692572] devtmpfs: mounted
+[    2.692983] Freeing init memory: 128K
+[    3.410439] UMP: UMP device driver  loaded
+[    3.452746] Mali: permit MALI_IOC_MEM_MAP_EXT ioctl for framebuffer (paddr=0x49000000, size=33554432)
+[    3.452890] mali: use config clk_div 1
+[    3.452906] mali: clk_div 1
+[    3.452958] Mali: mali clock set completed, clock is  360000000 Hz
+[    3.468638] mali: use config clk_div 1
+[    3.468665] mali: clk_div 1
+[    3.468720] Mali: mali clock set completed, clock is  360000000 Hz
+[    3.470707] Mali: Mali device driver loaded
+[    3.526037] udevd[59]: starting version 182
+[    4.080382] 
+[    4.080402] 
+[    4.080409] insmod_host_driver
+[    4.080417] 
+[    4.080437] [sw_hcd0]: sw_usb_host0_enable start
+[    4.080505] -------sw_hcd0_soft_disconnect---------
+[    4.080576] [sw_hcd0]: open_usb_clock
+[    4.335658] [sw_hcd0]: host_init_state = 1
+[    4.335699] is_on = 1, hcd0_set_vbus_cnt = 1
+[    4.335723] [sw_hcd_host0]: Set USB Power On
+[    4.335740] [sw_hcd0]: sw_usb_host0_enable end
+[    5.539534] sw_usb_enable_hcd: usbc_num = 1
+[    5.539569] ERR: script_parser_fetch usb_controller_type failed
+[    5.895354] usbcore: registered new interface driver rtl8188eu
+[   15.080351] ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   51.735076] ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   53.877712] UpdateHalRAMask8188EUsb => mac_id:0, networkType:0x0b, mask:0x000fffff
+[   53.877731] 	 ==> rssi_level:0, rate_bitmap:0x000ff005
+[   53.905600] ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[   57.449965] UpdateHalRAMask8188EUsb => mac_id:0, networkType:0x0b, mask:0x000fffff
+[   57.449983] 	 ==> rssi_level:1, rate_bitmap:0x000f0000
+[   64.824863] pcf8563_get_datetime,raw data is st1=08, st2=00, sec=25, min=43, hr=00, mday=13, wday=23, mon=27, year=16
+[   64.824993] pcf8563_get_datetime: tm is secs=25, mins=43, hours=0,mday=13, mon=6, year=126, wday=3
+[   64.828672] pcf8563_get_datetime,raw data is st1=08, st2=00, sec=25, min=43, hr=00, mday=13, wday=23, mon=27, year=16
+[   64.828722] pcf8563_get_datetime: tm is secs=25, mins=43, hours=0,mday=13, mon=6, year=126, wday=3
+
