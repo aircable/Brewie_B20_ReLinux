@@ -12,26 +12,34 @@ This repository documents the complete workflow of migrating a legacy embedded L
 ├── board/
 │   └── brewie/
 │       ├── sun5i-brewie.dts      # Main device tree (mainline)
-│       └── sun5i-brewie.dtb      # Compiled device tree
 ├── configs/
 │   └── brewie_b20_defconfig      # Buildroot configuration
-├── include/
-│   ├── allwinner/                 # Upstream Allwinner DTSI files
-│   └── dt-bindings/              # Device tree binding headers
 ├── scripts/
 │   ├── fex-report.py             # FEX analysis tool
 │   ├── fex2dts.py                # FEX to DTS converter
 │   └── report.md                 # Hardware analysis report
-├── SDcard/                       # Recovered firmware artifacts
+├── SDcard/                       # Recovered boot partition from the original Linux
 ├── ARCHITECTURE.md               # Hardware architecture documentation
 ├── DISCOVERY.md                  # Hardware discovery notes
 ├── PLAN.md                       # Project milestones and status
-└── AGENT.md                      # Engineering guidelines
+├── AGENT.md                      # Engineering guidelines
+└── several text files with discovery commands and logs
 ```
+
+## Files in this repo, what matters
+
+  - brewie_b20_defconfig selects kernel, U-Boot, ext4 rootfs, and the genimage flow.
+  - sun5i-brewie.dts is the board hardware description.
+  - genimage.cfg defines sdcard.img.
+  - post-image.sh runs genimage.
+  - The root README now identifies the repo as the Brewie BSP toolkit instead of only generic Buildroot.
+  - board/brewie/B20/rootfs-overlay/.gitkeep is only there so the overlay path exists in git; it is not a meaningful runtime file.
+
 
 ## Quick Start
 
 ### Analysis
+The analysis of the original 2014 Linux is already done. But the tools used are published here for similar projects.
 ```bash
 cd scripts
 python3 fex-report.py SDcard/script.fex
@@ -63,8 +71,7 @@ make
 - [x] FEX recovery and analysis
 - [x] Device tree generation
 - [x] Hardware detection (I2C devices)
-- [ ] Kernel compilation (Buildroot)
-- [ ] QEMU validation
+- [x] Kernel compilation (Buildroot)
 - [ ] Hardware testing
 
 ## License
