@@ -6,7 +6,28 @@ A Buildroot-based Linux BSP migration project for the Brewie B20 (Allwinner A13)
 
 This repository documents the complete workflow of migrating a legacy embedded Linux system to modern mainline kernel support. The Brewie B20 uses an Allwinner A13 SoC and legacy FEX configuration.
 
+## Presentation and Lecture
+
+I teach Embedded Linux Design at UCSC Extensions and use this an example of Device Tree and Board Support Package Engineering. This is a target for teaching since the A13-SOM sits in a sweet spot: it's old enough that students can understand the entire boot process, but modern enough to run Buildroot and even mainline Linux. This would make an excellent course example because it shows how to create a custom board support package rather than relying on a standard Raspberry Pi configuration. This is what embedded Linux engineers actually do in industry. Buildroot, Yocto, Device Trees, and bootloaders become tools in a larger workflow.
+
+[Embedded Linux Course Description](https://www.ucsc-extension.edu/courses/embedded-linux-design-and-programming)
+[BSP-Engineering Presentation](https://docs.google.com/presentation/d/1sq7ynd03yNYqLOmTWfzNwtD_2XBLVE_6/edit?usp=sharing&ouid=102670391106971867939&rtpof=true&sd=true)
+
+### Because you have a working machine, we can proceed methodically:
+
+- Extract everything from the original firmware.
+- Identify every peripheral (LCD, touch, EEPROM, GPIOs, etc.).
+- Create a modern Buildroot board support package.
+- Boot a current mainline Linux kernel.
+- Incrementally enable each peripheral until the Brewie hardware is fully functional.
+
+That mirrors what an embedded Linux engineer does when bringing up a new board.
+
+There are probably very few Brewie machines left in use, and I doubt anyone has ever ported them to a current mainline Linux kernel. By documenting the hardware and replacing the aging 2016 software stack with a modern Buildroot-based system, you'd not only have a great teaching example but also preserve an interesting piece of embedded hardware.
+
 ## Repository Structure
+
+Note: we do not publish either buildroot or the kernel code here, just the files added to the build environment to get you going.
 
 ```
 ├── board/
