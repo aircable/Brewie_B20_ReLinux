@@ -1,0 +1,1426 @@
+{
+  "sections": [
+    {
+      "name": "product",
+      "parameters": {
+        "version": "1.0",
+        "machine": "A13-EVB-V1.0"
+      }
+    },
+    {
+      "name": "target",
+      "parameters": {
+        "boot_clock": 1008,
+        "dcdc2_vol": 1400,
+        "dcdc3_vol": 1200,
+        "ldo2_vol": 3000,
+        "ldo3_vol": 3300,
+        "ldo4_vol": 3300,
+        "pll4_freq": 960,
+        "pll6_freq": 720
+      }
+    },
+    {
+      "name": "card_boot",
+      "parameters": {
+        "logical_start": 40960,
+        "sprite_gpio0": ""
+      }
+    },
+    {
+      "name": "card_boot0_para",
+      "parameters": {
+        "card_ctrl": 0,
+        "card_high_speed": 1,
+        "card_line": 4,
+        "sdc_d1": "port:PF00<2><1><default><default>",
+        "sdc_d0": "port:PF01<2><1><default><default>",
+        "sdc_clk": "port:PF02<2><1><default><default>",
+        "sdc_cmd": "port:PF03<2><1><default><default>",
+        "sdc_d3": "port:PF04<2><1><default><default>",
+        "sdc_d2": "port:PF05<2><1><default><default>"
+      }
+    },
+    {
+      "name": "twi_para",
+      "parameters": {
+        "twi_port": 0,
+        "twi_scl": "port:PB00<2><1><default><default>",
+        "twi_sda": "port:PB01<2><1><default><default>"
+      }
+    },
+    {
+      "name": "uart_para",
+      "parameters": {
+        "uart_debug_port": 1,
+        "uart_debug_tx": "port:PG03<4><1><default><default>",
+        "uart_debug_rx": "port:PG04<4><1><default><default>"
+      }
+    },
+    {
+      "name": "jtag_para",
+      "parameters": {
+        "jtag_enable": 0,
+        "jtag_ms": "port:PF00<4><1><default><default>",
+        "jtag_ck": "port:PF05<4><1><default><default>",
+        "jtag_do": "port:PF03<4><1><default><default>",
+        "jtag_di": "port:PF01<4><1><default><default>"
+      }
+    },
+    {
+      "name": "dram_para",
+      "parameters": {
+        "dram_baseaddr": 1073741824,
+        "dram_clk": 408,
+        "dram_type": 3,
+        "dram_rank_num": 1,
+        "dram_chip_density": 4096,
+        "dram_io_width": 16,
+        "dram_bus_width": 16,
+        "dram_cas": 9,
+        "dram_zq": 123,
+        "dram_odt_en": 0,
+        "dram_size": 512,
+        "dram_tpr0": 1121491383,
+        "dram_tpr1": 41104,
+        "dram_tpr2": 141824,
+        "dram_tpr3": 0,
+        "dram_tpr4": 0,
+        "dram_tpr5": 0,
+        "dram_emr1": 0,
+        "dram_emr2": 16,
+        "dram_emr3": 0
+      }
+    },
+    {
+      "name": "nand_para",
+      "parameters": {
+        "nand_used": 1,
+        "nand_we": "port:PC00<2><default><default><default>",
+        "nand_ale": "port:PC01<2><default><default><default>",
+        "nand_cle": "port:PC02<2><default><default><default>",
+        "nand_ce1": "port:PC03<2><default><default><default>",
+        "nand_ce0": "port:PC04<2><default><default><default>",
+        "nand_nre": "port:PC05<2><default><default><default>",
+        "nand_rb0": "port:PC06<2><default><default><default>",
+        "nand_rb1": "port:PC07<2><default><default><default>",
+        "nand_d0": "port:PC08<2><default><default><default>",
+        "nand_d1": "port:PC09<2><default><default><default>",
+        "nand_d2": "port:PC10<2><default><default><default>",
+        "nand_d3": "port:PC11<2><default><default><default>",
+        "nand_d4": "port:PC12<2><default><default><default>",
+        "nand_d5": "port:PC13<2><default><default><default>",
+        "nand_d6": "port:PC14<2><default><default><default>",
+        "nand_d7": "port:PC15<2><default><default><default>",
+        "nand_wp": "",
+        "nand_ce2": "",
+        "nand_ce3": "",
+        "nand_ce4": "",
+        "nand_ce5": "",
+        "nand_ce6": "",
+        "nand_ce7": "",
+        "nand_spi": "",
+        "nand_ndqs": "port:PC19<2><default><default><default>"
+      }
+    },
+    {
+      "name": "mali_para",
+      "parameters": {
+        "mali_used": 1,
+        "mali_clkdiv": 1
+      }
+    },
+    {
+      "name": "twi0_para",
+      "parameters": {
+        "twi0_used": 1,
+        "twi0_scl": "port:PB00<2><default><default><default>",
+        "twi0_sda": "port:PB01<2><default><default><default>"
+      }
+    },
+    {
+      "name": "twi1_para",
+      "parameters": {
+        "twi1_used": 0,
+        "twi1_scl": "port:PB15<2><default><default><default>",
+        "twi1_sda": "port:PB16<2><default><default><default>"
+      }
+    },
+    {
+      "name": "twi2_para",
+      "parameters": {
+        "twi2_used": 1,
+        "twi2_scl": "port:PB17<2><default><default><default>",
+        "twi2_sda": "port:PB18<2><default><default><default>"
+      }
+    },
+    {
+      "name": "uart_para0",
+      "parameters": {
+        "uart_used": 0,
+        "uart_port": 0,
+        "uart_type": 2,
+        "uart_tx": "port:PB19<2><1><default><default>",
+        "uart_rx": "port:PB20<2><1><default><default>"
+      }
+    },
+    {
+      "name": "uart_para1",
+      "parameters": {
+        "uart_used": 1,
+        "uart_port": 1,
+        "uart_type": 2,
+        "uart_tx": "port:PG03<4><1><default><default>",
+        "uart_rx": "port:PG04<4><1><default><default>"
+      }
+    },
+    {
+      "name": "uart_para3",
+      "parameters": {
+        "uart_used": 1,
+        "uart_port": 2,
+        "uart_type": 2,
+        "uart_tx": "port:PG09<3><1><default><default>",
+        "uart_rx": "port:PG10<3><1><default><default>"
+      }
+    },
+    {
+      "name": "spi1_para",
+      "parameters": {
+        "spi_used": 0,
+        "spi_cs0": "port:PG09<2><default><default><default>",
+        "spi_cs1": "port:PG13<2><default><default><default>",
+        "spi_sclk": "port:PG10<2><default><default><default>",
+        "spi_mosi": "port:PG11<2><default><default><default>",
+        "spi_miso": "port:PG12<2><default><default><default>"
+      }
+    },
+    {
+      "name": "spi2_para",
+      "parameters": {
+        "spi_used": 1,
+        "spi_cs0": "port:PE00<4><default><default><default>",
+        "spi_sclk": "port:PE01<4><default><default><default>",
+        "spi_mosi": "port:PE02<4><default><default><default>",
+        "spi_miso": "port:PE03<4><default><default><default>"
+      }
+    },
+    {
+      "name": "spi_devices",
+      "parameters": {
+        "spi_dev_num": 1
+      }
+    },
+    {
+      "name": "spi_board0",
+      "parameters": {
+        "modalias": "spidev",
+        "max_speed_hz": 1000000,
+        "bus_num": 2,
+        "chip_select": 0,
+        "mode": 3,
+        "full_duplex": 0,
+        "manual_cs": 0
+      }
+    },
+    {
+      "name": "rtp_para",
+      "parameters": {
+        "rtp_used": 0,
+        "rtp_screen_size": 5,
+        "rtp_regidity_level": 5,
+        "rtp_press_threshold_enable": 0,
+        "rtp_press_threshold": 8000,
+        "rtp_sensitive_level": 15,
+        "rtp_exchange_x_y_flag": 0
+      }
+    },
+    {
+      "name": "ctp_para",
+      "parameters": {
+        "ctp_used": 1,
+        "ctp_name": "ft5x_ts",
+        "ctp_twi_id": 2,
+        "ctp_twi_addr": 56,
+        "ctp_screen_max_x": 480,
+        "ctp_screen_max_y": 272,
+        "ctp_revert_x_flag": 0,
+        "ctp_revert_y_flag": 0,
+        "ctp_exchange_x_y_flag": 0,
+        "ctp_int_port": "port:PG11<6><default><default><default>",
+        "ctp_wakeup": "",
+        "ctp_io_port": "port:PG11<0><default><default><default>",
+        "rst_port": "port:PC03<1><default><default><default>"
+      }
+    },
+    {
+      "name": "tkey_para",
+      "parameters": {
+        "tkey_used": 0,
+        "tkey_name": "hv_keypad",
+        "tkey_twi_id": 2,
+        "tkey_twi_addr": 98,
+        "tkey_int": ""
+      }
+    },
+    {
+      "name": "motor_para",
+      "parameters": {
+        "motor_used": 0,
+        "motor_shake": ""
+      }
+    },
+    {
+      "name": "disp_init",
+      "parameters": {
+        "disp_init_enable": 1,
+        "disp_mode": 0,
+        "screen0_output_type": 1,
+        "screen0_output_mode": 5,
+        "screen1_output_type": 1,
+        "screen1_output_mode": 5,
+        "fb0_framebuffer_num": 2,
+        "fb0_format": 9,
+        "fb0_pixel_sequence": 2,
+        "fb0_scaler_mode_enable": 0,
+        "fb1_framebuffer_num": 2,
+        "fb1_format": 9,
+        "fb1_pixel_sequence": 2,
+        "fb1_scaler_mode_enable": 0,
+        "lcd0_backlight": 5,
+        "lcd0_bright": 50,
+        "lcd0_saturation": 50,
+        "lcd0_hue": 50
+      }
+    },
+    {
+      "name": "lcd0_para",
+      "parameters": {
+        "lcd_used": 1,
+        "lcd_x": 480,
+        "lcd_y": 272,
+        "lcd_dclk_freq": 9,
+        "lcd_pwm_not_used": 0,
+        "lcd_pwm_ch": 0,
+        "lcd_pwm_freq": 10000,
+        "lcd_pwm_pol": 1,
+        "lcd_if": 0,
+        "lcd_hbp": 40,
+        "lcd_ht": 525,
+        "lcd_vbp": 8,
+        "lcd_vt": 576,
+        "lcd_hv_if": 0,
+        "lcd_hv_smode": 0,
+        "lcd_hv_s888_if": 0,
+        "lcd_hv_syuv_if": 0,
+        "lcd_hv_vspw": 5,
+        "lcd_hv_hspw": 30,
+        "lcd_lvds_ch": 0,
+        "lcd_lvds_mode": 0,
+        "lcd_lvds_bitwidth": 0,
+        "lcd_lvds_io_cross": 0,
+        "lcd_cpu_if": 0,
+        "lcd_frm": 1,
+        "lcd_io_cfg0": 268435456,
+        "lcd_gamma_correction_en": 0,
+        "lcd_gamma_tbl_0": 0,
+        "lcd_gamma_tbl_1": 65793,
+        "lcd_gamma_tbl_255": 16777215,
+        "lcd_bl_en_used": 1,
+        "lcd_bl_en": "port:power1<1><0><default><1>",
+        "lcd_power_used": 0,
+        "lcd_power": "port:PB10<1><0><default><1>",
+        "lcd_pwm_used": 1,
+        "lcd_pwm": "port:PB02<2><0><default><default>",
+        "lcd_gpio_0": "",
+        "lcd_gpio_1": "",
+        "lcd_gpio_2": "",
+        "lcd_gpio_3": "",
+        "lcdd0": "port:PD00<2><0><default><default>",
+        "lcdd1": "port:PD01<2><0><default><default>",
+        "lcdd2": "port:PD02<2><0><default><default>",
+        "lcdd3": "port:PD03<2><0><default><default>",
+        "lcdd4": "port:PD04<2><0><default><default>",
+        "lcdd5": "port:PD05<2><0><default><default>",
+        "lcdd6": "port:PD06<2><0><default><default>",
+        "lcdd7": "port:PD07<2><0><default><default>",
+        "lcdd8": "port:PD08<2><0><default><default>",
+        "lcdd9": "port:PD09<2><0><default><default>",
+        "lcdd10": "port:PD10<2><0><default><default>",
+        "lcdd11": "port:PD11<2><0><default><default>",
+        "lcdd12": "port:PD12<2><0><default><default>",
+        "lcdd13": "port:PD13<2><0><default><default>",
+        "lcdd14": "port:PD14<2><0><default><default>",
+        "lcdd15": "port:PD15<2><0><default><default>",
+        "lcdd16": "port:PD16<2><0><default><default>",
+        "lcdd17": "port:PD17<2><0><default><default>",
+        "lcdd18": "port:PD18<2><0><default><default>",
+        "lcdd19": "port:PD19<2><0><default><default>",
+        "lcdd20": "port:PD20<2><0><default><default>",
+        "lcdd21": "port:PD21<2><0><default><default>",
+        "lcdd22": "port:PD22<2><0><default><default>",
+        "lcdd23": "port:PD23<2><0><default><default>",
+        "lcdclk": "port:PD24<2><0><default><default>",
+        "lcdde": "port:PD25<2><0><default><default>",
+        "lcdhsync": "port:PD26<2><0><default><default>",
+        "lcdvsync": "port:PD27<2><0><default><default>"
+      }
+    },
+    {
+      "name": "tv_out_dac_para",
+      "parameters": {
+        "dac_used": 1,
+        "dac0_src": 0
+      }
+    },
+    {
+      "name": "hdmi_para",
+      "parameters": {
+        "hdmi_used": 0
+      }
+    },
+    {
+      "name": "csi0_para",
+      "parameters": {
+        "csi_used": 0,
+        "csi_mode": 0,
+        "csi_dev_qty": 1,
+        "csi_stby_mode": 1,
+        "csi_mname": "gc0308",
+        "csi_twi_id": 2,
+        "csi_twi_addr": 66,
+        "csi_if": 0,
+        "csi_vflip": 0,
+        "csi_hflip": 1,
+        "csi_iovdd": "",
+        "csi_avdd": "",
+        "csi_dvdd": "",
+        "csi_flash_pol": 1,
+        "csi_mname_b": "",
+        "csi_twi_id_b": 1,
+        "csi_twi_addr_b": 120,
+        "csi_if_b": 0,
+        "csi_vflip_b": 1,
+        "csi_hflip_b": 0,
+        "csi_iovdd_b": "",
+        "csi_avdd_b": "",
+        "csi_dvdd_b": "",
+        "csi_flash_pol_b": 1,
+        "csi_pck": "port:PE00<3><default><default><default>",
+        "csi_ck": "port:PE01<3><default><default><default>",
+        "csi_hsync": "port:PE02<3><default><default><default>",
+        "csi_vsync": "port:PE03<3><default><default><default>",
+        "csi_d0": "port:PE04<3><default><default><default>",
+        "csi_d1": "port:PE05<3><default><default><default>",
+        "csi_d2": "port:PE06<3><default><default><default>",
+        "csi_d3": "port:PE07<3><default><default><default>",
+        "csi_d4": "port:PE08<3><default><default><default>",
+        "csi_d5": "port:PE09<3><default><default><default>",
+        "csi_d6": "port:PE10<3><default><default><default>",
+        "csi_d7": "port:PE11<3><default><default><default>",
+        "csi_reset": "port:power3<1><default><default><0>",
+        "csi_power_en": "",
+        "csi_stby": "port:PB10<1><default><default><1>",
+        "csi_flash": "",
+        "csi_af_en": "",
+        "csi_reset_b": "",
+        "csi_power_en_b": "",
+        "csi_stby_b": "",
+        "csi_flash_b": "",
+        "csi_af_en_b": ""
+      }
+    },
+    {
+      "name": "csi1_para",
+      "parameters": {
+        "csi_used": 0,
+        "csi_mode": 0,
+        "csi_dev_qty": 1,
+        "csi_stby_mode": 1,
+        "csi_mname": "",
+        "csi_twi_id": 1,
+        "csi_twi_addr": 186,
+        "csi_if": 0,
+        "csi_vflip": 0,
+        "csi_hflip": 0,
+        "csi_iovdd": "",
+        "csi_avdd": "",
+        "csi_dvdd": "",
+        "csi_flash_pol": 1,
+        "csi_mname_b": "",
+        "csi_twi_id_b": 1,
+        "csi_twi_addr_b": 120,
+        "csi_if_b": 0,
+        "csi_vflip_b": 1,
+        "csi_hflip_b": 0,
+        "csi_iovdd_b": "",
+        "csi_avdd_b": "",
+        "csi_dvdd_b": "",
+        "csi_flash_pol_b": 1,
+        "csi_reset": "",
+        "csi_power_en": "",
+        "csi_stby": "",
+        "csi_flash": "",
+        "csi_af_en": "",
+        "csi_reset_b": "",
+        "csi_power_en_b": "",
+        "csi_stby_b": "",
+        "csi_flash_b": "",
+        "csi_af_en_b": ""
+      }
+    },
+    {
+      "name": "mmc0_para",
+      "parameters": {
+        "sdc_used": 1,
+        "sdc_detmode": 3,
+        "bus_width": 4,
+        "sdc_d1": "port:PF00<2><1><2><default>",
+        "sdc_d0": "port:PF01<2><1><2><default>",
+        "sdc_clk": "port:PF02<2><1><2><default>",
+        "sdc_cmd": "port:PF03<2><1><2><default>",
+        "sdc_d3": "port:PF04<2><1><2><default>",
+        "sdc_d2": "port:PF05<2><1><2><default>",
+        "sdc_det": "port:PG00<0><0><default><default>",
+        "sdc_use_wp": 0,
+        "sdc_wp": ""
+      }
+    },
+    {
+      "name": "mmc1_para",
+      "parameters": {
+        "sdc_used": 0,
+        "sdc_detmode": "",
+        "bus_width": "",
+        "sdc_cmd": "",
+        "sdc_clk": "",
+        "sdc_d0": "",
+        "sdc_d1": "",
+        "sdc_d2": "",
+        "sdc_d3": "",
+        "sdc_det": "",
+        "sdc_use_wp": "",
+        "sdc_wp": ""
+      }
+    },
+    {
+      "name": "mmc2_para",
+      "parameters": {
+        "sdc_used": 0,
+        "sdc_detmode": 3,
+        "bus_width": 4,
+        "sdc_cmd": "port:PE08<4><1><2><default>",
+        "sdc_clk": "port:PE09<4><1><2><default>",
+        "sdc_d0": "port:PE04<4><1><2><default>",
+        "sdc_d1": "port:PE05<4><1><2><default>",
+        "sdc_d2": "port:PE06<4><1><2><default>",
+        "sdc_d3": "port:PE07<4><1><2><default>",
+        "sdc_det": "",
+        "sdc_use_wp": 0,
+        "sdc_wp": ""
+      }
+    },
+    {
+      "name": "ms_para",
+      "parameters": {
+        "ms_used": 0,
+        "ms_bs": "",
+        "ms_clk": "",
+        "ms_d0": "",
+        "ms_d1": "",
+        "ms_d2": "",
+        "ms_d3": "",
+        "ms_det": ""
+      }
+    },
+    {
+      "name": "keypad_para",
+      "parameters": {
+        "kp_used": 0,
+        "kp_in_size": "",
+        "kp_out_size": "",
+        "kp_in0": "",
+        "kp_in1": "",
+        "kp_in2": "",
+        "kp_in3": "",
+        "kp_in4": "",
+        "kp_in5": "",
+        "kp_in6": "",
+        "kp_in7": "",
+        "kp_out0": "",
+        "kp_out1": "",
+        "kp_out2": "",
+        "kp_out3": "",
+        "kp_out4": "",
+        "kp_out5": "",
+        "kp_out6": "",
+        "kp_out7": ""
+      }
+    },
+    {
+      "name": "usbc0",
+      "parameters": {
+        "usb_used": 1,
+        "usb_port_type": 2,
+        "usb_detect_type": 1,
+        "usb_id_gpio": "port:PG02<0><1><default><default>",
+        "usb_det_vbus_gpio": "port:PG01<0><0><default><default>",
+        "usb_drv_vbus_gpio": "port:PG13<1><0><default><0>",
+        "usb_host_init_state": 1
+      }
+    },
+    {
+      "name": "usbc1",
+      "parameters": {
+        "usb_used": 1,
+        "usb_port_type": 1,
+        "usb_detect_type": 0,
+        "usb_id_gpio": "",
+        "usb_det_vbus_gpio": "",
+        "usb_drv_vbus_gpio": "port:PG05<1><0><default><0>",
+        "usb_host_init_state": 1
+      }
+    },
+    {
+      "name": "usb_feature",
+      "parameters": {
+        "vendor_id": 6353,
+        "mass_storage_id": 1,
+        "adb_id": 2,
+        "manufacturer_name": "USB Developer",
+        "product_name": "Android",
+        "serial_number": 20080411
+      }
+    },
+    {
+      "name": "msc_feature",
+      "parameters": {
+        "vendor_name": "USB 2.0",
+        "product_name": "USB Flash Driver",
+        "release": 100,
+        "luns": 3
+      }
+    },
+    {
+      "name": "gsensor_para",
+      "parameters": {
+        "gsensor_used": 0,
+        "gsensor_name": "bma222",
+        "gsensor_twi_id": 1,
+        "gsensor_twi_addr": 24,
+        "gsensor_int1": "",
+        "gsensor_int2": ""
+      }
+    },
+    {
+      "name": "gps_para",
+      "parameters": {
+        "gps_used": 0,
+        "gps_spi_id": "",
+        "gps_spi_cs_num": "",
+        "gps_lradc": "",
+        "gps_clk": "",
+        "gps_sign": "",
+        "gps_mag": "",
+        "gps_vcc_en": "",
+        "gps_osc_en": "",
+        "gps_rx_en": ""
+      }
+    },
+    {
+      "name": "sdio_wifi_para",
+      "parameters": {
+        "sdio_wifi_used": 0,
+        "sdio_wifi_sdc_id": "",
+        "sdio_wifi_mod_sel": ""
+      }
+    },
+    {
+      "name": "usb_wifi_para",
+      "parameters": {
+        "usb_wifi_used": 1,
+        "usb_wifi_usbc_num": 1
+      }
+    },
+    {
+      "name": "3g_para",
+      "parameters": {
+        "3g_used": 0,
+        "3g_name": "",
+        "3g_usbc_num": "",
+        "3g_on_off": "",
+        "3g_reset": "",
+        "3g_poweron": "",
+        "3g_wakeup_out": "",
+        "3g_wakeup_in": ""
+      }
+    },
+    {
+      "name": "gy_para",
+      "parameters": {
+        "gy_used": 0,
+        "gy_twi_id": 1,
+        "gy_twi_addr": 0,
+        "gy_int1": "",
+        "gy_int2": ""
+      }
+    },
+    {
+      "name": "ls_para",
+      "parameters": {
+        "ls_used": 0,
+        "ls_name": "ltr501als",
+        "ls_twi_id": 1,
+        "ls_twi_addr": "",
+        "ls_int": ""
+      }
+    },
+    {
+      "name": "compass_para",
+      "parameters": {
+        "compass_used": 0,
+        "compass_twi_id": "",
+        "compass_twi_addr": "",
+        "compass_int": ""
+      }
+    },
+    {
+      "name": "bt_para",
+      "parameters": {
+        "bt_used": 0,
+        "bt_uart_id": "",
+        "bt_mod_type": ""
+      }
+    },
+    {
+      "name": "i2s_para",
+      "parameters": {
+        "i2s_used": 0,
+        "i2s_channel": "",
+        "i2s_mclk": "",
+        "i2s_bclk": "",
+        "i2s_lrclk": "",
+        "i2s_dout0": "",
+        "i2s_dout1": "",
+        "i2s_dout2": "",
+        "i2s_dout3": "",
+        "i2s_din": ""
+      }
+    },
+    {
+      "name": "spdif_para",
+      "parameters": {
+        "spdif_used": 0,
+        "spdif_mclk": "",
+        "spdif_dout": "",
+        "spdif_din": ""
+      }
+    },
+    {
+      "name": "audio_para",
+      "parameters": {
+        "audio_used": 1,
+        "capture_used": 1,
+        "playback_used": 1,
+        "audio_lr_change": 0
+      }
+    },
+    {
+      "name": "ir_para",
+      "parameters": {
+        "ir_used": 0,
+        "ir0_rx": "port:PB04<2><default><default><default>"
+      }
+    },
+    {
+      "name": "rtc_para",
+      "parameters": {
+        "rtc_used": 1,
+        "rtc_name": "pcf8563",
+        "rtc_twi_id": 0,
+        "rtc_twi_addr": 81
+      }
+    },
+    {
+      "name": "pmu_para",
+      "parameters": {
+        "pmu_used": 0,
+        "pmu_twi_addr": 52,
+        "pmu_twi_id": 0,
+        "pmu_irq_id": 0,
+        "pmu_battery_rdc": 200,
+        "pmu_battery_cap": 2600,
+        "pmu_init_chgcur": 300,
+        "pmu_earlysuspend_chgcur": 600,
+        "pmu_suspend_chgcur": 1000,
+        "pmu_resume_chgcur": 300,
+        "pmu_shutdown_chgcur": 1000,
+        "pmu_init_chgvol": 4200,
+        "pmu_init_chgend_rate": 15,
+        "pmu_init_chg_enabled": 1,
+        "pmu_init_adc_freq": 100,
+        "pmu_init_adc_freqc": 100,
+        "pmu_init_chg_pretime": 50,
+        "pmu_init_chg_csttime": 720,
+        "pmu_bat_para1": 0,
+        "pmu_bat_para2": 0,
+        "pmu_bat_para3": 1,
+        "pmu_bat_para4": 5,
+        "pmu_bat_para5": 7,
+        "pmu_bat_para6": 13,
+        "pmu_bat_para7": 16,
+        "pmu_bat_para8": 26,
+        "pmu_bat_para9": 36,
+        "pmu_bat_para10": 46,
+        "pmu_bat_para11": 53,
+        "pmu_bat_para12": 61,
+        "pmu_bat_para13": 73,
+        "pmu_bat_para14": 84,
+        "pmu_bat_para15": 92,
+        "pmu_bat_para16": 100,
+        "pmu_usbvol": 4000,
+        "pmu_usbcur": 0,
+        "pmu_usbvol_pc": 4000,
+        "pmu_usbcur_pc": 0,
+        "pmu_pwroff_vol": 3300,
+        "pmu_pwron_vol": 2900,
+        "pmu_pekoff_time": 6000,
+        "pmu_pekoff_en": 1,
+        "pmu_peklong_time": 1500,
+        "pmu_pekon_time": 1000,
+        "pmu_pwrok_time": 64,
+        "pmu_pwrnoe_time": 2000,
+        "pmu_intotp_en": 1,
+        "pmu_used2": 0,
+        "pmu_adpdet": "",
+        "pmu_init_chgcur2": 400,
+        "pmu_earlysuspend_chgcur2": 600,
+        "pmu_suspend_chgcur2": 1200,
+        "pmu_resume_chgcur2": 400,
+        "pmu_shutdown_chgcur2": 1200,
+        "pmu_suspendpwroff_vol": 3500,
+        "pmu_batdeten": 1
+      }
+    },
+    {
+      "name": "recovery_key",
+      "parameters": {
+        "key_min": 4,
+        "key_max": 6
+      }
+    },
+    {
+      "name": "gpio_para",
+      "parameters": {
+        "gpio_used": 1,
+        "gpio_num": 9,
+        "gpio_pin_1": "port:PB03<0><default><default><default>",
+        "gpio_pin_2": "port:PB15<0><default><default><default>",
+        "gpio_pin_3": "port:PB04<1><default><default><1>",
+        "gpio_pin_4": "port:PB16<1><default><default><0>",
+        "gpio_pin_5": "port:PB02<1><default><default><default>",
+        "gpio_pin_6": "port:PE09<1><default><default><1>",
+        "gpio_pin_7": "port:PB10<1><default><default><1>",
+        "gpio_pin_8": "port:PC07<1><default><default><1>",
+        "gpio_pin_9": "port:PG12<1><default><default><0>"
+      }
+    },
+    {
+      "name": "gpio_init",
+      "parameters": {
+        "pin_3": "port:PB04<1><default><default><1>",
+        "pin_7": "port:PB10<1><default><default><1>",
+        "pin_8": "port:PC07<1><default><default><1>"
+      }
+    },
+    {
+      "name": "pwm0_para",
+      "parameters": {
+        "pwm_used": 0,
+        "pwm_period": 10000,
+        "pwm_duty_percent": 99
+      }
+    },
+    {
+      "name": "leds_para",
+      "parameters": {
+        "leds_used": 0,
+        "leds_num": 1,
+        "leds_pin_1": "port:PG09<1><default><default><0>",
+        "leds_name_1": "green:pg09:led1",
+        "leds_default_1": 0,
+        "leds_trigger_1": "heartbeat"
+      }
+    }
+  ],
+  "hardware_summary": {
+    "soc": "Allwinner A13 (sun5i)",
+    "board_model": "A13-EVB-V1.0",
+    "cpu_clock": "1008 MHz",
+    "memory": {
+      "clock": "408 MHz",
+      "type": "DDR3",
+      "size": "512 MB",
+      "bus_width": "16 bit"
+    },
+    "storage": [
+      {
+        "type": "MMC/SD",
+        "host": "card_boot0_para"
+      },
+      {
+        "type": "MMC/SD",
+        "host": "mmc0_para"
+      },
+      {
+        "type": "MMC/SD",
+        "host": "mmc1_para"
+      },
+      {
+        "type": "MMC/SD",
+        "host": "mmc2_para"
+      }
+    ],
+    "display": {
+      "resolution": "480x272",
+      "pixel_clock_mhz": 9,
+      "timing_ht": 525,
+      "timing_hbp": 40,
+      "timing_hspw": 30,
+      "timing_vt": 576,
+      "timing_vbp": 8,
+      "timing_vspw": 5
+    },
+    "pmic": "AXP20x (likely AXP209)",
+    "dcdc2_voltage": "1400 mV"
+  },
+  "gpio_summary": [
+    {
+      "section": "lcd0_para",
+      "pins": {
+        "lcd_power": "port:PB10<1><0><default><1>",
+        "lcd_pwm": "port:PB02<2><0><default><default>",
+        "lcdd0": "port:PD00<2><0><default><default>",
+        "lcdd1": "port:PD01<2><0><default><default>",
+        "lcdd2": "port:PD02<2><0><default><default>",
+        "lcdd3": "port:PD03<2><0><default><default>",
+        "lcdd4": "port:PD04<2><0><default><default>",
+        "lcdd5": "port:PD05<2><0><default><default>",
+        "lcdd6": "port:PD06<2><0><default><default>",
+        "lcdd7": "port:PD07<2><0><default><default>",
+        "lcdd8": "port:PD08<2><0><default><default>",
+        "lcdd9": "port:PD09<2><0><default><default>",
+        "lcdd10": "port:PD10<2><0><default><default>",
+        "lcdd11": "port:PD11<2><0><default><default>",
+        "lcdd12": "port:PD12<2><0><default><default>",
+        "lcdd13": "port:PD13<2><0><default><default>",
+        "lcdd14": "port:PD14<2><0><default><default>",
+        "lcdd15": "port:PD15<2><0><default><default>",
+        "lcdd16": "port:PD16<2><0><default><default>",
+        "lcdd17": "port:PD17<2><0><default><default>",
+        "lcdd18": "port:PD18<2><0><default><default>",
+        "lcdd19": "port:PD19<2><0><default><default>",
+        "lcdd20": "port:PD20<2><0><default><default>",
+        "lcdd21": "port:PD21<2><0><default><default>",
+        "lcdd22": "port:PD22<2><0><default><default>",
+        "lcdd23": "port:PD23<2><0><default><default>",
+        "lcdclk": "port:PD24<2><0><default><default>",
+        "lcdde": "port:PD25<2><0><default><default>",
+        "lcdhsync": "port:PD26<2><0><default><default>",
+        "lcdvsync": "port:PD27<2><0><default><default>"
+      }
+    },
+    {
+      "section": "gpio_para",
+      "pins": {
+        "gpio_pin_1": "port:PB03<0><default><default><default>",
+        "gpio_pin_2": "port:PB15<0><default><default><default>",
+        "gpio_pin_3": "port:PB04<1><default><default><1>",
+        "gpio_pin_4": "port:PB16<1><default><default><0>",
+        "gpio_pin_5": "port:PB02<1><default><default><default>",
+        "gpio_pin_6": "port:PE09<1><default><default><1>",
+        "gpio_pin_7": "port:PB10<1><default><default><1>",
+        "gpio_pin_8": "port:PC07<1><default><default><1>",
+        "gpio_pin_9": "port:PG12<1><default><default><0>"
+      }
+    },
+    {
+      "section": "gpio_init",
+      "pins": {
+        "pin_3": "port:PB04<1><default><default><1>",
+        "pin_7": "port:PB10<1><default><default><1>",
+        "pin_8": "port:PC07<1><default><default><1>"
+      }
+    }
+  ],
+  "lcd_timings": {
+    "lcd0_para": {
+      "lcd_x": 480,
+      "lcd_y": 272,
+      "lcd_dclk_freq": 9,
+      "lcd_ht": 525,
+      "lcd_hbp": 40,
+      "lcd_hv_hspw": 30,
+      "lcd_vt": 576,
+      "lcd_vbp": 8,
+      "lcd_hv_vspw": 5,
+      "lcd_pwm_freq": 10000,
+      "lcd_pwm_pol": 1
+    }
+  },
+  "peripherals": [
+    {
+      "type": "I2C",
+      "section": "twi_para",
+      "used": "unknown",
+      "parameters": {
+        "twi_port": 0,
+        "twi_scl": "port:PB00<2><1><default><default>",
+        "twi_sda": "port:PB01<2><1><default><default>"
+      }
+    },
+    {
+      "type": "UART",
+      "section": "uart_para",
+      "used": "unknown",
+      "parameters": {
+        "uart_debug_port": 1,
+        "uart_debug_tx": "port:PG03<4><1><default><default>",
+        "uart_debug_rx": "port:PG04<4><1><default><default>"
+      }
+    },
+    {
+      "type": "NAND Flash",
+      "section": "nand_para",
+      "used": 1,
+      "parameters": {
+        "nand_used": 1,
+        "nand_we": "port:PC00<2><default><default><default>",
+        "nand_ale": "port:PC01<2><default><default><default>",
+        "nand_cle": "port:PC02<2><default><default><default>",
+        "nand_ce1": "port:PC03<2><default><default><default>",
+        "nand_ce0": "port:PC04<2><default><default><default>",
+        "nand_nre": "port:PC05<2><default><default><default>",
+        "nand_rb0": "port:PC06<2><default><default><default>",
+        "nand_rb1": "port:PC07<2><default><default><default>",
+        "nand_d0": "port:PC08<2><default><default><default>",
+        "nand_d1": "port:PC09<2><default><default><default>",
+        "nand_d2": "port:PC10<2><default><default><default>",
+        "nand_d3": "port:PC11<2><default><default><default>",
+        "nand_d4": "port:PC12<2><default><default><default>",
+        "nand_d5": "port:PC13<2><default><default><default>",
+        "nand_d6": "port:PC14<2><default><default><default>",
+        "nand_d7": "port:PC15<2><default><default><default>",
+        "nand_wp": "",
+        "nand_ce2": "",
+        "nand_ce3": "",
+        "nand_ce4": "",
+        "nand_ce5": "",
+        "nand_ce6": "",
+        "nand_ce7": "",
+        "nand_spi": "",
+        "nand_ndqs": "port:PC19<2><default><default><default>"
+      }
+    },
+    {
+      "type": "I2C",
+      "section": "twi0_para",
+      "used": 1,
+      "parameters": {
+        "twi0_used": 1,
+        "twi0_scl": "port:PB00<2><default><default><default>",
+        "twi0_sda": "port:PB01<2><default><default><default>"
+      }
+    },
+    {
+      "type": "I2C",
+      "section": "twi1_para",
+      "used": "unknown",
+      "parameters": {
+        "twi1_used": 0,
+        "twi1_scl": "port:PB15<2><default><default><default>",
+        "twi1_sda": "port:PB16<2><default><default><default>"
+      }
+    },
+    {
+      "type": "I2C",
+      "section": "twi2_para",
+      "used": "unknown",
+      "parameters": {
+        "twi2_used": 1,
+        "twi2_scl": "port:PB17<2><default><default><default>",
+        "twi2_sda": "port:PB18<2><default><default><default>"
+      }
+    },
+    {
+      "type": "UART",
+      "section": "uart_para0",
+      "used": 0,
+      "parameters": {
+        "uart_used": 0,
+        "uart_port": 0,
+        "uart_type": 2,
+        "uart_tx": "port:PB19<2><1><default><default>",
+        "uart_rx": "port:PB20<2><1><default><default>"
+      }
+    },
+    {
+      "type": "UART",
+      "section": "uart_para1",
+      "used": 1,
+      "parameters": {
+        "uart_used": 1,
+        "uart_port": 1,
+        "uart_type": 2,
+        "uart_tx": "port:PG03<4><1><default><default>",
+        "uart_rx": "port:PG04<4><1><default><default>"
+      }
+    },
+    {
+      "type": "UART",
+      "section": "uart_para3",
+      "used": 1,
+      "parameters": {
+        "uart_used": 1,
+        "uart_port": 2,
+        "uart_type": 2,
+        "uart_tx": "port:PG09<3><1><default><default>",
+        "uart_rx": "port:PG10<3><1><default><default>"
+      }
+    },
+    {
+      "type": "SPI",
+      "section": "spi1_para",
+      "used": 0,
+      "parameters": {
+        "spi_used": 0,
+        "spi_cs0": "port:PG09<2><default><default><default>",
+        "spi_cs1": "port:PG13<2><default><default><default>",
+        "spi_sclk": "port:PG10<2><default><default><default>",
+        "spi_mosi": "port:PG11<2><default><default><default>",
+        "spi_miso": "port:PG12<2><default><default><default>"
+      }
+    },
+    {
+      "type": "SPI",
+      "section": "spi2_para",
+      "used": 1,
+      "parameters": {
+        "spi_used": 1,
+        "spi_cs0": "port:PE00<4><default><default><default>",
+        "spi_sclk": "port:PE01<4><default><default><default>",
+        "spi_mosi": "port:PE02<4><default><default><default>",
+        "spi_miso": "port:PE03<4><default><default><default>"
+      }
+    },
+    {
+      "type": "SPI",
+      "section": "spi_devices",
+      "used": "unknown",
+      "parameters": {
+        "spi_dev_num": 1
+      }
+    },
+    {
+      "type": "SPI",
+      "section": "spi_board0",
+      "used": "unknown",
+      "parameters": {
+        "modalias": "spidev",
+        "max_speed_hz": 1000000,
+        "bus_num": 2,
+        "chip_select": 0,
+        "mode": 3,
+        "full_duplex": 0,
+        "manual_cs": 0
+      }
+    },
+    {
+      "type": "Resistive Touch",
+      "section": "rtp_para",
+      "used": 0,
+      "parameters": {
+        "rtp_used": 0,
+        "rtp_screen_size": 5,
+        "rtp_regidity_level": 5,
+        "rtp_press_threshold_enable": 0,
+        "rtp_press_threshold": 8000,
+        "rtp_sensitive_level": 15,
+        "rtp_exchange_x_y_flag": 0
+      }
+    },
+    {
+      "type": "Capacitive Touch",
+      "section": "ctp_para",
+      "used": 1,
+      "parameters": {
+        "ctp_used": 1,
+        "ctp_name": "ft5x_ts",
+        "ctp_twi_id": 2,
+        "ctp_twi_addr": 56,
+        "ctp_screen_max_x": 480,
+        "ctp_screen_max_y": 272,
+        "ctp_revert_x_flag": 0,
+        "ctp_revert_y_flag": 0,
+        "ctp_exchange_x_y_flag": 0,
+        "ctp_int_port": "port:PG11<6><default><default><default>",
+        "ctp_wakeup": "",
+        "ctp_io_port": "port:PG11<0><default><default><default>",
+        "rst_port": "port:PC03<1><default><default><default>"
+      }
+    },
+    {
+      "type": "CSI/DVP Camera",
+      "section": "csi0_para",
+      "used": 0,
+      "parameters": {
+        "csi_used": 0,
+        "csi_mode": 0,
+        "csi_dev_qty": 1,
+        "csi_stby_mode": 1,
+        "csi_mname": "gc0308",
+        "csi_twi_id": 2,
+        "csi_twi_addr": 66,
+        "csi_if": 0,
+        "csi_vflip": 0,
+        "csi_hflip": 1,
+        "csi_iovdd": "",
+        "csi_avdd": "",
+        "csi_dvdd": "",
+        "csi_flash_pol": 1,
+        "csi_mname_b": "",
+        "csi_twi_id_b": 1,
+        "csi_twi_addr_b": 120,
+        "csi_if_b": 0,
+        "csi_vflip_b": 1,
+        "csi_hflip_b": 0,
+        "csi_iovdd_b": "",
+        "csi_avdd_b": "",
+        "csi_dvdd_b": "",
+        "csi_flash_pol_b": 1,
+        "csi_pck": "port:PE00<3><default><default><default>",
+        "csi_ck": "port:PE01<3><default><default><default>",
+        "csi_hsync": "port:PE02<3><default><default><default>",
+        "csi_vsync": "port:PE03<3><default><default><default>",
+        "csi_d0": "port:PE04<3><default><default><default>",
+        "csi_d1": "port:PE05<3><default><default><default>",
+        "csi_d2": "port:PE06<3><default><default><default>",
+        "csi_d3": "port:PE07<3><default><default><default>",
+        "csi_d4": "port:PE08<3><default><default><default>",
+        "csi_d5": "port:PE09<3><default><default><default>",
+        "csi_d6": "port:PE10<3><default><default><default>",
+        "csi_d7": "port:PE11<3><default><default><default>",
+        "csi_reset": "port:power3<1><default><default><0>",
+        "csi_power_en": "",
+        "csi_stby": "port:PB10<1><default><default><1>",
+        "csi_flash": "",
+        "csi_af_en": "",
+        "csi_reset_b": "",
+        "csi_power_en_b": "",
+        "csi_stby_b": "",
+        "csi_flash_b": "",
+        "csi_af_en_b": ""
+      }
+    },
+    {
+      "type": "CSI/DVP Camera",
+      "section": "csi1_para",
+      "used": 0,
+      "parameters": {
+        "csi_used": 0,
+        "csi_mode": 0,
+        "csi_dev_qty": 1,
+        "csi_stby_mode": 1,
+        "csi_mname": "",
+        "csi_twi_id": 1,
+        "csi_twi_addr": 186,
+        "csi_if": 0,
+        "csi_vflip": 0,
+        "csi_hflip": 0,
+        "csi_iovdd": "",
+        "csi_avdd": "",
+        "csi_dvdd": "",
+        "csi_flash_pol": 1,
+        "csi_mname_b": "",
+        "csi_twi_id_b": 1,
+        "csi_twi_addr_b": 120,
+        "csi_if_b": 0,
+        "csi_vflip_b": 1,
+        "csi_hflip_b": 0,
+        "csi_iovdd_b": "",
+        "csi_avdd_b": "",
+        "csi_dvdd_b": "",
+        "csi_flash_pol_b": 1,
+        "csi_reset": "",
+        "csi_power_en": "",
+        "csi_stby": "",
+        "csi_flash": "",
+        "csi_af_en": "",
+        "csi_reset_b": "",
+        "csi_power_en_b": "",
+        "csi_stby_b": "",
+        "csi_flash_b": "",
+        "csi_af_en_b": ""
+      }
+    },
+    {
+      "type": "MMC/SD",
+      "section": "mmc0_para",
+      "used": "unknown",
+      "parameters": {
+        "sdc_used": 1,
+        "sdc_detmode": 3,
+        "bus_width": 4,
+        "sdc_d1": "port:PF00<2><1><2><default>",
+        "sdc_d0": "port:PF01<2><1><2><default>",
+        "sdc_clk": "port:PF02<2><1><2><default>",
+        "sdc_cmd": "port:PF03<2><1><2><default>",
+        "sdc_d3": "port:PF04<2><1><2><default>",
+        "sdc_d2": "port:PF05<2><1><2><default>",
+        "sdc_det": "port:PG00<0><0><default><default>",
+        "sdc_use_wp": 0,
+        "sdc_wp": ""
+      }
+    },
+    {
+      "type": "MMC/SD",
+      "section": "mmc1_para",
+      "used": "unknown",
+      "parameters": {
+        "sdc_used": 0,
+        "sdc_detmode": "",
+        "bus_width": "",
+        "sdc_cmd": "",
+        "sdc_clk": "",
+        "sdc_d0": "",
+        "sdc_d1": "",
+        "sdc_d2": "",
+        "sdc_d3": "",
+        "sdc_det": "",
+        "sdc_use_wp": "",
+        "sdc_wp": ""
+      }
+    },
+    {
+      "type": "MMC/SD",
+      "section": "mmc2_para",
+      "used": "unknown",
+      "parameters": {
+        "sdc_used": 0,
+        "sdc_detmode": 3,
+        "bus_width": 4,
+        "sdc_cmd": "port:PE08<4><1><2><default>",
+        "sdc_clk": "port:PE09<4><1><2><default>",
+        "sdc_d0": "port:PE04<4><1><2><default>",
+        "sdc_d1": "port:PE05<4><1><2><default>",
+        "sdc_d2": "port:PE06<4><1><2><default>",
+        "sdc_d3": "port:PE07<4><1><2><default>",
+        "sdc_det": "",
+        "sdc_use_wp": 0,
+        "sdc_wp": ""
+      }
+    },
+    {
+      "type": "USB",
+      "section": "usbc0",
+      "used": 1,
+      "parameters": {
+        "usb_used": 1,
+        "usb_port_type": 2,
+        "usb_detect_type": 1,
+        "usb_id_gpio": "port:PG02<0><1><default><default>",
+        "usb_det_vbus_gpio": "port:PG01<0><0><default><default>",
+        "usb_drv_vbus_gpio": "port:PG13<1><0><default><0>",
+        "usb_host_init_state": 1
+      }
+    },
+    {
+      "type": "USB",
+      "section": "usbc1",
+      "used": 1,
+      "parameters": {
+        "usb_used": 1,
+        "usb_port_type": 1,
+        "usb_detect_type": 0,
+        "usb_id_gpio": "",
+        "usb_det_vbus_gpio": "",
+        "usb_drv_vbus_gpio": "port:PG05<1><0><default><0>",
+        "usb_host_init_state": 1
+      }
+    },
+    {
+      "type": "USB",
+      "section": "usb_feature",
+      "used": "unknown",
+      "parameters": {
+        "vendor_id": 6353,
+        "mass_storage_id": 1,
+        "adb_id": 2,
+        "manufacturer_name": "USB Developer",
+        "product_name": "Android",
+        "serial_number": 20080411
+      }
+    },
+    {
+      "type": "USB",
+      "section": "usb_wifi_para",
+      "used": "unknown",
+      "parameters": {
+        "usb_wifi_used": 1,
+        "usb_wifi_usbc_num": 1
+      }
+    },
+    {
+      "type": "Audio",
+      "section": "audio_para",
+      "used": 1,
+      "parameters": {
+        "audio_used": 1,
+        "capture_used": 1,
+        "playback_used": 1,
+        "audio_lr_change": 0
+      }
+    },
+    {
+      "type": "IR Remote",
+      "section": "ir_para",
+      "used": 0,
+      "parameters": {
+        "ir_used": 0,
+        "ir0_rx": "port:PB04<2><default><default><default>"
+      }
+    },
+    {
+      "type": "PWM",
+      "section": "pwm0_para",
+      "used": 0,
+      "parameters": {
+        "pwm_used": 0,
+        "pwm_period": 10000,
+        "pwm_duty_percent": 99
+      }
+    }
+  ],
+  "warnings": [
+    "[jtag_para] jtag_ms = port:PF00<4><1><default><default>",
+    "[jtag_para] jtag_ck = port:PF05<4><1><default><default>",
+    "[jtag_para] jtag_do = port:PF03<4><1><default><default>",
+    "[jtag_para] jtag_di = port:PF01<4><1><default><default>",
+    "[twi0_para] twi0_used = 1",
+    "[twi0_para] twi0_scl = port:PB00<2><default><default><default>",
+    "[twi0_para] twi0_sda = port:PB01<2><default><default><default>",
+    "[twi1_para] twi1_used = 0",
+    "[twi1_para] twi1_scl = port:PB15<2><default><default><default>",
+    "[twi1_para] twi1_sda = port:PB16<2><default><default><default>",
+    "[twi2_para] twi2_used = 1",
+    "[twi2_para] twi2_scl = port:PB17<2><default><default><default>",
+    "[twi2_para] twi2_sda = port:PB18<2><default><default><default>",
+    "[spi_board0] modalias = spidev",
+    "[spi_board0] max_speed_hz = 1000000",
+    "[spi_board0] bus_num = 2",
+    "[spi_board0] chip_select = 0",
+    "[spi_board0] mode = 3",
+    "[spi_board0] full_duplex = 0",
+    "[spi_board0] manual_cs = 0"
+  ]
+}
