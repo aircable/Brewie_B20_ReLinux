@@ -30,14 +30,36 @@
         stdout-path = "serial0:115200n8";
     };
 
-    /* LCD backlight - uses PWM0 on PB2 for brightness control */
+    /* LCD backlight - PWM0 is PB2; PB10 is the panel power/latch enable. */
     backlight: backlight {
         compatible = "pwm-backlight";
-        pwms = <&pwm 0 9000 PWM_POLARITY_INVERTED>; /* ~10kHz PWM */
+        pwms = <&pwm 0 9000 0>; /* ~10kHz PWM, active high */
+        enable-gpios = <&pio 1 10 GPIO_ACTIVE_HIGH>; /* PB10 / GPIO42 */
         brightness-levels = <0 10 20 30 40 50 60 70 80 90 100>;
-        default-brightness-level = <5>;
-        enable-gpios = <&axp_gpio 1 GPIO_ACTIVE_HIGH>; /* AXP209 GPIO1 (power1) */
-        power-supply = <&reg_vcc3v3>;
+        default-brightness-level = <10>;
+    };
+
+    panel_lcd0: panel-lcd0 {
+        compatible = "panel-dpi";
+        backlight = <&backlight>;
+
+        panel-timing {
+            clock-frequency = <9000000>;
+            hactive = <480>;
+            vactive = <272>;
+            hfront-porch = <10>;
+            hback-porch = <5>;
+            hsync-len = <30>;
+            vfront-porch = <3>;
+            vback-porch = <8>;
+            vsync-len = <5>;
+        };
+
+        port {
+            panel_lcd0_in: endpoint {
+                remote-endpoint = <&tcon0_out_lcd0>;
+            };
+        };
     };
 
     /* Simple framebuffer for early console */
@@ -49,21 +71,25 @@
         height = <272>;
         stride = <960>; /* 480 x 16bpp */
         format = "r5g6b5";
+        status = "disabled";
         clocks = <&ccu CLK_AHB_LCD>, <&ccu CLK_AHB_DE_BE>, <&ccu CLK_DE_BE>,
                  <&ccu CLK_TCON_CH0>, <&ccu CLK_DRAM_DE_BE>;
         /* Timing from fbset output: hfp=10, hbp=5, vfp=3, vbp=8, hspw=30, vspw=5 */
     };
 };
 
-/* LCD RGB24 pins (PD0-PD27) - 24-bit color mode */
+/* U-Boot cannot adjust core voltage without the PMIC; stay at the boot rate. */
+&cpu0 {
+    operating-points = <384000 1200000>;
+};
+
+/* LCD pins: use the valid A13 RGB666 pin group. */
 &pio {
-    lcd_rgb24_pins: lcd-rgb24-pins {
-        pins = "PD0", "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7",
-               "PD8", "PD9", "PD10", "PD11", "PD12", "PD13", "PD14", "PD15",
-               "PD16", "PD17", "PD18", "PD19", "PD20", "PD21", "PD22", "PD23",
-               "PD24", "PD25", "PD26", "PD27";
-        function = "lcd0";
-    };
+    vcc-pb-supply = <&reg_vcc3v3>;
+    vcc-pc-supply = <&reg_vcc3v3>;
+    vcc-pd-supply = <&reg_vcc3v3>;
+    vcc-pf-supply = <&reg_vcc3v3>;
+    vcc-pg-supply = <&reg_vcc3v3>;
 };
 
 &i2c0 {
@@ -71,20 +97,12 @@
     pinctrl-0 = <&i2c0_pins>;
     status = "okay";
 
-    axp209: pmic@34 {
-        compatible = "x-powers,axp209";
-        reg = <0x34>;
-        interrupt-parent = <&pio>;
-        interrupts = <0 7 IRQ_TYPE_EDGE_FALLING>; /* PB7 */
-    };
-
     rtc@51 {
         compatible = "nxp,pcf8563";
         reg = <0x51>;
+        status = "okay";
     };
 };
-
-#include "allwinner/axp209.dtsi"
 
 &i2c2 {
     pinctrl-names = "default";
@@ -94,6 +112,7 @@
     ft5x06@38 {
         compatible = "edt,edt-ft5x06";
         reg = <0x38>;
+        status = "okay";
         interrupt-parent = <&pio>;
         interrupts = <6 11 IRQ_TYPE_EDGE_FALLING>;
         reset-gpios = <&pio 2 3 GPIO_ACTIVE_LOW>;
@@ -113,8 +132,9 @@
 &mmc0 {
     pinctrl-names = "default";
     pinctrl-0 = <&mmc0_pins>;
+    vmmc-supply = <&reg_vcc3v3>;
     bus-width = <4>;
-    cd-gpios = <&pio 5 6 GPIO_ACTIVE_LOW>; /* PF6 */
+    non-removable;
     status = "okay";
 };
 &spi2 {
@@ -128,6 +148,27 @@
         spi-max-frequency = <1000000>;
     };
 };
+
+&fe0 {
+    status = "okay";
+};
+
+&be0 {
+    status = "okay";
+};
+
+&tcon0 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&lcd_rgb666_pins>;
+    status = "okay";
+};
+
+&tcon0_out {
+    tcon0_out_lcd0: endpoint@0 {
+        reg = <0>;
+        remote-endpoint = <&panel_lcd0_in>;
+    };
+};
 &ehci0 {
     status = "okay";
 };
@@ -135,6 +176,16 @@
 &ohci0 {
     status = "okay";
 };
+
+&reg_usb1_vbus {
+    gpio = <&pio 6 13 GPIO_ACTIVE_HIGH>; /* FEX usb_drv_vbus_gpio: PG13 */
+    status = "okay";
+};
+
+&usbphy {
+    status = "okay";
+};
+
 &pwm {
     pinctrl-names = "default";
     pinctrl-0 = <&pwm0_pin>;
@@ -142,5 +193,10 @@
 };
 &lradc {
     vref-supply = <&reg_vcc3v0>;
+    status = "okay";
+};
+
+/* Re-enable the board watchdog now that the basic boot path is stable. */
+&wdt {
     status = "okay";
 };

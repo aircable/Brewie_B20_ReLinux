@@ -1,0 +1,2461 @@
+         U abort@@GLIBC_2.4
+         U __aeabi_idiv@@GCC_3.5
+         U __aeabi_idivmod@@GCC_3.5
+         U __aeabi_uidivmod@@GCC_3.5
+         U __aeabi_unwind_cpp_pr0@@GCC_3.5
+         U __aeabi_unwind_cpp_pr1@@GCC_3.5
+         U __cxa_atexit@@GLIBC_2.4
+         U __cxa_begin_catch@@CXXABI_1.3
+         U __cxa_end_catch@@CXXABI_1.3
+         U __cxa_end_cleanup@@CXXABI_1.3
+         U __cxa_guard_abort@@CXXABI_1.3
+         U __cxa_guard_acquire@@CXXABI_1.3
+         U __cxa_guard_release@@CXXABI_1.3
+         U __cxa_pure_virtual@@CXXABI_1.3
+         U __cxa_rethrow@@CXXABI_1.3
+         U free@@GLIBC_2.4
+         w __gmon_start__
+         U __gxx_personality_v0@@CXXABI_1.3
+         w _ITM_deregisterTMCloneTable
+         w _ITM_registerTMCloneTable
+         w _Jv_RegisterClasses
+         U __libc_start_main@@GLIBC_2.4
+         U malloc@@GLIBC_2.4
+         U memcmp@@GLIBC_2.4
+         U memcpy@@GLIBC_2.4
+         U memset@@GLIBC_2.4
+         U pow@@GLIBC_2.4
+         U roundf@@GLIBC_2.4
+         U stdout@@GLIBC_2.4
+         U strcmp@@GLIBC_2.4
+         U strlen@@GLIBC_2.4
+         U qt_assert_x(char const*, char const*, char const*, int)
+         U qUncompress(unsigned char const*, int)
+         U qFlagLocation(char const*)
+         U qt_message_output(QtMsgType, QMessageLogContext const&, QString const&)
+         U qRegisterResourceData(int, unsigned char const*, unsigned char const*, unsigned char const*)
+         U qInstallMessageHandler(void (*)(QtMsgType, QMessageLogContext const&, QString const&))
+         U qUnregisterResourceData(int, unsigned char const*, unsigned char const*, unsigned char const*)
+         U endl(QTextStream&)
+         U qHash(QString const&, unsigned int)
+         U qBadAlloc()
+         U qCompress(unsigned char const*, int, int)
+         U qt_assert(char const*, char const*, int)
+         U operator delete(void*)@@GLIBCXX_3.4
+         U operator==(QString const&, QString const&)
+         U operator<<(QDebug, QAbstractSocket::SocketError)
+         U operator<<(QDebug, QVariant const&)
+         U operator<<(QDataStream&, QString const&)
+         U operator<<(QDataStream&, QVariant const&)
+         U operator<(QString const&, QString const&)
+         U QArrayData::deallocate(QArrayData*, unsigned int, unsigned int)
+         U QArrayData::shared_null
+         U QByteArray::fromBase64(QByteArray const&)
+         U QByteArray::reallocData(unsigned int, QFlags<QArrayData::AllocationOption>)
+         U QByteArray::append(char)
+         U QByteArray::append(char const*)
+         U QByteArray::append(QByteArray const&)
+         U QByteArray::remove(int, int)
+         U QByteArray::operator=(QByteArray const&)
+         U QByteArray::QByteArray(char const*, int)
+         U QQmlEngine::setObjectOwnership(QObject*, QQmlEngine::ObjectOwnership)
+         U QTcpServer::nextPendingConnection()
+         U QTcpServer::listen(QHostAddress const&, unsigned short)
+         U QTcpServer::QTcpServer(QObject*)
+         U QTcpServer::~QTcpServer()
+         U QDataStream::resetStatus()
+         U QDataStream::setStatus(QDataStream::Status)
+         U QDataStream::QDataStream(QByteArray*, QFlags<QIODevice::OpenModeFlag>)
+         U QDataStream::~QDataStream()
+         U QDataStream::operator<<(int)
+         U QDataStream::operator>>(int&)
+         U QDomElement::QDomElement(QDomElement const&)
+         U QFileDevice::flush()
+         U QMetaObject::Connection::~Connection()
+         U QMetaObject::normalizedType(char const*)
+         U QMetaObject::activate(QObject*, QMetaObject const*, int, void**)
+         U QQmlContext::setContextProperty(QString const&, QObject*)
+         U QQmlContext::setContextProperty(QString const&, QVariant const&)
+         U QQmlPrivate::qmlregister(QQmlPrivate::RegistrationType, void*)
+         U QQmlPrivate::qdeclarativeelement_destructor(QObject*)
+         U QSerialPort::setBaudRate(int, QFlags<QSerialPort::Direction>)
+         U QSerialPort::setDataBits(QSerialPort::DataBits)
+         U QSerialPort::setPortName(QString const&)
+         U QSerialPort::setStopBits(QSerialPort::StopBits)
+         U QSerialPort::setFlowControl(QSerialPort::FlowControl)
+         U QSerialPort::setParity(QSerialPort::Parity)
+         U QSerialPort::QSerialPort(QObject*)
+         U QTextStream::readLine(long long)
+         U QTextStream::QTextStream(_IO_FILE*, QFlags<QIODevice::OpenModeFlag>)
+         U QTextStream::QTextStream(QIODevice*)
+         U QTextStream::~QTextStream()
+         U QTextStream::operator<<(char)
+         U QTextStream::operator<<(float)
+         U QTextStream::operator<<(int)
+         U QTextStream::operator<<(char const*)
+         U QTextStream::operator<<(QByteArray const&)
+         U QTextStream::operator<<(QString const&)
+         U QThreadPool::globalInstance()
+         U QThreadPool::start(QRunnable*, int)
+         U QApplication::exec()
+         U QApplication::QApplication(int&, char**, int)
+         U QApplication::~QApplication()
+         U QDomNodeList::~QDomNodeList()
+         U QHostAddress::QHostAddress(QHostAddress::SpecialAddress)
+         U QHostAddress::~QHostAddress()
+         U QMapDataBase::createData()
+         U QMapDataBase::createNode(int, int, QMapNodeBase*, bool)
+         U QMapDataBase::shared_null
+         U QMapDataBase::recalcMostLeftNode()
+         U QMapDataBase::freeNodeAndRebalance(QMapNodeBase*)
+         U QMapDataBase::freeData(QMapDataBase*)
+         U QMapDataBase::freeTree(QMapNodeBase*, int)
+         U QJsonDocument::fromVariant(QVariant const&)
+         U QJsonDocument::fromBinaryData(QByteArray const&, QJsonDocument::DataValidation)
+         U QJsonDocument::fromJson(QByteArray const&, QJsonParseError*)
+         U QJsonDocument::QJsonDocument()
+         U QJsonDocument::~QJsonDocument()
+         U QGuiApplication::focusObject()
+         U QGuiApplication::screens()
+         U QCoreApplication::notifyInternal(QObject*, QEvent*)
+         U QCoreApplication::applicationDirPath()
+         U QCoreApplication::self
+         U QLoggingCategory::QLoggingCategory(char const*)
+         U QLoggingCategory::~QLoggingCategory()
+         U QNetworkInterface::interfaceFromName(QString const&)
+         U QNetworkInterface::~QNetworkInterface()
+         U QFutureWatcherBase::qt_metacall(QMetaObject::Call, int, void**)
+         U QFutureWatcherBase::qt_metacast(char const*)
+         U QFutureWatcherBase::connectNotify(QMetaMethod const&)
+         U QFutureWatcherBase::disconnectNotify(QMetaMethod const&)
+         U QFutureWatcherBase::connectOutputInterface()
+         U QFutureWatcherBase::disconnectOutputInterface(bool)
+         U QFutureWatcherBase::event(QEvent*)
+         U QFutureWatcherBase::QFutureWatcherBase(QObject*)
+         U QSequentialIterable::const_iterator::~const_iterator()
+         U QSequentialIterable::const_iterator::operator++()
+         U QSequentialIterable::QSequentialIterable(QtMetaTypePrivate::QSequentialIterableImpl)
+         U QAssociativeIterable::const_iterator::~const_iterator()
+         U QAssociativeIterable::const_iterator::operator++()
+         U QAssociativeIterable::QAssociativeIterable(QtMetaTypePrivate::QAssociativeIterableImpl)
+         U QFutureInterfaceBase::setRunnable(QRunnable*)
+         U QFutureInterfaceBase::reportStarted()
+         U QFutureInterfaceBase::reportFinished()
+         U QFutureInterfaceBase::reportException(QException const&)
+         U QFutureInterfaceBase::operator=(QFutureInterfaceBase const&)
+         U QFutureInterfaceBase::QFutureInterfaceBase(QFutureInterfaceBase const&)
+         U QFutureInterfaceBase::QFutureInterfaceBase(QFutureInterfaceBase::State)
+         U QFutureInterfaceBase::~QFutureInterfaceBase()
+         U QFutureInterfaceBase::~QFutureInterfaceBase()
+         U QNetworkAddressEntry::QNetworkAddressEntry(QNetworkAddressEntry const&)
+         U QNetworkAddressEntry::~QNetworkAddressEntry()
+         U QQmlDebuggingEnabler::QQmlDebuggingEnabler(bool)
+         U QQmlApplicationEngine::load(QUrl const&)
+         U QQmlApplicationEngine::QQmlApplicationEngine(QObject*)
+         U QQmlApplicationEngine::~QQmlApplicationEngine()
+         U QDir::setNameFilters(QStringList const&)
+         U QDir::remove(QString const&)
+         U QDir::QDir(QString const&)
+         U QDir::~QDir()
+         U QUrl::QUrl(QString const&, QUrl::ParsingMode)
+         U QUrl::~QUrl()
+         U QChar::toUpper(unsigned int)
+         U QChar::category(unsigned int)
+         U QFile::setFileName(QString const&)
+         U QFile::open(QFlags<QIODevice::OpenModeFlag>)
+         U QFile::remove()
+         U QFile::rename(QString const&)
+         U QFile::QFile(QString const&)
+         U QFile::QFile()
+         U QFile::~QFile()
+         U QTime::currentTime()
+         U QUuid::createUuid()
+         U QMutex::lock()
+         U QMutex::unlock()
+         U QMutex::QMutex(QMutex::RecursionMode)
+         U QMutex::~QMutex()
+         U QTimer::singleShot(int, QObject const*, char const*)
+         U QTimer::setInterval(int)
+         U QTimer::stop()
+         U QTimer::start(int)
+         U QTimer::start()
+         U QTimer::QTimer(QObject*)
+         U QObject::childEvent(QChildEvent*)
+         U QObject::timerEvent(QTimerEvent*)
+         U QObject::customEvent(QEvent*)
+         U QObject::eventFilter(QObject*, QEvent*)
+         U QObject::qt_metacall(QMetaObject::Call, int, void**)
+         U QObject::qt_metacast(char const*)
+         U QObject::moveToThread(QThread*)
+         U QObject::connectNotify(QMetaMethod const&)
+         U QObject::disconnectNotify(QMetaMethod const&)
+         U QObject::event(QEvent*)
+         U QObject::connect(QObject const*, char const*, QObject const*, char const*, Qt::ConnectionType)
+         U QObject::QObject(QObject*)
+         U QObject::~QObject()
+         U QRegExp::QRegExp(QString const&, Qt::CaseSensitivity, QRegExp::PatternSyntax)
+         U QRegExp::~QRegExp()
+         U QString::reallocData(unsigned int, bool)
+         U QString::toUtf8_helper(QString const&)
+         U QString::compare_helper(QChar const*, int, char const*, int, Qt::CaseSensitivity)
+         U QString::fromUtf8_helper(char const*, int)
+         U QString::fromAscii_helper(char const*, int)
+         U QString::chop(int)
+         U QString::append(QString const&)
+         U QString::expand(int)
+         U QString::insert(int, QChar)
+         U QString::number(double, char, int)
+         U QString::number(int, int)
+         U QString::remove(int, int)
+         U QString::replace(QChar, QChar, Qt::CaseSensitivity)
+         U QString::replace(QRegExp const&, QString const&)
+         U QString::replace(QString const&, QString const&, Qt::CaseSensitivity)
+         U QString::operator=(QString const&)
+         U QDomNode::operator=(QDomNode const&)
+         U QDomNode::~QDomNode()
+         U QDomNode::~QDomNode()
+         U QProcess::waitForFinished(int)
+         U QProcess::readAllStandardOutput()
+         U QProcess::kill()
+         U QProcess::close()
+         U QProcess::start(QString const&, QFlags<QIODevice::OpenModeFlag>)
+         U QProcess::execute(QString const&)
+         U QProcess::QProcess(QObject*)
+         U QProcess::~QProcess()
+         U QVariant::operator=(QVariant const&)
+         U QVariant::QVariant(bool)
+         U QVariant::QVariant(double)
+         U QVariant::QVariant(float)
+         U QVariant::QVariant(int)
+         U QVariant::QVariant(char const*)
+         U QVariant::QVariant(QByteArray const&)
+         U QVariant::QVariant(QMap<QString, QVariant> const&)
+         U QVariant::QVariant(QList<QVariant> const&)
+         U QVariant::QVariant(QString const&)
+         U QVariant::QVariant(QVariant const&)
+         U QVariant::QVariant(long long)
+         U QVariant::~QVariant()
+         U QDateTime::currentDateTime()
+         U QDateTime::currentDateTimeUtc()
+         U QDateTime::~QDateTime()
+         U QFileInfo::QFileInfo(QString const&)
+         U QFileInfo::~QFileInfo()
+         U QHashData::free_helper(void (*)(QHashData::Node*))
+         U QHashData::shared_null
+         U QHashData::allocateNode(int)
+         U QHashData::previousNode(QHashData::Node*)
+         U QHashData::detach_helper(void (*)(QHashData::Node*, void*), void (*)(QHashData::Node*), int, int)
+         U QHashData::rehash(int)
+         U QHashData::freeNode(void*)
+         U QHashData::nextNode(QHashData::Node*)
+         U QIODevice::write(char const*, long long)
+         U QIODevice::readAll()
+         U QIODevice::readLine(long long)
+         U QKeyEvent::QKeyEvent(QEvent::Type, int, QFlags<Qt::KeyboardModifier>, QString const&, bool, unsigned short)
+         U QKeyEvent::~QKeyEvent()
+         U QListData::detach_grow(int*, int)
+         U QListData::shared_null
+         U QListData::erase(void**)
+         U QListData::append(QListData const&)
+         U QListData::append()
+         U QListData::detach(int)
+         U QListData::insert(int)
+         U QListData::remove(int)
+         U QListData::dispose(QListData::Data*)
+         U QListData::prepend()
+         U QListData::realloc(int)
+         U QMetaType::registerNormalizedType(QByteArray const&, void (*)(void*), void* (*)(void const*), void (*)(void*), void* (*)(void*, void const*), int, QFlags<QMetaType::TypeFlag>, QMetaObject const*)
+         U QMetaType::registerNormalizedTypedef(QByteArray const&, int)
+         U QMetaType::hasRegisteredConverterFunction(int, int)
+         U QTimeZone::availableTimeZoneIds()
+         U QTimeZone::QTimeZone(QByteArray const&)
+         U QTimeZone::~QTimeZone()
+         U QByteArray::mid(int, int) const
+         U QByteArray::toBase64() const
+         U QQmlEngine::rootContext() const
+         U QDataStream::atEnd() const
+         U QDataStream::status() const
+         U QDomElement::text() const
+         U QDomElement::tagName() const
+         U QMetaObject::className() const
+         U QObjectData::dynamicMetaObject() const
+         U QSerialPort::portName() const
+         U QDomNodeList::length() const
+         U QHostAddress::toString() const
+         U QMapNodeBase::previousNode() const
+         U QMapNodeBase::nextNode() const
+         U QJsonDocument::toBinaryData() const
+         U QJsonDocument::toJson() const
+         U QJsonDocument::toVariant() const
+         U QMessageLogger::debug(QLoggingCategory const& (*)()) const
+         U QMessageLogger::debug() const
+         U QMessageLogger::warning(QLoggingCategory const& (*)()) const
+         U QMessageLogger::warning() const
+         U QAbstractSocket::state() const
+         U QNetworkInterface::addressEntries() const
+         U QFutureWatcherBase::metaObject() const
+         U QSequentialIterable::const_iterator::operator*() const
+         U QSequentialIterable::const_iterator::operator!=(QSequentialIterable::const_iterator const&) const
+         U QSequentialIterable::end() const
+         U QSequentialIterable::size() const
+         U QSequentialIterable::begin() const
+         U QAssociativeIterable::const_iterator::key() const
+         U QAssociativeIterable::const_iterator::value() const
+         U QAssociativeIterable::const_iterator::operator!=(QAssociativeIterable::const_iterator const&) const
+         U QAssociativeIterable::end() const
+         U QAssociativeIterable::begin() const
+         U QFutureInterfaceBase::isCanceled() const
+         U QNetworkAddressEntry::ip() const
+         U QDir::exists() const
+         U QDir::mkpath(QString const&) const
+         U QDir::entryList(QFlags<QDir::Filter>, QFlags<QDir::SortFlag>) const
+         U QDir::entryList(QStringList const&, QFlags<QDir::Filter>, QFlags<QDir::SortFlag>) const
+         U QFile::exists() const
+         U QTime::addSecs(int) const
+         U QTime::toString(QString const&) const
+         U QUuid::toString() const
+         U QObject::thread() const
+         U QRegExp::indexIn(QString const&, int, QRegExp::CaretMode) const
+         U QScreen::physicalDotsPerInch() const
+         U QString::startsWith(QString const&, Qt::CaseSensitivity) const
+         U QString::lastIndexOf(QString const&, int, Qt::CaseSensitivity) const
+         U QString::arg(QString const&, int, QChar) const
+         U QString::arg(long long, int, int, QChar) const
+         U QString::mid(int, int) const
+         U QString::left(int) const
+         U QString::right(int) const
+         U QString::split(QString const&, QString::SplitBehavior, Qt::CaseSensitivity) const
+         U QString::toInt(bool*, int) const
+         U QString::compare(QString const&, Qt::CaseSensitivity) const
+         U QString::indexOf(QRegExp const&, int) const
+         U QString::indexOf(QString const&, int, Qt::CaseSensitivity) const
+         U QString::section(QString const&, int, int, QFlags<QString::SectionFlag>) const
+         U QString::toFloat(bool*) const
+         U QString::toLower() const
+         U QString::toUpper() const
+         U QString::trimmed() const
+         U QString::endsWith(QChar, Qt::CaseSensitivity) const
+         U QString::endsWith(QString const&, Qt::CaseSensitivity) const
+         U QString::multiArg(int, QString const**) const
+         U QString::toDouble(bool*) const
+         U QDomNode::childNodes() const
+         U QDomNode::firstChild() const
+         U QDomNode::nextSibling() const
+         U QDomNode::isNull() const
+         U QDomNode::isElement() const
+         U QDomNode::toElement() const
+         U QProcess::exitStatus() const
+         U QProcess::exitCode() const
+         U QVariant::canConvert(int) const
+         U QVariant::cmp(QVariant const&) const
+         U QVariant::compare(QVariant const&) const
+         U QVariant::convert(int, void*) const
+         U QVariant::toString() const
+         U QVariant::userType() const
+         U QVariant::constData() const
+         U QDateTime::toMSecsSinceEpoch() const
+         U QDateTime::time() const
+         U QDateTime::toString(QString const&) const
+         U QFileInfo::lastModified() const
+         U QIODevice::errorString() const
+         U QIODevice::isOpen() const
+         U QTimeZone::offsetFromUtc(QDateTime const&) const
+         U std::exception::~exception()@@GLIBCXX_3.4
+         U operator new(unsigned int)@@GLIBCXX_3.4
+         U operator>>(QDataStream&, QString&)
+         U operator>>(QDataStream&, QVariant&)
+         U std::terminate()@@GLIBCXX_3.4
+         U typeinfo for QException
+         U typeinfo for std::bad_alloc@@GLIBCXX_3.4
+         U vtable for QException
+         U vtable for QFutureWatcherBase
+         U vtable for QUnhandledException
+0001638c T _init
+00017460 t _GLOBAL__sub_D_main
+00017474 t _GLOBAL__sub_D__ZN10FileParser9m_recordsE
+00017484 t _GLOBAL__sub_D__ZN11ViewHandlerC2Ev
+00017498 t _GLOBAL__sub_D__ZN8LauncherC2Ev
+000174ac t _GLOBAL__sub_D__ZN17ConnectionHandlerC2Ev
+000174bc t _GLOBAL__sub_D__ZN14ConnectionViewC2EP7QObject
+000174d0 t _GLOBAL__sub_D__Z18qInitResources_qmlv
+000174d4 t _GLOBAL__sub_D__ZN11ViewHandler18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000174e8 t _GLOBAL__sub_D__ZN8Launcher18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000174fc t _GLOBAL__sub_D__ZN17ConnectionHandler18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00017510 t _GLOBAL__sub_D__ZN14ConnectionView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00017524 t _GLOBAL__sub_I_main
+00017558 T main
+00017d24 t _GLOBAL__sub_I__ZN6RecipeC2EP7QObject
+00017d38 t _GLOBAL__sub_I__ZN7BrewingC2EP7QObject
+00017d4c t _GLOBAL__sub_I__Z16LOG_BREWING_JSONv
+00017d64 t _GLOBAL__sub_I_crcTable
+00017d7c t _GLOBAL__sub_I__ZN10FileParser9m_recordsE
+00018180 t _GLOBAL__sub_I__ZN13ButtonHandlerC2Ev
+00018194 t _GLOBAL__sub_I__ZN19NotificationHandlerC2Ev
+000181a8 t _GLOBAL__sub_I__ZN11ViewHandlerC2Ev
+000181e0 t _GLOBAL__sub_I__ZN10WatersViewC2EP7QObject
+000181f4 t _GLOBAL__sub_I__ZN17RecipeChooserViewC2EP7QObject
+00018208 t _GLOBAL__sub_I__ZN11MashingViewC2EP7QObject
+0001821c t _GLOBAL__sub_I__ZN8HopsViewC2EP7QObject
+00018230 t _GLOBAL__sub_I__ZN11HoppingViewC2EP7QObject
+00018244 t _GLOBAL__sub_I__ZN16FermentablesViewC2EP7QObject
+00018258 t _GLOBAL__sub_I__ZN16FermentationViewC2EP7QObject
+0001826c t _GLOBAL__sub_I__ZN8LauncherC2Ev
+000182a0 t _GLOBAL__sub_I__ZN15SettingsHandlerC2Ev
+000182b4 t _GLOBAL__sub_I__ZN20ConfigurationHandlerC2Ev
+000182c8 t _GLOBAL__sub_I__ZN17ConnectionHandlerC2Ev
+000182fc t _GLOBAL__sub_I__ZN11DetailsViewC2EP7QObject
+00018310 t _GLOBAL__sub_I__ZN14ConnectionViewC2EP7QObject
+00018344 t _GLOBAL__sub_I__ZN11CoolingViewC2EP7QObject
+00018358 t _GLOBAL__sub_I__ZN16NotificationViewC2EP7QObject
+0001836c t _GLOBAL__sub_I__ZN23RemoteConnectionHandlerC2Ev
+00018380 t _GLOBAL__sub_I__ZN10QtDebugLog13LogWriterIntf17setCategoryFilterEPNS_18CategoryFilterIntfE
+00018394 t _GLOBAL__sub_I__ZN12MachineStateC2Ev
+000183a8 t _GLOBAL__sub_I__Z18qInitResources_qmlv
+000183ac t _GLOBAL__sub_I__ZN7Brewing18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000183c0 t _GLOBAL__sub_I__ZN6Recipe18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000183d4 t _GLOBAL__sub_I__ZN13RecipeHandler18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000183e8 t _GLOBAL__sub_I__ZN12SerialParser18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000183fc t _GLOBAL__sub_I__ZN13ButtonHandler18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00018410 t _GLOBAL__sub_I__ZN19NotificationHandler18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00018424 t _GLOBAL__sub_I__ZN11ViewHandler18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+0001845c t _GLOBAL__sub_I__ZN10WatersView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00018470 t _GLOBAL__sub_I__ZN17RecipeChooserView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00018484 t _GLOBAL__sub_I__ZN11MashingView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00018498 t _GLOBAL__sub_I__ZN11HoppingView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000184ac t _GLOBAL__sub_I__ZN16FermentablesView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000184c0 t _GLOBAL__sub_I__ZN16FermentationView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000184d4 t _GLOBAL__sub_I__ZN8Launcher18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+0001850c t _GLOBAL__sub_I__ZN15SettingsHandler18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00018520 t _GLOBAL__sub_I__ZN20ConfigurationHandler18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00018534 t _GLOBAL__sub_I__ZN17ConnectionHandler18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+0001856c t _GLOBAL__sub_I__ZN11DetailsView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00018580 t _GLOBAL__sub_I__ZN14ConnectionView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000185b8 t _GLOBAL__sub_I__ZN11CoolingView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000185cc t _GLOBAL__sub_I__ZN16NotificationView18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000185e0 t _GLOBAL__sub_I__ZN23RemoteConnectionHandler18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+000185f4 t _GLOBAL__sub_I__ZN12MachineState18qt_static_metacallEP7QObjectN11QMetaObject4CallEiPPv
+00018608 T _start
+00018644 t call_weak_fn
+00018668 t deregister_tm_clones
+000186a0 t register_tm_clones
+000186e0 t __do_global_dtors_aux
+00018708 t frame_dummy
+0001873c t void QBasicAtomicOps<4>::orderedMemoryFence<int>(int const&) [clone .isra.187]
+00018744 t __tcf_2
+00018760 t __tcf_3
+0001877c t __tcf_1
+00018798 t __tcf_4
+000187b4 t __tcf_0
+000187d0 W QFutureWatcher<void>::futureInterface() const
+000187d8 W QFutureWatcher<void>::futureInterface()
+000187e0 W QtDebugLog::EmptyCategoryFilter::isEnabled(QString const&) const
+000187e8 W Singleton<RecipeHandler>::~Singleton()
+000187e8 W Singleton<RecipeHandler>::~Singleton()
+0001880c W Singleton<Launcher>::~Singleton()
+0001880c W Singleton<Launcher>::~Singleton()
+00018830 W Singleton<MachineState>::~Singleton()
+00018830 W Singleton<MachineState>::~Singleton()
+00018854 W Singleton<NotificationHandler>::~Singleton()
+00018854 W Singleton<NotificationHandler>::~Singleton()
+00018878 W QtMetaTypePrivate::QMetaTypeFunctionHelper<Recipe*, true>::Destruct(void*)
+0001887c W QtMetaTypePrivate::QMetaTypeFunctionHelper<Recipe*, true>::Construct(void*, void const*)
+00018894 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<Recipe>, true>::Destruct(void*)
+00018898 W QtMetaTypePrivate::QMetaTypeFunctionHelper<RecipeHandler*, true>::Destruct(void*)
+0001889c W QtMetaTypePrivate::QMetaTypeFunctionHelper<RecipeHandler*, true>::Construct(void*, void const*)
+000188b4 W QtMetaTypePrivate::QMetaTypeFunctionHelper<MachineState*, true>::Destruct(void*)
+000188b8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<MachineState*, true>::Construct(void*, void const*)
+000188d0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<Brewing*, true>::Destruct(void*)
+000188d4 W QtMetaTypePrivate::QMetaTypeFunctionHelper<Brewing*, true>::Construct(void*, void const*)
+000188ec W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<Brewing>, true>::Destruct(void*)
+000188f0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<NotificationHandler*, true>::Destruct(void*)
+000188f4 W QtMetaTypePrivate::QMetaTypeFunctionHelper<NotificationHandler*, true>::Construct(void*, void const*)
+0001890c W QtMetaTypePrivate::QMetaTypeFunctionHelper<FermentablesView*, true>::Destruct(void*)
+00018910 W QtMetaTypePrivate::QMetaTypeFunctionHelper<FermentablesView*, true>::Construct(void*, void const*)
+00018928 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<FermentablesView>, true>::Destruct(void*)
+0001892c W QtMetaTypePrivate::QMetaTypeFunctionHelper<HopsView*, true>::Destruct(void*)
+00018930 W QtMetaTypePrivate::QMetaTypeFunctionHelper<HopsView*, true>::Construct(void*, void const*)
+00018948 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<HopsView>, true>::Destruct(void*)
+0001894c W QtMetaTypePrivate::QMetaTypeFunctionHelper<RecipeChooserView*, true>::Destruct(void*)
+00018950 W QtMetaTypePrivate::QMetaTypeFunctionHelper<RecipeChooserView*, true>::Construct(void*, void const*)
+00018968 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<RecipeChooserView>, true>::Destruct(void*)
+0001896c W QtMetaTypePrivate::QMetaTypeFunctionHelper<DetailsView*, true>::Destruct(void*)
+00018970 W QtMetaTypePrivate::QMetaTypeFunctionHelper<DetailsView*, true>::Construct(void*, void const*)
+00018988 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<DetailsView>, true>::Destruct(void*)
+0001898c W QtMetaTypePrivate::QMetaTypeFunctionHelper<WatersView*, true>::Destruct(void*)
+00018990 W QtMetaTypePrivate::QMetaTypeFunctionHelper<WatersView*, true>::Construct(void*, void const*)
+000189a8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<WatersView>, true>::Destruct(void*)
+000189ac W QtMetaTypePrivate::QMetaTypeFunctionHelper<MashingView*, true>::Destruct(void*)
+000189b0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<MashingView*, true>::Construct(void*, void const*)
+000189c8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<MashingView>, true>::Destruct(void*)
+000189cc W QtMetaTypePrivate::QMetaTypeFunctionHelper<HoppingView*, true>::Destruct(void*)
+000189d0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<HoppingView*, true>::Construct(void*, void const*)
+000189e8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<HoppingView>, true>::Destruct(void*)
+000189ec W QtMetaTypePrivate::QMetaTypeFunctionHelper<FermentationView*, true>::Destruct(void*)
+000189f0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<FermentationView*, true>::Construct(void*, void const*)
+00018a08 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<FermentationView>, true>::Destruct(void*)
+00018a0c W QtMetaTypePrivate::QMetaTypeFunctionHelper<InputSelectorView*, true>::Destruct(void*)
+00018a10 W QtMetaTypePrivate::QMetaTypeFunctionHelper<InputSelectorView*, true>::Construct(void*, void const*)
+00018a28 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<InputSelectorView>, true>::Destruct(void*)
+00018a2c W QtMetaTypePrivate::QMetaTypeFunctionHelper<ConnectionView*, true>::Destruct(void*)
+00018a30 W QtMetaTypePrivate::QMetaTypeFunctionHelper<ConnectionView*, true>::Construct(void*, void const*)
+00018a48 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<ConnectionView>, true>::Destruct(void*)
+00018a4c W QtMetaTypePrivate::QMetaTypeFunctionHelper<CoolingView*, true>::Destruct(void*)
+00018a50 W QtMetaTypePrivate::QMetaTypeFunctionHelper<CoolingView*, true>::Construct(void*, void const*)
+00018a68 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<CoolingView>, true>::Destruct(void*)
+00018a6c W QtMetaTypePrivate::QMetaTypeFunctionHelper<NotificationView*, true>::Destruct(void*)
+00018a70 W QtMetaTypePrivate::QMetaTypeFunctionHelper<NotificationView*, true>::Construct(void*, void const*)
+00018a88 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<NotificationView>, true>::Destruct(void*)
+00018a8c W QtSharedPointer::ExternalRefCountWithCustomDeleter<QtDebugLog::LogWriterIntf, QtSharedPointer::NormalDeleter>::deleter(QtSharedPointer::ExternalRefCountData*)
+00018aac W QtMetaTypePrivate::QMetaTypeFunctionHelper<Recipe*, true>::Delete(void*)
+00018ab0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<Recipe>, true>::Delete(void*)
+00018ab4 W QtMetaTypePrivate::QMetaTypeFunctionHelper<RecipeHandler*, true>::Delete(void*)
+00018ab8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<MachineState*, true>::Delete(void*)
+00018abc W QtMetaTypePrivate::QMetaTypeFunctionHelper<Brewing*, true>::Delete(void*)
+00018ac0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<Brewing>, true>::Delete(void*)
+00018ac4 W QtMetaTypePrivate::QMetaTypeFunctionHelper<NotificationHandler*, true>::Delete(void*)
+00018ac8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<FermentablesView*, true>::Delete(void*)
+00018acc W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<FermentablesView>, true>::Delete(void*)
+00018ad0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<HopsView*, true>::Delete(void*)
+00018ad4 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<HopsView>, true>::Delete(void*)
+00018ad8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<RecipeChooserView*, true>::Delete(void*)
+00018adc W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<RecipeChooserView>, true>::Delete(void*)
+00018ae0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<DetailsView*, true>::Delete(void*)
+00018ae4 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<DetailsView>, true>::Delete(void*)
+00018ae8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<WatersView*, true>::Delete(void*)
+00018aec W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<WatersView>, true>::Delete(void*)
+00018af0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<MashingView*, true>::Delete(void*)
+00018af4 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<MashingView>, true>::Delete(void*)
+00018af8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<HoppingView*, true>::Delete(void*)
+00018afc W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<HoppingView>, true>::Delete(void*)
+00018b00 W QtMetaTypePrivate::QMetaTypeFunctionHelper<FermentationView*, true>::Delete(void*)
+00018b04 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<FermentationView>, true>::Delete(void*)
+00018b08 W QtMetaTypePrivate::QMetaTypeFunctionHelper<InputSelectorView*, true>::Delete(void*)
+00018b0c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<InputSelectorView>, true>::Delete(void*)
+00018b10 W QtMetaTypePrivate::QMetaTypeFunctionHelper<ConnectionView*, true>::Delete(void*)
+00018b14 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<ConnectionView>, true>::Delete(void*)
+00018b18 W QtMetaTypePrivate::QMetaTypeFunctionHelper<CoolingView*, true>::Delete(void*)
+00018b1c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<CoolingView>, true>::Delete(void*)
+00018b20 W QtMetaTypePrivate::QMetaTypeFunctionHelper<NotificationView*, true>::Delete(void*)
+00018b24 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<NotificationView>, true>::Delete(void*)
+00018b28 W Singleton<RecipeHandler>::~Singleton()
+00018b5c W Singleton<Launcher>::~Singleton()
+00018b90 W Singleton<MachineState>::~Singleton()
+00018bc4 W Singleton<NotificationHandler>::~Singleton()
+00018bf8 W QFutureWatcherBase::~QFutureWatcherBase()
+00018bf8 W QFutureWatcherBase::~QFutureWatcherBase()
+00018c2c W QFutureWatcherBase::~QFutureWatcherBase()
+00018c48 W CoolingView::~CoolingView()
+00018c48 W CoolingView::~CoolingView()
+00018c7c W CoolingView::~CoolingView()
+00018c98 W QObject* Singleton<NotificationHandler>::qmlInstanceProvider<NotificationHandler, std::enable_if<true, QObject*> >(QQmlEngine*, QJSEngine*)
+00018d20 W QObject* Singleton<MachineState>::qmlInstanceProvider<MachineState, std::enable_if<true, QObject*> >(QQmlEngine*, QJSEngine*)
+00018da8 W QQmlPrivate::QQmlElement<CoolingView>::~QQmlElement()
+00018da8 W QQmlPrivate::QQmlElement<CoolingView>::~QQmlElement()
+00018de4 W QQmlPrivate::QQmlElement<CoolingView>::~QQmlElement()
+00018e00 W QtMetaTypePrivate::QMetaTypeFunctionHelper<Recipe*, true>::Create(void const*)
+00018e2c W QtMetaTypePrivate::QMetaTypeFunctionHelper<RecipeHandler*, true>::Create(void const*)
+00018e58 W QtMetaTypePrivate::QMetaTypeFunctionHelper<MachineState*, true>::Create(void const*)
+00018e84 W QtMetaTypePrivate::QMetaTypeFunctionHelper<Brewing*, true>::Create(void const*)
+00018eb0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<NotificationHandler*, true>::Create(void const*)
+00018edc W QtMetaTypePrivate::QMetaTypeFunctionHelper<FermentablesView*, true>::Create(void const*)
+00018f08 W QtMetaTypePrivate::QMetaTypeFunctionHelper<HopsView*, true>::Create(void const*)
+00018f34 W QtMetaTypePrivate::QMetaTypeFunctionHelper<RecipeChooserView*, true>::Create(void const*)
+00018f60 W QtMetaTypePrivate::QMetaTypeFunctionHelper<DetailsView*, true>::Create(void const*)
+00018f8c W QtMetaTypePrivate::QMetaTypeFunctionHelper<WatersView*, true>::Create(void const*)
+00018fb8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<MashingView*, true>::Create(void const*)
+00018fe4 W QtMetaTypePrivate::QMetaTypeFunctionHelper<HoppingView*, true>::Create(void const*)
+00019010 W QtMetaTypePrivate::QMetaTypeFunctionHelper<FermentationView*, true>::Create(void const*)
+0001903c W QtMetaTypePrivate::QMetaTypeFunctionHelper<InputSelectorView*, true>::Create(void const*)
+00019068 W QtMetaTypePrivate::QMetaTypeFunctionHelper<ConnectionView*, true>::Create(void const*)
+00019094 W QtMetaTypePrivate::QMetaTypeFunctionHelper<CoolingView*, true>::Create(void const*)
+000190c0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<NotificationView*, true>::Create(void const*)
+000190ec W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<WatersView>, true>::Create(void const*)
+0001914c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<FermentablesView>, true>::Create(void const*)
+000191ac W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<HopsView>, true>::Create(void const*)
+0001920c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<RecipeChooserView>, true>::Create(void const*)
+0001926c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<DetailsView>, true>::Create(void const*)
+000192cc W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<Recipe>, true>::Create(void const*)
+0001932c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<Brewing>, true>::Create(void const*)
+0001938c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<InputSelectorView>, true>::Create(void const*)
+000193ec W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<ConnectionView>, true>::Create(void const*)
+0001944c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<CoolingView>, true>::Create(void const*)
+000194ac W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<NotificationView>, true>::Create(void const*)
+0001950c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<HoppingView>, true>::Create(void const*)
+0001956c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<FermentationView>, true>::Create(void const*)
+000195cc W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<MashingView>, true>::Create(void const*)
+0001962c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<Recipe>, true>::Construct(void*, void const*)
+00019690 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<Brewing>, true>::Construct(void*, void const*)
+000196f4 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<FermentablesView>, true>::Construct(void*, void const*)
+00019758 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<HopsView>, true>::Construct(void*, void const*)
+000197bc W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<RecipeChooserView>, true>::Construct(void*, void const*)
+00019820 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<DetailsView>, true>::Construct(void*, void const*)
+00019884 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<WatersView>, true>::Construct(void*, void const*)
+000198e8 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<MashingView>, true>::Construct(void*, void const*)
+0001994c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<HoppingView>, true>::Construct(void*, void const*)
+000199b0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<FermentationView>, true>::Construct(void*, void const*)
+00019a14 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<CoolingView>, true>::Construct(void*, void const*)
+00019a78 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<NotificationView>, true>::Construct(void*, void const*)
+00019adc W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<InputSelectorView>, true>::Construct(void*, void const*)
+00019b40 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QQmlListProperty<ConnectionView>, true>::Construct(void*, void const*)
+00019ba4 W void QQmlPrivate::createInto<NotificationView>(void*)
+00019bdc W void QQmlPrivate::createInto<Recipe>(void*)
+00019c14 W void QQmlPrivate::createInto<WatersView>(void*)
+00019c4c W void QQmlPrivate::createInto<MashingView>(void*)
+00019c84 W void QQmlPrivate::createInto<RecipeChooserView>(void*)
+00019cbc W void QQmlPrivate::createInto<DetailsView>(void*)
+00019cf4 W void QQmlPrivate::createInto<HoppingView>(void*)
+00019d2c W void QQmlPrivate::createInto<FermentationView>(void*)
+00019d64 W void QQmlPrivate::createInto<InputSelectorView>(void*)
+00019d9c W void QQmlPrivate::createInto<ConnectionView>(void*)
+00019dd4 W void QQmlPrivate::createInto<Brewing>(void*)
+00019e0c W void QQmlPrivate::createInto<FermentablesView>(void*)
+00019e44 W void QQmlPrivate::createInto<HopsView>(void*)
+00019e7c W void QQmlPrivate::createInto<CoolingView>(void*)
+00019eb4 W QtDebugLog::LogWriterIntf::~LogWriterIntf()
+00019eb4 W QtDebugLog::LogWriterIntf::~LogWriterIntf()
+00019efc W QtDebugLog::LogWriterIntf::~LogWriterIntf()
+00019f18 W QByteArray::constData() const
+00019f60 W QByteArray::reserve(int)
+00019fcc W operator==(QByteArray const&, QByteArray const&)
+0001a020 W QString::QString(char const*)
+0001a020 W QString::QString(char const*)
+0001a058 W Singleton<QtDebugLog>::getInstance()
+0001a0d4 W QSharedPointer<QtDebugLog::LogWriterIntf>::QSharedPointer(QtDebugLog::LogWriterIntf*)
+0001a0d4 W QSharedPointer<QtDebugLog::LogWriterIntf>::QSharedPointer(QtDebugLog::LogWriterIntf*)
+0001a140 W Singleton<RecipeHandler>::getInstance()
+0001a1bc W QObject* Singleton<RecipeHandler>::qmlInstanceProvider<RecipeHandler, std::enable_if<true, QObject*> >(QQmlEngine*, QJSEngine*)
+0001a1d8 W bool QBasicAtomicOps<4>::ref<int>(int&)
+0001a1f8 W QtPrivate::RefCount::ref()
+0001a228 W QString::QString(QString const&)
+0001a228 W QString::QString(QString const&)
+0001a26c W QHash<QString, QHashDummyValue>::duplicateNode(QHashData::Node*, void*)
+0001a290 W bool QBasicAtomicOps<4>::deref<int>(int&)
+0001a2b0 W QtPrivate::RefCount::deref()
+0001a2d8 W QByteArray::~QByteArray()
+0001a2d8 W QByteArray::~QByteArray()
+0001a308 W QString::~QString()
+0001a308 W QString::~QString()
+0001a338 W Launcher::~Launcher()
+0001a338 W Launcher::~Launcher()
+0001a39c W non-virtual thunk to Launcher::~Launcher()
+0001a3a4 W Launcher::~Launcher()
+0001a3c0 W non-virtual thunk to Launcher::~Launcher()
+0001a3c8 W MachineState::~MachineState()
+0001a3c8 W MachineState::~MachineState()
+0001a42c W non-virtual thunk to MachineState::~MachineState()
+0001a434 W MachineState::~MachineState()
+0001a450 W non-virtual thunk to MachineState::~MachineState()
+0001a458 W QHash<QString, QHashDummyValue>::deleteNode2(QHashData::Node*)
+0001a460 W QHash<QString, QHashDummyValue>::~QHash()
+0001a460 W QHash<QString, QHashDummyValue>::~QHash()
+0001a4a4 W QList<QVariant>::~QList()
+0001a4a4 W QList<QVariant>::~QList()
+0001a514 W FermentablesView::~FermentablesView()
+0001a514 W FermentablesView::~FermentablesView()
+0001a550 W FermentablesView::~FermentablesView()
+0001a56c W QQmlPrivate::QQmlElement<FermentablesView>::~QQmlElement()
+0001a56c W QQmlPrivate::QQmlElement<FermentablesView>::~QQmlElement()
+0001a5a8 W QQmlPrivate::QQmlElement<FermentablesView>::~QQmlElement()
+0001a5c4 W HopsView::~HopsView()
+0001a5c4 W HopsView::~HopsView()
+0001a600 W HopsView::~HopsView()
+0001a61c W QQmlPrivate::QQmlElement<HopsView>::~QQmlElement()
+0001a61c W QQmlPrivate::QQmlElement<HopsView>::~QQmlElement()
+0001a658 W QQmlPrivate::QQmlElement<HopsView>::~QQmlElement()
+0001a674 W RecipeChooserView::~RecipeChooserView()
+0001a674 W RecipeChooserView::~RecipeChooserView()
+0001a6b0 W RecipeChooserView::~RecipeChooserView()
+0001a6cc W QQmlPrivate::QQmlElement<RecipeChooserView>::~QQmlElement()
+0001a6cc W QQmlPrivate::QQmlElement<RecipeChooserView>::~QQmlElement()
+0001a708 W QQmlPrivate::QQmlElement<RecipeChooserView>::~QQmlElement()
+0001a724 W MashingView::~MashingView()
+0001a724 W MashingView::~MashingView()
+0001a760 W MashingView::~MashingView()
+0001a77c W QQmlPrivate::QQmlElement<MashingView>::~QQmlElement()
+0001a77c W QQmlPrivate::QQmlElement<MashingView>::~QQmlElement()
+0001a7b8 W QQmlPrivate::QQmlElement<MashingView>::~QQmlElement()
+0001a7d4 W HoppingView::~HoppingView()
+0001a7d4 W HoppingView::~HoppingView()
+0001a810 W HoppingView::~HoppingView()
+0001a82c W QQmlPrivate::QQmlElement<HoppingView>::~QQmlElement()
+0001a82c W QQmlPrivate::QQmlElement<HoppingView>::~QQmlElement()
+0001a868 W QQmlPrivate::QQmlElement<HoppingView>::~QQmlElement()
+0001a884 W FermentationView::~FermentationView()
+0001a884 W FermentationView::~FermentationView()
+0001a8c0 W FermentationView::~FermentationView()
+0001a8dc W QQmlPrivate::QQmlElement<FermentationView>::~QQmlElement()
+0001a8dc W QQmlPrivate::QQmlElement<FermentationView>::~QQmlElement()
+0001a918 W QQmlPrivate::QQmlElement<FermentationView>::~QQmlElement()
+0001a934 W QSharedPointer<QtDebugLog::LogWriterIntf>::~QSharedPointer()
+0001a934 W QSharedPointer<QtDebugLog::LogWriterIntf>::~QSharedPointer()
+0001a9d4 W std::unique_ptr<Brewing, std::default_delete<Brewing> >::~unique_ptr()
+0001a9d4 W std::unique_ptr<Brewing, std::default_delete<Brewing> >::~unique_ptr()
+0001aa04 W RecipeHandler::~RecipeHandler()
+0001aa04 W RecipeHandler::~RecipeHandler()
+0001aaa8 W non-virtual thunk to RecipeHandler::~RecipeHandler()
+0001aab0 W RecipeHandler::~RecipeHandler()
+0001aacc W non-virtual thunk to RecipeHandler::~RecipeHandler()
+0001aad4 W QVarLengthArray<char, 48>::QVarLengthArray(int)
+0001aad4 W QVarLengthArray<char, 48>::QVarLengthArray(int)
+0001ab50 W QVarLengthArray<char, 48>::~QVarLengthArray()
+0001ab50 W QVarLengthArray<char, 48>::~QVarLengthArray()
+0001ab74 W QVarLengthArray<char, 48>::operator[](int)
+0001abb8 W QVarLengthArray<char, 64>::QVarLengthArray(int)
+0001abb8 W QVarLengthArray<char, 64>::QVarLengthArray(int)
+0001ac34 W QVarLengthArray<char, 64>::~QVarLengthArray()
+0001ac34 W QVarLengthArray<char, 64>::~QVarLengthArray()
+0001ac58 W QVarLengthArray<char, 64>::operator[](int)
+0001ac9c W QMapNode<QString, QVariant>::destroySubTree()
+0001acd4 W QMap<QString, QVariant>::~QMap()
+0001acd4 W QMap<QString, QVariant>::~QMap()
+0001ad20 W Recipe::~Recipe()
+0001ad20 W Recipe::~Recipe()
+0001ad7c W Recipe::~Recipe()
+0001ad98 W QQmlPrivate::QQmlElement<Recipe>::~QQmlElement()
+0001ad98 W QQmlPrivate::QQmlElement<Recipe>::~QQmlElement()
+0001add4 W QQmlPrivate::QQmlElement<Recipe>::~QQmlElement()
+0001adf0 W Brewing::~Brewing()
+0001adf0 W Brewing::~Brewing()
+0001ae44 W Brewing::~Brewing()
+0001ae60 W QQmlPrivate::QQmlElement<Brewing>::~QQmlElement()
+0001ae60 W QQmlPrivate::QQmlElement<Brewing>::~QQmlElement()
+0001ae9c W QQmlPrivate::QQmlElement<Brewing>::~QQmlElement()
+0001aeb8 W NotificationHandler::~NotificationHandler()
+0001aeb8 W NotificationHandler::~NotificationHandler()
+0001af1c W non-virtual thunk to NotificationHandler::~NotificationHandler()
+0001af24 W NotificationHandler::~NotificationHandler()
+0001af40 W non-virtual thunk to NotificationHandler::~NotificationHandler()
+0001af48 W DetailsView::~DetailsView()
+0001af48 W DetailsView::~DetailsView()
+0001af84 W DetailsView::~DetailsView()
+0001afa0 W QQmlPrivate::QQmlElement<DetailsView>::~QQmlElement()
+0001afa0 W QQmlPrivate::QQmlElement<DetailsView>::~QQmlElement()
+0001afdc W QQmlPrivate::QQmlElement<DetailsView>::~QQmlElement()
+0001aff8 W WatersView::~WatersView()
+0001aff8 W WatersView::~WatersView()
+0001b034 W WatersView::~WatersView()
+0001b050 W QQmlPrivate::QQmlElement<WatersView>::~QQmlElement()
+0001b050 W QQmlPrivate::QQmlElement<WatersView>::~QQmlElement()
+0001b08c W QQmlPrivate::QQmlElement<WatersView>::~QQmlElement()
+0001b0a8 W InputSelectorView::~InputSelectorView()
+0001b0a8 W InputSelectorView::~InputSelectorView()
+0001b144 W InputSelectorView::~InputSelectorView()
+0001b160 W QQmlPrivate::QQmlElement<InputSelectorView>::~QQmlElement()
+0001b160 W QQmlPrivate::QQmlElement<InputSelectorView>::~QQmlElement()
+0001b19c W QQmlPrivate::QQmlElement<InputSelectorView>::~QQmlElement()
+0001b1b8 W NotificationView::~NotificationView()
+0001b1b8 W NotificationView::~NotificationView()
+0001b1f4 W NotificationView::~NotificationView()
+0001b210 W QQmlPrivate::QQmlElement<NotificationView>::~QQmlElement()
+0001b210 W QQmlPrivate::QQmlElement<NotificationView>::~QQmlElement()
+0001b24c W QQmlPrivate::QQmlElement<NotificationView>::~QQmlElement()
+0001b268 W QHash<QString, QHashDummyValue>::detach()
+0001b2e8 W QHash<QString, QHashDummyValue>::QHash(QHash<QString, QHashDummyValue> const&)
+0001b2e8 W QHash<QString, QHashDummyValue>::QHash(QHash<QString, QHashDummyValue> const&)
+0001b320 W QHash<QString, QHashDummyValue>::findNode(QString const&, unsigned int*) const
+0001b404 W QtDebugLog::CategoryBlackList::isEnabled(QString const&) const
+0001b430 W QSet<QString>::QSet(std::initializer_list<QString>)
+0001b430 W QSet<QString>::QSet(std::initializer_list<QString>)
+0001b548 W QtDebugLog::CategoryWhiteList::isEnabled(QString const&) const
+0001b570 W QMetaTypeIdQObject<Recipe*, true>::qt_metatype_id()
+0001b624 W int qRegisterNormalizedMetaType<Recipe*>(QByteArray const&, Recipe**, QtPrivate::MetaTypeDefinedHelper<Recipe*, QMetaTypeId2<Recipe*>::Defined&&(!QMetaTypeId2<Recipe*>::IsBuiltIn)>::DefinedType)
+0001b72c W int qmlRegisterType<Recipe>(char const*, int, int, char const*)
+0001ba00 W QMetaTypeIdQObject<RecipeHandler*, true>::qt_metatype_id()
+0001bab4 W int qRegisterNormalizedMetaType<RecipeHandler*>(QByteArray const&, RecipeHandler**, QtPrivate::MetaTypeDefinedHelper<RecipeHandler*, QMetaTypeId2<RecipeHandler*>::Defined&&(!QMetaTypeId2<RecipeHandler*>::IsBuiltIn)>::DefinedType)
+0001bbbc W int qmlRegisterSingletonType<RecipeHandler>(char const*, int, int, char const*, QObject* (*)(QQmlEngine*, QJSEngine*))
+0001bd7c W QMetaTypeIdQObject<MachineState*, true>::qt_metatype_id()
+0001be30 W int qRegisterNormalizedMetaType<MachineState*>(QByteArray const&, MachineState**, QtPrivate::MetaTypeDefinedHelper<MachineState*, QMetaTypeId2<MachineState*>::Defined&&(!QMetaTypeId2<MachineState*>::IsBuiltIn)>::DefinedType)
+0001bf38 W int qmlRegisterSingletonType<MachineState>(char const*, int, int, char const*, QObject* (*)(QQmlEngine*, QJSEngine*))
+0001c0f8 W QMetaTypeIdQObject<Brewing*, true>::qt_metatype_id()
+0001c1ac W int qRegisterNormalizedMetaType<Brewing*>(QByteArray const&, Brewing**, QtPrivate::MetaTypeDefinedHelper<Brewing*, QMetaTypeId2<Brewing*>::Defined&&(!QMetaTypeId2<Brewing*>::IsBuiltIn)>::DefinedType)
+0001c2b4 W int qmlRegisterType<Brewing>(char const*, int, int, char const*)
+0001c588 W QMetaTypeIdQObject<NotificationHandler*, true>::qt_metatype_id()
+0001c63c W int qRegisterNormalizedMetaType<NotificationHandler*>(QByteArray const&, NotificationHandler**, QtPrivate::MetaTypeDefinedHelper<NotificationHandler*, QMetaTypeId2<NotificationHandler*>::Defined&&(!QMetaTypeId2<NotificationHandler*>::IsBuiltIn)>::DefinedType)
+0001c744 W int qmlRegisterSingletonType<NotificationHandler>(char const*, int, int, char const*, QObject* (*)(QQmlEngine*, QJSEngine*))
+0001c904 W QMetaTypeIdQObject<FermentablesView*, true>::qt_metatype_id()
+0001c9b8 W int qRegisterNormalizedMetaType<FermentablesView*>(QByteArray const&, FermentablesView**, QtPrivate::MetaTypeDefinedHelper<FermentablesView*, QMetaTypeId2<FermentablesView*>::Defined&&(!QMetaTypeId2<FermentablesView*>::IsBuiltIn)>::DefinedType)
+0001cac0 W int qmlRegisterType<FermentablesView>(char const*, int, int, char const*)
+0001cd94 W QMetaTypeIdQObject<HopsView*, true>::qt_metatype_id()
+0001ce48 W int qRegisterNormalizedMetaType<HopsView*>(QByteArray const&, HopsView**, QtPrivate::MetaTypeDefinedHelper<HopsView*, QMetaTypeId2<HopsView*>::Defined&&(!QMetaTypeId2<HopsView*>::IsBuiltIn)>::DefinedType)
+0001cf50 W int qmlRegisterType<HopsView>(char const*, int, int, char const*)
+0001d224 W QMetaTypeIdQObject<RecipeChooserView*, true>::qt_metatype_id()
+0001d2d8 W int qRegisterNormalizedMetaType<RecipeChooserView*>(QByteArray const&, RecipeChooserView**, QtPrivate::MetaTypeDefinedHelper<RecipeChooserView*, QMetaTypeId2<RecipeChooserView*>::Defined&&(!QMetaTypeId2<RecipeChooserView*>::IsBuiltIn)>::DefinedType)
+0001d3e0 W int qmlRegisterType<RecipeChooserView>(char const*, int, int, char const*)
+0001d6b4 W QMetaTypeIdQObject<DetailsView*, true>::qt_metatype_id()
+0001d768 W int qRegisterNormalizedMetaType<DetailsView*>(QByteArray const&, DetailsView**, QtPrivate::MetaTypeDefinedHelper<DetailsView*, QMetaTypeId2<DetailsView*>::Defined&&(!QMetaTypeId2<DetailsView*>::IsBuiltIn)>::DefinedType)
+0001d870 W int qmlRegisterType<DetailsView>(char const*, int, int, char const*)
+0001db44 W QMetaTypeIdQObject<WatersView*, true>::qt_metatype_id()
+0001dbf8 W int qRegisterNormalizedMetaType<WatersView*>(QByteArray const&, WatersView**, QtPrivate::MetaTypeDefinedHelper<WatersView*, QMetaTypeId2<WatersView*>::Defined&&(!QMetaTypeId2<WatersView*>::IsBuiltIn)>::DefinedType)
+0001dd00 W int qmlRegisterType<WatersView>(char const*, int, int, char const*)
+0001dfd4 W QMetaTypeIdQObject<MashingView*, true>::qt_metatype_id()
+0001e088 W int qRegisterNormalizedMetaType<MashingView*>(QByteArray const&, MashingView**, QtPrivate::MetaTypeDefinedHelper<MashingView*, QMetaTypeId2<MashingView*>::Defined&&(!QMetaTypeId2<MashingView*>::IsBuiltIn)>::DefinedType)
+0001e190 W int qmlRegisterType<MashingView>(char const*, int, int, char const*)
+0001e464 W QMetaTypeIdQObject<HoppingView*, true>::qt_metatype_id()
+0001e518 W int qRegisterNormalizedMetaType<HoppingView*>(QByteArray const&, HoppingView**, QtPrivate::MetaTypeDefinedHelper<HoppingView*, QMetaTypeId2<HoppingView*>::Defined&&(!QMetaTypeId2<HoppingView*>::IsBuiltIn)>::DefinedType)
+0001e620 W int qmlRegisterType<HoppingView>(char const*, int, int, char const*)
+0001e8f4 W QMetaTypeIdQObject<FermentationView*, true>::qt_metatype_id()
+0001e9a8 W int qRegisterNormalizedMetaType<FermentationView*>(QByteArray const&, FermentationView**, QtPrivate::MetaTypeDefinedHelper<FermentationView*, QMetaTypeId2<FermentationView*>::Defined&&(!QMetaTypeId2<FermentationView*>::IsBuiltIn)>::DefinedType)
+0001eab0 W int qmlRegisterType<FermentationView>(char const*, int, int, char const*)
+0001ed84 W QMetaTypeIdQObject<InputSelectorView*, true>::qt_metatype_id()
+0001ee38 W int qRegisterNormalizedMetaType<InputSelectorView*>(QByteArray const&, InputSelectorView**, QtPrivate::MetaTypeDefinedHelper<InputSelectorView*, QMetaTypeId2<InputSelectorView*>::Defined&&(!QMetaTypeId2<InputSelectorView*>::IsBuiltIn)>::DefinedType)
+0001ef40 W int qmlRegisterType<InputSelectorView>(char const*, int, int, char const*)
+0001f214 W QMetaTypeIdQObject<ConnectionView*, true>::qt_metatype_id()
+0001f2c8 W int qRegisterNormalizedMetaType<ConnectionView*>(QByteArray const&, ConnectionView**, QtPrivate::MetaTypeDefinedHelper<ConnectionView*, QMetaTypeId2<ConnectionView*>::Defined&&(!QMetaTypeId2<ConnectionView*>::IsBuiltIn)>::DefinedType)
+0001f3d0 W int qmlRegisterType<ConnectionView>(char const*, int, int, char const*)
+0001f6a4 W QMetaTypeIdQObject<CoolingView*, true>::qt_metatype_id()
+0001f758 W int qRegisterNormalizedMetaType<CoolingView*>(QByteArray const&, CoolingView**, QtPrivate::MetaTypeDefinedHelper<CoolingView*, QMetaTypeId2<CoolingView*>::Defined&&(!QMetaTypeId2<CoolingView*>::IsBuiltIn)>::DefinedType)
+0001f860 W int qmlRegisterType<CoolingView>(char const*, int, int, char const*)
+0001fb34 W QMetaTypeIdQObject<NotificationView*, true>::qt_metatype_id()
+0001fbe8 W int qRegisterNormalizedMetaType<NotificationView*>(QByteArray const&, NotificationView**, QtPrivate::MetaTypeDefinedHelper<NotificationView*, QMetaTypeId2<NotificationView*>::Defined&&(!QMetaTypeId2<NotificationView*>::IsBuiltIn)>::DefinedType)
+0001fcf0 W int qmlRegisterType<NotificationView>(char const*, int, int, char const*)
+0001ffc4 W QFutureWatcher<void>::~QFutureWatcher()
+0001ffc4 W QFutureWatcher<void>::~QFutureWatcher()
+00020010 W QFutureWatcher<void>::~QFutureWatcher()
+0002002c W ConnectionView::~ConnectionView()
+0002002c W ConnectionView::~ConnectionView()
+00020078 W ConnectionView::~ConnectionView()
+00020094 W QQmlPrivate::QQmlElement<ConnectionView>::~QQmlElement()
+00020094 W QQmlPrivate::QQmlElement<ConnectionView>::~QQmlElement()
+000200d0 W QQmlPrivate::QQmlElement<ConnectionView>::~QQmlElement()
+000200ec W QDebug::~QDebug()
+000200ec W QDebug::~QDebug()
+000201a8 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.23]
+000201e4 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.24]
+00020214 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.25]
+00020248 T Recipe::getData() const
+00020250 T Recipe::getBounds()
+00020268 T Recipe::getValidation()
+00020280 T Recipe::setData(QMap<QString, QVariant> const&)
+000202cc T Recipe::getFermentation() const
+00020434 T Recipe::Recipe(QObject*)
+00020434 T Recipe::Recipe(QObject*)
+00020534 T Recipe::setId(QString)
+000205ac T Recipe::setFermentables(QList<QVariant>)
+0002063c T Recipe::setHops(QList<QVariant>)
+000206cc T Recipe::setFermentation(QList<QVariant>)
+0002075c T Recipe::setDelayedHoppingTime(int)
+000207d4 T Recipe::setCoolingTemperature(float)
+00020854 T Recipe::getFermentables() const
+00020af4 T Recipe::hasSparging() const
+00020f28 T Recipe::setDetails(QMap<QString, QVariant>)
+00021058 T Recipe::getMashSteps() const
+000213a4 T Recipe::setMashSteps(QList<QVariant>)
+0002158c T Recipe::setMashInWater(float)
+0002177c T Recipe::setMashInTemperature(float)
+0002196c T Recipe::setSpargingWater(float)
+00021b5c T Recipe::setSpargingTime(int)
+00021d44 T Recipe::setSpargingTemperature(float)
+00021f34 T Recipe::removeSparging()
+000220fc T Recipe::getId() const
+000221d0 T Recipe::getPath() const
+000222a4 T Recipe::getHops() const
+0002291c T Recipe::getSpargingTime() const
+00022a70 T Recipe::getDelayedHoppingTime() const
+00022b2c T Recipe::getDetails() const
+0002325c T Recipe::getMashInWater() const
+000233b8 T Recipe::getMashInTemperature() const
+00023514 T Recipe::getSpargingWater() const
+00023674 T Recipe::getSpargingTemperature() const
+000237d0 T Recipe::getCoolingTemperature() const
+00023898 T Recipe::calculateBounds(float, float)
+000241b4 T Recipe::validateWaters(float, float)
+00024510 T Recipe::changeBoundsAmount(float)
+00024540 T Recipe::changeWaterAmount(float, float)
+00024578 T Recipe::validateRecipe(bool)
+00024bd4 T Recipe::calculate()
+00025c5c T Recipe::save()
+00025cd0 W QtMetaTypePrivate::IteratorOwner<QList<QVariant>::const_iterator>::advance(void**, int)
+00025ce4 W QtMetaTypePrivate::IteratorOwner<QList<QVariant>::const_iterator>::equal(void* const*, void* const*)
+00025d04 W void const* QtMetaTypePrivate::QSequentialIterableImpl::atImpl<QList<QVariant> >(void const*, int)
+00025d1c W QtMetaTypePrivate::VariantData QtMetaTypePrivate::QSequentialIterableImpl::getImpl<QList<QVariant> >(void* const*, int, unsigned int)
+00025d34 W QtMetaTypePrivate::IteratorOwner<QList<QString>::const_iterator>::advance(void**, int)
+00025d48 W QtMetaTypePrivate::IteratorOwner<QList<QString>::const_iterator>::equal(void* const*, void* const*)
+00025d68 W void const* QtMetaTypePrivate::QSequentialIterableImpl::atImpl<QStringList>(void const*, int)
+00025d80 W QtMetaTypePrivate::VariantData QtMetaTypePrivate::QSequentialIterableImpl::getImpl<QStringList>(void* const*, int, unsigned int)
+00025d94 W QtMetaTypePrivate::IteratorOwner<QMap<QString, QVariant>::const_iterator>::equal(void* const*, void* const*)
+00025db4 W QtMetaTypePrivate::VariantData QtMetaTypePrivate::QAssociativeIterableImpl::getKeyImpl<QMap<QString, QVariant> >(void* const*, int, unsigned int)
+00025dcc W QtMetaTypePrivate::VariantData QtMetaTypePrivate::QAssociativeIterableImpl::getValueImpl<QMap<QString, QVariant> >(void* const*, int, unsigned int)
+00025de4 W QtMetaTypePrivate::IteratorOwner<QHash<QString, QVariant>::const_iterator>::equal(void* const*, void* const*)
+00025e04 W QtMetaTypePrivate::VariantData QtMetaTypePrivate::QAssociativeIterableImpl::getKeyImpl<QHash<QString, QVariant> >(void* const*, int, unsigned int)
+00025e1c W QtMetaTypePrivate::VariantData QtMetaTypePrivate::QAssociativeIterableImpl::getValueImpl<QHash<QString, QVariant> >(void* const*, int, unsigned int)
+00025e34 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QtMetaTypePrivate::QSequentialIterableImpl, true>::Destruct(void*)
+00025e38 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QtMetaTypePrivate::QAssociativeIterableImpl, true>::Destruct(void*)
+00025e3c W int QtMetaTypePrivate::QSequentialIterableImpl::sizeImpl<QStringList>(void const*)
+00025e54 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QtMetaTypePrivate::QSequentialIterableImpl, true>::Delete(void*)
+00025e58 W QtMetaTypePrivate::IteratorOwner<QList<QVariant>::const_iterator>::destroy(void**)
+00025e60 W QtMetaTypePrivate::IteratorOwner<QList<QString>::const_iterator>::destroy(void**)
+00025e68 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QtMetaTypePrivate::QAssociativeIterableImpl, true>::Delete(void*)
+00025e6c W QtMetaTypePrivate::IteratorOwner<QMap<QString, QVariant>::const_iterator>::destroy(void**)
+00025e74 W QtMetaTypePrivate::IteratorOwner<QHash<QString, QVariant>::const_iterator>::destroy(void**)
+00025e7c W QtMetaTypePrivate::IteratorOwner<QMap<QString, QVariant>::const_iterator>::assign(void**, void* const*)
+00025ea4 W QtMetaTypePrivate::IteratorOwner<QHash<QString, QVariant>::const_iterator>::assign(void**, void* const*)
+00025ecc W QtMetaTypePrivate::IteratorOwner<QList<QVariant>::const_iterator>::assign(void**, void* const*)
+00025ef4 W void QtMetaTypePrivate::QSequentialIterableImpl::moveToEndImpl<QList<QVariant> >(void const*, void**)
+00025f20 W QtMetaTypePrivate::IteratorOwner<QList<QString>::const_iterator>::assign(void**, void* const*)
+00025f48 W void QtMetaTypePrivate::QSequentialIterableImpl::moveToBeginImpl<QStringList>(void const*, void**)
+00025f74 W void QtMetaTypePrivate::QAssociativeIterableImpl::advanceImpl<QHash<QString, QVariant> >(void**, int)
+00025fc0 W void QtMetaTypePrivate::QAssociativeIterableImpl::advanceImpl<QMap<QString, QVariant> >(void**, int)
+0002600c W void QtMetaTypePrivate::QSequentialIterableImpl::moveToBeginImpl<QList<QVariant> >(void const*, void**)
+00026038 W void QtMetaTypePrivate::QSequentialIterableImpl::moveToEndImpl<QStringList>(void const*, void**)
+00026064 W int QtMetaTypePrivate::QAssociativeIterableImpl::sizeImpl<QMap<QString, QVariant> >(void const*)
+000260a0 W QArrayData::data()
+000260e4 W QListData::size() const
+000260f8 W int QtMetaTypePrivate::QSequentialIterableImpl::sizeImpl<QList<QVariant> >(void const*)
+000260fc W QListData::isEmpty() const
+00026118 W QtMetaTypePrivate::QSequentialIterableImpl::QSequentialIterableImpl()
+00026118 W QtMetaTypePrivate::QSequentialIterableImpl::QSequentialIterableImpl()
+00026158 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QtMetaTypePrivate::QSequentialIterableImpl, true>::Construct(void*, void const*)
+000261b0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QtMetaTypePrivate::QSequentialIterableImpl, true>::Create(void const*)
+00026204 W QtMetaTypePrivate::QAssociativeIterableImpl::QAssociativeIterableImpl()
+00026204 W QtMetaTypePrivate::QAssociativeIterableImpl::QAssociativeIterableImpl()
+00026248 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QtMetaTypePrivate::QAssociativeIterableImpl, true>::Construct(void*, void const*)
+000262a0 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QtMetaTypePrivate::QAssociativeIterableImpl, true>::Create(void const*)
+000262f4 W QMetaTypeId<QtMetaTypePrivate::QSequentialIterableImpl>::qt_metatype_id()
+00026428 W QMetaTypeId<QtMetaTypePrivate::QAssociativeIterableImpl>::qt_metatype_id()
+0002655c W QtPrivate::QVariantValueHelperInterface<QSequentialIterable>::invoke(QVariant const&)
+000267ec W QtPrivate::QVariantValueHelperInterface<QAssociativeIterable>::invoke(QVariant const&)
+00026aac W void std::swap<QVariant::Private>(QVariant::Private&, QVariant::Private&)
+00026b20 W QMapData<QString, QVariant>::createNode(QString const&, QVariant const&, QMapNode<QString, QVariant>*, bool)
+00026bb4 W QList<QVariant>::node_copy(QList<QVariant>::Node*, QList<QVariant>::Node*, QList<QVariant>::Node*)
+00026c40 W QList<QVariant>::QList(QList<QVariant> const&)
+00026c40 W QList<QVariant>::QList(QList<QVariant> const&)
+00026cc8 W QList<QVariant>::operator=(QList<QVariant> const&)
+00026d10 W QList<QVariant>::detach_helper(int)
+00026d90 W QMapData<QString, QVariant>::findNode(QString const&) const
+00026e00 W QMap<QString, QVariant>::contains(QString const&) const
+00026e18 W QMap<QString, QVariant>::operator[](QString const&) const
+00026e88 W QList<QVariant>::detach()
+00026ea0 W QList<QVariant>::operator[](int)
+00026f08 W QMapNode<QString, QVariant>::copy(QMapData<QString, QVariant>*) const
+00026fac W QMap<QString, QVariant>::QMap(QMap<QString, QVariant> const&)
+00026fac W QMap<QString, QVariant>::QMap(QMap<QString, QVariant> const&)
+00027020 W QtMetaTypePrivate::IteratorOwner<QMap<QString, QVariant>::const_iterator>::assign(void**, QMap<QString, QVariant>::const_iterator)
+00027040 W void QtMetaTypePrivate::QAssociativeIterableImpl::endImpl<QMap<QString, QVariant> >(void const*, void**)
+00027058 W void QtMetaTypePrivate::QAssociativeIterableImpl::beginImpl<QMap<QString, QVariant> >(void const*, void**)
+00027080 W void QtMetaTypePrivate::QAssociativeIterableImpl::findImpl<QMap<QString, QVariant> >(void const*, void const*, void**)
+000270b0 W QHash<QString, QVariant>::begin() const
+000270e8 W int QtMetaTypePrivate::QAssociativeIterableImpl::sizeImpl<QHash<QString, QVariant> >(void const*)
+00027118 W QtMetaTypePrivate::IteratorOwner<QHash<QString, QVariant>::const_iterator>::assign(void**, QHash<QString, QVariant>::const_iterator)
+00027138 W void QtMetaTypePrivate::QAssociativeIterableImpl::endImpl<QHash<QString, QVariant> >(void const*, void**)
+00027150 W void QtMetaTypePrivate::QAssociativeIterableImpl::beginImpl<QHash<QString, QVariant> >(void const*, void**)
+0002716c W void QtMetaTypePrivate::QAssociativeIterableImpl::findImpl<QHash<QString, QVariant> >(void const*, void const*, void**)
+00027244 W QList<QVariant>::detach_helper_grow(int, int)
+00027358 W QList<QVariant>::append(QVariant const&)
+000273dc W QtPrivate::QVariantValueHelperInterface<QList<QVariant> >::invoke(QVariant const&)
+000275c8 W QMapData<QString, QVariant>::destroy()
+000275fc W QMap<QString, QVariant>::detach()
+00027674 W QMap<QString, QVariant>::insert(QString const&, QVariant const&)
+00027724 W QtPrivate::QVariantValueHelperInterface<QMap<QString, QVariant> >::invoke(QVariant const&)
+00027904 W QMap<QString, QVariant>::operator[](QString const&)
+0002798c W QMap<QString, QVariant>::remove(QString const&)
+000279e4 W QtPrivate::QVariantValueHelper<QString>::metaType(QVariant const&)
+00027a80 W QtPrivate::QVariantValueHelper<int>::metaType(QVariant const&)
+00027ac0 W QtPrivate::QVariantValueHelper<float>::metaType(QVariant const&)
+00027b08 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.23]
+00027b3c t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.32]
+00027b78 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.33]
+00027ba8 T Brewing::getRecipe()
+00027bb0 T Brewing::getStatus() const
+00027bb8 T Brewing::setEstimatedTime(int)
+00027bc0 T Brewing::getEstimatedTime()
+00027bc8 T Brewing::getStepIterator()
+00027bd0 T Brewing::getStartIterator()
+00027bd8 T Brewing::isWaterInlet()
+00027be0 T Brewing::isCooling()
+00027be8 T Brewing::setRecipeData(QMap<QString, QVariant> const&)
+00027c08 T Brewing::setType(int)
+00027c10 T Brewing::getType()
+00027c18 T Brewing::isAborted() const
+00027c20 T Brewing::setAborted(bool)
+00027c28 T Brewing::setStartStep(int)
+00027c30 T Brewing::goToNextStep()
+00027c40 T Brewing::pause(bool)
+00027c70 T Brewing::save()
+00027cd8 t __tcf_3
+00027cf4 T Brewing::getCheckList()
+00027d0c T Brewing::getData() const
+00027d24 t __tcf_4
+00027d40 T Brewing::setCheckList()
+000282fc T Brewing::setWaterInlet(bool)
+00028304 T Brewing::setCooling(bool)
+0002830c t __tcf_0
+00028328 T Brewing::Brewing(QObject*)
+00028328 T Brewing::Brewing(QObject*)
+00028418 T Brewing::serialize()
+00028830 T Brewing::getSteps()
+00028914 T Brewing::addInstruction(int, int, int, bool, bool, bool, int, int, bool, bool, bool, bool, bool, int, bool, int, int, int, int, int, int, bool, bool)
+00028fc4 T Brewing::sortSteps(QList<QVariant>&, QString)
+00029140 T Brewing::sortHops(QList<QVariant>)
+00029678 T Brewing::getStepMap(int)
+00029e50 T Brewing::setData(QMap<QString, QVariant>)
+0002a1a8 T Brewing::createSteps()
+0002b0ec T Brewing::addBoil(int&, QList<QVariant>, int)
+0002b3b8 T Brewing::nextStep()
+0002b6d8 T Brewing::deserialize(QByteArray)
+0002bbfc T Brewing::addFirstWort(int&, QList<QVariant>, int*, int&)
+0002c160 T Brewing::addHopBack(QList<QVariant>)
+0002ceec t __tcf_1
+0002cf08 T Brewing::start(bool)
+0002d000 T Brewing::setStatus(int)
+0002d0bc T Brewing::createInstructions()
+0002efc8 t __tcf_2
+0002efe4 W Singleton<SettingsHandler>::~Singleton()
+0002efe4 W Singleton<SettingsHandler>::~Singleton()
+0002f008 W Singleton<RemoteConnectionHandler>::~Singleton()
+0002f008 W Singleton<RemoteConnectionHandler>::~Singleton()
+0002f02c W Singleton<SettingsHandler>::~Singleton()
+0002f060 W Singleton<RemoteConnectionHandler>::~Singleton()
+0002f094 W QString::fromUtf8(char const*, int)
+0002f0d8 W QString::operator==(char const*) const
+0002f114 W QDebug::maybeSpace()
+0002f13c W QDebug::operator<<(char)
+0002f158 W QDebug::operator<<(int)
+0002f174 W Singleton<SettingsHandler>::getInstance()
+0002f1f0 W Singleton<SerialParser>::getInstance()
+0002f26c W Singleton<RemoteConnectionHandler>::getInstance()
+0002f2e8 W Singleton<MachineState>::getInstance()
+0002f364 W QList<int>::contains(int const&) const
+0002f3b0 W QList<QVariant>::at(int) const
+0002f410 W QDebug::operator<<(char const*)
+0002f45c W operator+(QString const&, char const*)
+0002f4b8 W operator+(QString const&, QString const&)
+0002f4e8 W operator+(char const*, QString const&)
+0002f51c W QList<int>::~QList()
+0002f51c W QList<int>::~QList()
+0002f544 W QList<int>::clear()
+0002f57c W QList<QVariant>::reserve(int)
+0002f5a0 W QMap<QString, QVariant>::begin() const
+0002f5b8 W QList<int>::detach_helper_grow(int, int)
+0002f6a0 W QList<int>::append(int const&)
+0002f708 W QDataStream& operator>><QVariant>(QDataStream&, QList<QVariant>&)
+0002f7e8 W QList<QVariant>::insert(int, QVariant const&)
+0002f864 W SettingsHandler::~SettingsHandler()
+0002f864 W SettingsHandler::~SettingsHandler()
+0002f8e0 W non-virtual thunk to SettingsHandler::~SettingsHandler()
+0002f8e8 W SettingsHandler::~SettingsHandler()
+0002f904 W non-virtual thunk to SettingsHandler::~SettingsHandler()
+0002f90c W QMap<QString, QVariant>::clear()
+0002f944 W QDataStream& operator>><QString, QVariant>(QDataStream&, QMap<QString, QVariant>&)
+0002fac4 W QtPrivate::QVariantValueHelper<bool>::metaType(QVariant const&)
+0002fb04 W QDebug operator<< <QString, QVariant>(QDebug, QMap<QString, QVariant> const&)
+0002fc50 W RemoteConnectionHandler::~RemoteConnectionHandler()
+0002fc50 W RemoteConnectionHandler::~RemoteConnectionHandler()
+0002fcbc W non-virtual thunk to RemoteConnectionHandler::~RemoteConnectionHandler()
+0002fcc4 W RemoteConnectionHandler::~RemoteConnectionHandler()
+0002fce0 W non-virtual thunk to RemoteConnectionHandler::~RemoteConnectionHandler()
+0002fce8 t __tcf_0
+0002fcf8 T LOG_BREWING_JSON()
+0002fd88 t std::default_delete<Recipe>::operator()(Recipe*) const [clone .isra.19]
+0002fda4 t std::default_delete<Brewing>::operator()(Brewing*) const [clone .isra.20]
+0002fdc0 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.30]
+0002fdfc t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.31]
+0002fe2c t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.32]
+0002fe60 T RecipeHandler::isReady() const
+0002fe68 T RecipeHandler::setReady(bool)
+0002fe70 T RecipeHandler::getActiveRecipe() const
+0002fe78 T RecipeHandler::recipeValidation()
+0002fe7c T RecipeHandler::getActiveBrewing() const
+0002fe84 T RecipeHandler::setActiveBrewing(QMap<QString, QVariant> const&)
+0002feec T RecipeHandler::setActiveBrewing()
+0002ff0c T RecipeHandler::shortClean()
+0002ff64 T RecipeHandler::sanitizingClean()
+0002ffbc T RecipeHandler::fullClean()
+00030014 T RecipeHandler::drain(bool, bool, bool, bool)
+000302c0 T RecipeHandler::unclogging(int)
+00030448 T RecipeHandler::calibration()
+00030590 T RecipeHandler::getPath()
+000305a8 t QList<QString>::node_copy(QList<QString>::Node*, QList<QString>::Node*, QList<QString>::Node*) [clone .isra.14]
+000305e4 T RecipeHandler::debug(QString)
+0003062c t __tcf_4
+00030648 T RecipeHandler::cancelAbortedBrewing()
+00030688 T RecipeHandler::stop(bool)
+000306b8 t QList<QString>::dealloc(QListData::Data*) [clone .isra.29]
+000306fc T RecipeHandler::getRecipes()
+00030784 t __tcf_5
+000307a0 T RecipeHandler::firstClean()
+0003089c T RecipeHandler::getRecipeById(QString)
+00030a38 T RecipeHandler::setActiveRecipe(QString)
+00030b5c T RecipeHandler::save(bool)
+00030c48 t RecipeHandler::sortABC()::{lambda(QVariant const&, QVariant const&)#1}::operator()(QVariant const&, QVariant const&) const [clone .isra.43]
+00030dc4 t void QAlgorithmsPrivate::qSortHelper<QList<QVariant>::iterator, QVariant, RecipeHandler::sortABC()::{lambda(QVariant const&, QVariant const&)#1}>(QList<QVariant>::iterator, QList<QVariant>::iterator, QVariant const&, RecipeHandler::sortABC()::{lambda(QVariant const&, QVariant const&)#1}) [clone .isra.44]
+00030f8c T RecipeHandler::sortABC()
+00030ff8 T RecipeHandler::createRecipe(QString)
+000312f0 T RecipeHandler::renameRecipe(QString)
+00031540 T RecipeHandler::saveAsRecipe(QString)
+00031874 T RecipeHandler::setRecipe(QMap<QString, QVariant>)
+00031c54 t __tcf_1
+00031c70 T RecipeHandler::changeBrewingLogFile()
+00032324 T RecipeHandler::RecipeHandler()
+00032324 T RecipeHandler::RecipeHandler()
+000324c0 T RecipeHandler::start(bool)
+00032770 T RecipeHandler::resumeAbortedBrewing()
+000327f0 T RecipeHandler::setAbortedBrewing(QString const&, std::unique_ptr<Brewing, std::default_delete<Brewing> >&&)
+00032968 t __tcf_2
+00032984 T RecipeHandler::openRecipe(QString)
+00032f80 T RecipeHandler::loadRecipes()
+00033324 T RecipeHandler::removeRecipe(QString)
+00033654 t __tcf_3
+00033694 W QDebug::operator<<(QString const&)
+000336c8 W QDebug::operator<<(QByteArray const&)
+000336fc W std::unique_ptr<Brewing, std::default_delete<Brewing> >::reset(Brewing*)
+00033714 W QSharedPointer<QtDebugLog::LogWriterIntf>::QSharedPointer(QSharedPointer<QtDebugLog::LogWriterIntf> const&)
+00033714 W QSharedPointer<QtDebugLog::LogWriterIntf>::QSharedPointer(QSharedPointer<QtDebugLog::LogWriterIntf> const&)
+0003374c W QString::operator=(char const*)
+00033788 W QList<QString>::append(QString const&)
+000338a0 W QList<QString>::~QList()
+000338a0 W QList<QString>::~QList()
+000338c8 W QList<QString>::detach()
+00033938 t __tcf_0
+00033948 t __tcf_1
+0003395c T LOG_SERIAL()
+000339ec T LOG_CONTROL_DATA()
+00033a80 t QList<QString>::node_copy(QList<QString>::Node*, QList<QString>::Node*, QList<QString>::Node*) [clone .isra.11]
+00033abc t __tcf_2
+00033ad8 t QList<QString>::dealloc(QListData::Data*) [clone .isra.14]
+00033b1c T SerialParser::isValidPacketID(unsigned char) const
+00033b48 T SerialParser::SerialParser()
+00033b48 T SerialParser::SerialParser()
+00033e6c T SerialParser::openSerialPort(bool)
+00034000 T SerialParser::closeSerialPort()
+00034138 T SerialParser::~SerialParser()
+00034138 T SerialParser::~SerialParser()
+000341a0 T non-virtual thunk to SerialParser::~SerialParser()
+000341a8 T SerialParser::~SerialParser()
+000341c4 T non-virtual thunk to SerialParser::~SerialParser()
+000341cc T SerialParser::handleError(QSerialPort::SerialPortError)
+000342c0 T SerialParser::readErrorTimeout()
+000343a8 T SerialParser::sendData()
+000346ac T SerialParser::writeData(QString)
+00034794 T SerialParser::startBrew()
+000347dc T SerialParser::pauseBrew()
+00034824 T SerialParser::continueBrew()
+0003486c T SerialParser::stop()
+000348bc T SerialParser::nextStep()
+00034904 T SerialParser::initRecipe(int)
+00034980 T SerialParser::writeStep(int, bool, bool, bool, int, int, bool, bool, bool, bool, bool, int, bool, int, int, int, int, int, int, bool, bool)
+00035514 T SerialParser::resendLastData()
+000355fc T SerialParser::readData()
+00035b9c T SerialParser::handleAckTimeout()
+00035c6c W Singleton<SerialParser>::~Singleton()
+00035c90 W Singleton<SerialParser>::~Singleton()
+00035cc4 W QByteArray::at(int) const
+00035d08 W QList<QString>::detach_helper_grow(int, int)
+00035dc0 W QList<QString>::prepend(QString const&)
+00035e3c W QList<QString>::takeFirst()
+00035f74 t QString::operator[](int) [clone .part.4]
+00035f98 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.14]
+00035fcc t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.17]
+00036008 t QList<QString>::node_copy(QList<QString>::Node*, QList<QString>::Node*, QList<QString>::Node*) [clone .isra.10]
+00036044 t QList<QString>::dealloc(QListData::Data*) [clone .isra.16]
+00036088 T FileParser::FileParser()
+00036088 T FileParser::FileParser()
+0003608c T FileParser::setValueType(QString const&)
+00036160 T FileParser::encodeKey(QString)
+000361e4 T FileParser::decodeKey(QString)
+00036304 T FileParser::decodeElement(QDomElement)
+000368fc T FileParser::encodeJson(QString, QVariant const&)
+00036c94 T FileParser::decodeJson(QString const&)
+00036e68 W QCharRef::operator QChar() const
+00036e98 W QIODevice::write(QByteArray const&)
+00036ec4 W QList<QString>::QList(QList<QString> const&)
+00036ec4 W QList<QString>::QList(QList<QString> const&)
+00036f2c T ButtonHandler::ButtonHandler()
+00036f2c T ButtonHandler::ButtonHandler()
+0003702c T ButtonHandler::setInProgress(bool)
+00037034 T ButtonHandler::isInProgress()
+0003703c t __tcf_0
+00037058 T ButtonHandler::setDrainLed(bool)
+0003716c T ButtonHandler::update()
+000374b0 W Singleton<ButtonHandler>::~Singleton()
+000374d4 W Singleton<ButtonHandler>::~Singleton()
+00037508 t __tcf_1
+00037524 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.22]
+00037560 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.23]
+00037590 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.24]
+000375c4 T NotificationHandler::setNotificationAsFuture(int, bool)
+000375d0 T NotificationHandler::getType()
+000375d8 T NotificationHandler::getFutureType()
+000375e0 T NotificationHandler::getLastType()
+000375e8 T NotificationHandler::isVisible()
+000375f0 T NotificationHandler::shutdown()
+000375f4 T NotificationHandler::restart()
+00037634 t __tcf_5
+00037650 t __tcf_0
+0003766c T NotificationHandler::getData()
+000376e0 t __tcf_2
+000376fc t __tcf_3
+00037718 T NotificationHandler::reset()
+0003778c T NotificationHandler::close(int)
+000377e0 T NotificationHandler::NotificationHandler()
+000377e0 T NotificationHandler::NotificationHandler()
+000378d8 T NotificationHandler::setHeaderLabel(QString)
+0003795c T NotificationHandler::getNotification(int)
+0003d724 T NotificationHandler::setNotification(int, bool)
+0003f704 T NotificationHandler::setFutureNotification()
+0003f72c T NotificationHandler::ok(int)
+0003fb24 T NotificationHandler::cancel(int)
+0003fcfc T NotificationHandler::recipeValidation()
+00040b94 T NotificationHandler::setNotificationBySerialData(int, int, float, QString, bool, bool)
+00041294 t __tcf_4
+000412d4 W Singleton<ButtonHandler>::~Singleton()
+000412f8 W Singleton<ConfigurationHandler>::~Singleton()
+000412f8 W Singleton<ConfigurationHandler>::~Singleton()
+0004131c W Singleton<ConfigurationHandler>::~Singleton()
+00041350 W ButtonHandler::~ButtonHandler()
+00041350 W ButtonHandler::~ButtonHandler()
+00041398 W non-virtual thunk to ButtonHandler::~ButtonHandler()
+000413a0 W ButtonHandler::~ButtonHandler()
+000413bc W non-virtual thunk to ButtonHandler::~ButtonHandler()
+000413c4 W QString::operator+=(QString const&)
+000413c8 W QString::contains(QString const&, Qt::CaseSensitivity) const
+000413e4 W QDebug::operator<<(bool)
+0004141c W Singleton<ButtonHandler>::getInstance()
+00041498 W Singleton<ConfigurationHandler>::getInstance()
+00041514 W ConfigurationHandler::~ConfigurationHandler()
+00041514 W ConfigurationHandler::~ConfigurationHandler()
+00041580 W non-virtual thunk to ConfigurationHandler::~ConfigurationHandler()
+00041588 W ConfigurationHandler::~ConfigurationHandler()
+000415a4 W non-virtual thunk to ConfigurationHandler::~ConfigurationHandler()
+000415ac T ViewHandler::ViewHandler()
+000415ac T ViewHandler::ViewHandler()
+00041620 T ViewHandler::getRecipeChooserView()
+00041660 T ViewHandler::getWatersView()
+000416a0 T ViewHandler::getMashingView()
+000416e0 T ViewHandler::getHoppingView()
+00041720 T ViewHandler::getFermentablesView()
+00041760 T ViewHandler::getHopsView()
+000417a0 T ViewHandler::getFermentationView()
+000417e0 T ViewHandler::getDetailsView()
+00041820 T ViewHandler::getInputSelectorView()
+00041860 T ViewHandler::getConnectionView()
+000418a0 T ViewHandler::getCoolingView()
+000418e0 T ViewHandler::getNotificationView()
+00041920 T ViewHandler::simulateKey(Qt::Key)
+00041a1c T ViewHandler::simulateKey(Qt::Key, QString, bool)
+00041b60 W Singleton<ViewHandler>::~Singleton()
+00041b84 W Singleton<ViewHandler>::~Singleton()
+00041bb8 W QCoreApplication::sendEvent(QObject*, QEvent*)
+00041c00 t __tcf_0
+00041c1c T WatersView::getData()
+00041c34 T WatersView::WatersView(QObject*)
+00041c34 T WatersView::WatersView(QObject*)
+00041cf0 T WatersView::clear()
+00041d34 T WatersView::setMashInTemperature(float)
+00041db4 T WatersView::setSpargingTime(int)
+00041e2c T WatersView::setSpargingTemperature(float)
+00041eac T WatersView::addSparging()
+00041f2c T WatersView::removeSparging()
+00042034 T WatersView::setMashInWater(float)
+00042140 T WatersView::setSpargingWater(float)
+0004224c T WatersView::save()
+00042594 T WatersView::refresh()
+00042c60 T WatersView::cancel()
+00042c64 T WatersView::init()
+00042d24 W QRunnable::~QRunnable()
+00042d24 W QRunnable::~QRunnable()
+00042d48 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, WatersView>::runFunctor()
+00042d70 W QtConcurrent::RunFunctionTaskBase<void>::run()
+00042d74 W non-virtual thunk to QtConcurrent::RunFunctionTaskBase<void>::run()
+00042d7c W QRunnable::~QRunnable()
+00042db0 W QException::~QException()
+00042db0 W QException::~QException()
+00042de4 W QException::~QException()
+00042e00 W QUnhandledException::~QUnhandledException()
+00042e00 W QUnhandledException::~QUnhandledException()
+00042e34 W QUnhandledException::~QUnhandledException()
+00042e50 W QtConcurrent::RunFunctionTask<void>::run()
+00042efc W non-virtual thunk to QtConcurrent::RunFunctionTask<void>::run()
+00042f04 W QFutureInterface<void>::~QFutureInterface()
+00042f04 W QFutureInterface<void>::~QFutureInterface()
+00042f38 W QFutureInterface<void>::~QFutureInterface()
+00042f54 W QtConcurrent::RunFunctionTaskBase<void>::~RunFunctionTaskBase()
+00042f54 W QtConcurrent::RunFunctionTaskBase<void>::~RunFunctionTaskBase()
+00042f9c W non-virtual thunk to QtConcurrent::RunFunctionTaskBase<void>::~RunFunctionTaskBase()
+00042fa4 W QtConcurrent::RunFunctionTaskBase<void>::~RunFunctionTaskBase()
+00042fc0 W non-virtual thunk to QtConcurrent::RunFunctionTaskBase<void>::~RunFunctionTaskBase()
+00042fc8 W QtConcurrent::RunFunctionTask<void>::~RunFunctionTask()
+00042fc8 W QtConcurrent::RunFunctionTask<void>::~RunFunctionTask()
+00043004 W non-virtual thunk to QtConcurrent::RunFunctionTask<void>::~RunFunctionTask()
+0004300c W QtConcurrent::RunFunctionTask<void>::~RunFunctionTask()
+00043028 W non-virtual thunk to QtConcurrent::RunFunctionTask<void>::~RunFunctionTask()
+00043030 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, WatersView>::~VoidStoredMemberFunctionPointerCall0()
+00043030 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, WatersView>::~VoidStoredMemberFunctionPointerCall0()
+0004306c W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, WatersView>::~VoidStoredMemberFunctionPointerCall0()
+00043074 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, WatersView>::~VoidStoredMemberFunctionPointerCall0()
+00043090 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, WatersView>::~VoidStoredMemberFunctionPointerCall0()
+00043098 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.22]
+000430d4 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.23]
+00043104 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.24]
+00043138 T RecipeChooserView::RecipeChooserView(QObject*)
+00043138 T RecipeChooserView::RecipeChooserView(QObject*)
+000431f4 T RecipeChooserView::refresh()
+00043238 T RecipeChooserView::getRecipes()
+00043250 t __tcf_0
+0004326c T RecipeChooserView::filter(QString)
+00043c4c T RecipeChooserView::show()
+00043d0c T RecipeChooserView::remove()
+00043d10 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, RecipeChooserView>::runFunctor()
+00043d38 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, RecipeChooserView>::~VoidStoredMemberFunctionPointerCall0()
+00043d38 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, RecipeChooserView>::~VoidStoredMemberFunctionPointerCall0()
+00043d74 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, RecipeChooserView>::~VoidStoredMemberFunctionPointerCall0()
+00043d7c W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, RecipeChooserView>::~VoidStoredMemberFunctionPointerCall0()
+00043d98 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, RecipeChooserView>::~VoidStoredMemberFunctionPointerCall0()
+00043da0 W QList<QString>::indexOf(QString const&, int) const
+00043e34 W QList<QString>::operator=(QList<QString> const&)
+00043ef0 W QList<QString>::operator[](int)
+00044008 W QtPrivate::QVariantValueHelper<QMap<QString, QVariant> >::metaType(QVariant const&)
+000440fc t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.25]
+00044138 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.26]
+00044168 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.27]
+0004419c T MashingView::getCount()
+000441a4 T MashingView::MashingView(QObject*)
+000441a4 T MashingView::MashingView(QObject*)
+00044260 T MashingView::clear()
+000442b4 T MashingView::getData()
+000442cc T MashingView::save()
+00044324 t __tcf_0
+00044340 T MashingView::removeStep(int, int)
+00044454 T MashingView::refresh()
+00044514 T MashingView::cancel()
+00044518 T MashingView::addStep(int)
+00044628 T MashingView::setStepTime(int, int, int)
+000447b0 T MashingView::setStepTemp(int, int, float)
+0004493c T MashingView::init()
+000449fc W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, MashingView>::runFunctor()
+00044a24 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, MashingView>::~VoidStoredMemberFunctionPointerCall0()
+00044a24 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, MashingView>::~VoidStoredMemberFunctionPointerCall0()
+00044a60 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, MashingView>::~VoidStoredMemberFunctionPointerCall0()
+00044a68 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, MashingView>::~VoidStoredMemberFunctionPointerCall0()
+00044a84 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, MashingView>::~VoidStoredMemberFunctionPointerCall0()
+00044a8c t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.25]
+00044ac8 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.26]
+00044af8 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.27]
+00044b2c T HopsView::getCount()
+00044b34 T HopsView::HopsView(QObject*)
+00044b34 T HopsView::HopsView(QObject*)
+00044bf0 T HopsView::clear()
+00044c44 T HopsView::getData()
+00044c5c T HopsView::save()
+00044cb4 t __tcf_0
+00044cd0 T HopsView::refresh()
+00044d90 T HopsView::cancel()
+00044d94 T HopsView::removeCage(int)
+00044e1c T HopsView::addHop(int)
+00044f2c T HopsView::addCage()
+00044f94 T HopsView::removeHop(int, int)
+000450e4 T HopsView::setAmount(int, int, float)
+00045270 T HopsView::setType(int, int, QMap<QString, QVariant>)
+0004559c T HopsView::init()
+0004565c W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HopsView>::runFunctor()
+00045684 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HopsView>::~VoidStoredMemberFunctionPointerCall0()
+00045684 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HopsView>::~VoidStoredMemberFunctionPointerCall0()
+000456c0 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HopsView>::~VoidStoredMemberFunctionPointerCall0()
+000456c8 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HopsView>::~VoidStoredMemberFunctionPointerCall0()
+000456e4 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HopsView>::~VoidStoredMemberFunctionPointerCall0()
+000456ec W QList<QVariant>::removeAt(int)
+0004574c W QList<QVariant>::operator+=(QList<QVariant> const&)
+00045848 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.24]
+00045884 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.25]
+000458b4 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.26]
+000458e8 T HoppingView::getDelayedHoppingTime()
+000458f0 T HoppingView::setDelayedHoppingTime(int)
+000458f8 T HoppingView::HoppingView(QObject*)
+000458f8 T HoppingView::HoppingView(QObject*)
+000459bc T HoppingView::clear()
+00045a10 T HoppingView::getData()
+00045a28 T HoppingView::save()
+00045a88 t __tcf_0
+00045aa4 T HoppingView::setCageTime(int, int)
+00045c38 T HoppingView::refresh()
+00045db8 T HoppingView::cancel()
+00045dbc T HoppingView::init()
+00045e7c W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HoppingView>::runFunctor()
+00045ea4 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HoppingView>::~VoidStoredMemberFunctionPointerCall0()
+00045ea4 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HoppingView>::~VoidStoredMemberFunctionPointerCall0()
+00045ee0 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HoppingView>::~VoidStoredMemberFunctionPointerCall0()
+00045ee8 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HoppingView>::~VoidStoredMemberFunctionPointerCall0()
+00045f04 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HoppingView>::~VoidStoredMemberFunctionPointerCall0()
+00045f0c t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.25]
+00045f48 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.26]
+00045f78 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.27]
+00045fac T FermentablesView::getCount()
+00045fb4 T FermentablesView::FermentablesView(QObject*)
+00045fb4 T FermentablesView::FermentablesView(QObject*)
+00046070 T FermentablesView::clear()
+000460c4 T FermentablesView::getData()
+000460dc T FermentablesView::save()
+00046144 t __tcf_0
+00046160 T FermentablesView::refresh()
+00046220 T FermentablesView::cancel()
+0004623c T FermentablesView::removeBag(int)
+000462c0 T FermentablesView::addFermentable(int)
+000463d0 T FermentablesView::addBag()
+00046460 T FermentablesView::removeFermentable(int, int)
+000465b0 T FermentablesView::setAmount(int, int, float)
+0004673c T FermentablesView::setType(int, int, QMap<QString, QVariant>)
+00046ab8 T FermentablesView::init()
+00046b78 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentablesView>::runFunctor()
+00046ba0 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentablesView>::~VoidStoredMemberFunctionPointerCall0()
+00046ba0 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentablesView>::~VoidStoredMemberFunctionPointerCall0()
+00046bdc W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentablesView>::~VoidStoredMemberFunctionPointerCall0()
+00046be4 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentablesView>::~VoidStoredMemberFunctionPointerCall0()
+00046c00 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentablesView>::~VoidStoredMemberFunctionPointerCall0()
+00046c08 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.25]
+00046c44 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.26]
+00046c74 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.27]
+00046ca8 T FermentationView::getCount()
+00046cb0 T FermentationView::FermentationView(QObject*)
+00046cb0 T FermentationView::FermentationView(QObject*)
+00046d6c T FermentationView::clear()
+00046dc0 T FermentationView::refresh()
+00046e38 T FermentationView::cancel()
+00046e3c T FermentationView::getData()
+00046e54 T FermentationView::save()
+00046eac t __tcf_0
+00046ec8 T FermentationView::removeStage(int)
+00046f04 T FermentationView::addStage()
+00046f88 T FermentationView::addIngredient(int)
+000471ac T FermentationView::removeIngredient(int, int)
+0004739c T FermentationView::setBottling(int, bool)
+0004749c T FermentationView::setRacking(int, bool)
+0004759c T FermentationView::setDuration(int, int)
+000476a0 T FermentationView::setTemperature(int, float)
+000477a8 T FermentationView::setStorage(int, QString)
+000478a8 T FermentationView::setIngredientCategory(int, int, QString)
+00047b54 T FermentationView::setIngredientAmount(int, int, float)
+00047e08 T FermentationView::setIngredientAlpha(int, int, float)
+000480bc T FermentationView::setIngredientType(int, int, QMap<QString, QVariant>)
+000485a8 T FermentationView::init()
+00048668 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentationView>::runFunctor()
+00048690 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentationView>::~VoidStoredMemberFunctionPointerCall0()
+00048690 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentationView>::~VoidStoredMemberFunctionPointerCall0()
+000486cc W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentationView>::~VoidStoredMemberFunctionPointerCall0()
+000486d4 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentationView>::~VoidStoredMemberFunctionPointerCall0()
+000486f0 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentationView>::~VoidStoredMemberFunctionPointerCall0()
+000486f8 t __tcf_6
+00048714 t __tcf_8
+00048730 T Launcher::getPath()
+00048748 T Launcher::getImageIndex()
+00048760 T Launcher::getFontIndex()
+00048768 T Launcher::isFontsReady()
+00048770 T Launcher::setQmlReady(bool)
+00048778 T Launcher::isQmlReady()
+00048780 T Launcher::isReady()
+00048788 T Launcher::getRootContext()
+00048790 T Launcher::isStandbyMode()
+00048798 T Launcher::loadRecipes()
+000487a8 T Launcher::refreshScreen()
+0004897c T Launcher::setStandbyMode()
+000489c4 t __tcf_3
+000489e0 T Launcher::Launcher()
+000489e0 T Launcher::Launcher()
+00048b6c t __tcf_4
+00048b88 T Launcher::setRootContext(QQmlContext*)
+00049118 t __tcf_2
+00049134 t __tcf_1
+00049150 t __tcf_5
+0004916c t __tcf_7
+00049188 T Launcher::start()
+000492c8 t __tcf_0
+000492e4 t __tcf_9
+00049324 W Singleton<ConnectionHandler>::~Singleton()
+00049324 W Singleton<ConnectionHandler>::~Singleton()
+00049348 W Singleton<ViewHandler>::~Singleton()
+0004936c W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, Launcher>::runFunctor()
+00049394 W Singleton<ConnectionHandler>::~Singleton()
+000493c8 W ViewHandler::~ViewHandler()
+000493c8 W ViewHandler::~ViewHandler()
+00049410 W non-virtual thunk to ViewHandler::~ViewHandler()
+00049418 W ViewHandler::~ViewHandler()
+00049434 W non-virtual thunk to ViewHandler::~ViewHandler()
+0004943c W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, Launcher>::~VoidStoredMemberFunctionPointerCall0()
+0004943c W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, Launcher>::~VoidStoredMemberFunctionPointerCall0()
+00049478 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, Launcher>::~VoidStoredMemberFunctionPointerCall0()
+00049480 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, Launcher>::~VoidStoredMemberFunctionPointerCall0()
+0004949c W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, Launcher>::~VoidStoredMemberFunctionPointerCall0()
+000494a4 W ConnectionHandler::~ConnectionHandler()
+000494a4 W ConnectionHandler::~ConnectionHandler()
+00049500 W non-virtual thunk to ConnectionHandler::~ConnectionHandler()
+00049508 W ConnectionHandler::~ConnectionHandler()
+00049524 W non-virtual thunk to ConnectionHandler::~ConnectionHandler()
+0004952c W QList<QScreen*>::~QList()
+0004952c W QList<QScreen*>::~QList()
+00049558 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.21]
+00049594 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.22]
+000495c4 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.23]
+000495f8 T SettingsHandler::getTime()
+00049610 T SettingsHandler::getData()
+00049628 T SettingsHandler::setUserId(QString)
+000496a0 T SettingsHandler::load()
+0004980c T SettingsHandler::cancel()
+00049888 T SettingsHandler::setTemperatureUnit(int)
+00049a14 T SettingsHandler::setVolumeUnit(int)
+00049ba0 T SettingsHandler::setWeightUnit(int)
+00049d2c T SettingsHandler::setTimeZone(QString)
+00049eb8 T SettingsHandler::setTimeFormat(int)
+0004a044 T SettingsHandler::setWaterInlet(bool)
+0004a1d0 T SettingsHandler::setWaterOutlet(bool)
+0004a35c T SettingsHandler::getUserId()
+0004a40c T SettingsHandler::getTimeZone()
+0004a55c T SettingsHandler::getTemperatureUnit()
+0004a698 T SettingsHandler::temperatureValueToString(float)
+0004a700 T SettingsHandler::temperatureUnitToString()
+0004a73c T SettingsHandler::temperatureUnitToShortString()
+0004a778 T SettingsHandler::getVolumeUnit()
+0004a8b4 T SettingsHandler::volumeValueToString(float)
+0004a908 T SettingsHandler::volumeUnitToString()
+0004a944 T SettingsHandler::volumeUnitToShortString()
+0004a980 T SettingsHandler::getWeightUnit()
+0004aabc T SettingsHandler::weightValueToString(float)
+0004ab14 T SettingsHandler::weightUnitToString()
+0004ab50 T SettingsHandler::weightUnitToShortString()
+0004ab8c T SettingsHandler::getTimeFormat()
+0004acc8 T SettingsHandler::updateTime()
+0004ae64 T SettingsHandler::SettingsHandler()
+0004ae64 T SettingsHandler::SettingsHandler()
+0004afc4 T SettingsHandler::isWaterInlet()
+0004b0f0 T SettingsHandler::isWaterOutlet()
+0004b21c T SettingsHandler::save()
+0004b44c W QDebug operator<< <QVariant>(QDebug, QList<QVariant> const&)
+0004b598 t __tcf_0
+0004b5b4 T ConfigurationHandler::save()
+0004b644 T ConfigurationHandler::getId()
+0004b65c T ConfigurationHandler::getHwVersion()
+0004b664 T ConfigurationHandler::getWaterLevel()
+0004b66c T ConfigurationHandler::startCalibration(bool)
+0004b698 T ConfigurationHandler::updateCalibration(int, float)
+0004b6e0 T ConfigurationHandler::isCalibrate()
+0004b6f0 T ConfigurationHandler::isAcceptedEula()
+0004b6f8 T ConfigurationHandler::getCalibrationCounter()
+0004b700 T ConfigurationHandler::getCalibrationWeight()
+0004b708 T ConfigurationHandler::getValidateState()
+0004b710 T ConfigurationHandler::configure()
+0004b8e4 T ConfigurationHandler::initCalibration()
+0004b9d8 T ConfigurationHandler::resetCalibration()
+0004ba8c T ConfigurationHandler::setCalibration(float)
+0004bb6c T ConfigurationHandler::serialTimerTimeout()
+0004bd24 T ConfigurationHandler::getVersion()
+0004bd3c t __tcf_2
+0004bd58 T ConfigurationHandler::factoryReset()
+0004bdf0 T ConfigurationHandler::acceptEula()
+0004bedc T ConfigurationHandler::load()
+0004c650 T ConfigurationHandler::ConfigurationHandler()
+0004c650 T ConfigurationHandler::ConfigurationHandler()
+0004c84c T ConfigurationHandler::stopCalibration()
+0004ca58 t __tcf_1
+0004ca9c t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.19]
+0004cad0 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.27]
+0004cb0c t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.28]
+0004cb3c t QList<QString>::node_copy(QList<QString>::Node*, QList<QString>::Node*, QList<QString>::Node*) [clone .isra.14]
+0004cb78 t QList<QString>::dealloc(QListData::Data*) [clone .isra.26]
+0004cbbc T ConnectionHandler::getTime()
+0004cc08 T ConnectionHandler::setTime()
+0004cc54 T ConnectionHandler::killScan()
+0004cc5c T ConnectionHandler::getScanProgress()
+0004cc64 T ConnectionHandler::isConnecting()
+0004cc6c T ConnectionHandler::hasWiredConnection()
+0004cc74 T ConnectionHandler::hasWirelessConnection()
+0004cc7c T ConnectionHandler::ConnectionHandler()
+0004cc7c T ConnectionHandler::ConnectionHandler()
+0004ce64 T ConnectionHandler::getNetworks()
+0004ceec t __tcf_0
+0004cf08 T ConnectionHandler::detectIP()
+0004de18 T ConnectionHandler::setScanProgress(float)
+0004decc T ConnectionHandler::scan()
+0004df9c T ConnectionHandler::timeFinished(int)
+0004e068 T ConnectionHandler::scanFinished(int)
+0004ecf4 T ConnectionHandler::executeCommand(QString, int)
+0004ed4c T ConnectionHandler::disconnectWifi()
+0004f228 T ConnectionHandler::connectWifi(int, QString, QString, bool)
+0004fa18 T ConnectionHandler::checkConnection()
+0004fc18 T ConnectionHandler::checkNetwork(bool)
+0004fdac T ConnectionHandler::checkNetwork()
+0004fdb4 T ConnectionHandler::checkNetworkWithEthernet()
+0004fdbc T ConnectionHandler::checkSavedWifi()
+000501c0 W QString::QString(QByteArray const&)
+000501c0 W QString::QString(QByteArray const&)
+00050218 W Singleton<NotificationHandler>::getInstance()
+00050294 W QList<QNetworkAddressEntry>::~QList()
+00050294 W QList<QNetworkAddressEntry>::~QList()
+000502f0 W QList<QVariant>::prepend(QVariant const&)
+00050374 W QList<QNetworkAddressEntry>::detach_helper(int)
+00050474 W QList<QNetworkAddressEntry>::first()
+000504d8 t __tcf_0
+000504f4 T DetailsView::getData()
+0005050c T DetailsView::DetailsView(QObject*)
+0005050c T DetailsView::DetailsView(QObject*)
+000505c8 T DetailsView::save()
+00050620 T DetailsView::clear()
+00050658 T DetailsView::refresh()
+000506b0 T DetailsView::cancel()
+000506b4 T DetailsView::setStyle(QMap<QString, QVariant>)
+00051310 T DetailsView::init()
+000513d0 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, DetailsView>::runFunctor()
+000513f8 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, DetailsView>::~VoidStoredMemberFunctionPointerCall0()
+000513f8 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, DetailsView>::~VoidStoredMemberFunctionPointerCall0()
+00051434 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, DetailsView>::~VoidStoredMemberFunctionPointerCall0()
+0005143c W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, DetailsView>::~VoidStoredMemberFunctionPointerCall0()
+00051458 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, DetailsView>::~VoidStoredMemberFunctionPointerCall0()
+00051460 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.27]
+0005149c t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.28]
+000514cc t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.29]
+00051500 T InputSelectorView::setType(QString)
+00051508 T InputSelectorView::getType()
+00051520 T InputSelectorView::setKey(QString)
+00051528 T InputSelectorView::getKey()
+00051540 T InputSelectorView::setStyleCategory(QString)
+00051548 T InputSelectorView::getStyleCategory()
+00051560 T InputSelectorView::getData()
+00051578 T InputSelectorView::setFermentation()
+000517b0 T InputSelectorView::setHops(QMap<QString, QVariant>)
+00051860 T InputSelectorView::setYeast(QMap<QString, QVariant>)
+00051910 T InputSelectorView::setFermentables(QMap<QString, QVariant>)
+00051b30 T InputSelectorView::setTimeZones()
+000520b4 T InputSelectorView::getDataByType()
+000523d8 T InputSelectorView::refresh()
+00052418 T InputSelectorView::filter(QString)
+000529a8 T InputSelectorView::setStyles(QMap<QString, QVariant>)
+00052c08 T InputSelectorView::InputSelectorView(QObject*)
+00052c08 T InputSelectorView::InputSelectorView(QObject*)
+00052e90 T InputSelectorView::show()
+00052f50 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, InputSelectorView>::runFunctor()
+00052f78 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, InputSelectorView>::~VoidStoredMemberFunctionPointerCall0()
+00052f78 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, InputSelectorView>::~VoidStoredMemberFunctionPointerCall0()
+00052fb4 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, InputSelectorView>::~VoidStoredMemberFunctionPointerCall0()
+00052fbc W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, InputSelectorView>::~VoidStoredMemberFunctionPointerCall0()
+00052fd8 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, InputSelectorView>::~VoidStoredMemberFunctionPointerCall0()
+00052fe0 W QList<QByteArray>::~QList()
+00052fe0 W QList<QByteArray>::~QList()
+0005303c t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.21]
+00053094 t __tcf_0
+000530b0 T ConnectionView::getData()
+000530c8 T ConnectionView::connectData()
+000531c0 T ConnectionView::ConnectionView(QObject*)
+000531c0 T ConnectionView::ConnectionView(QObject*)
+00053314 T ConnectionView::show(int)
+0005335c T ConnectionView::connectWifi(QString)
+000533ec T ConnectionView::refresh()
+00053644 T ConnectionView::setData(QMap<QString, QVariant>)
+000538c0 T ConnectionView::connectFinished()
+0005399c W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, ConnectionView>::runFunctor()
+000539c4 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, ConnectionView>::~VoidStoredMemberFunctionPointerCall0()
+000539c4 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, ConnectionView>::~VoidStoredMemberFunctionPointerCall0()
+00053a00 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, ConnectionView>::~VoidStoredMemberFunctionPointerCall0()
+00053a08 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, ConnectionView>::~VoidStoredMemberFunctionPointerCall0()
+00053a24 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, ConnectionView>::~VoidStoredMemberFunctionPointerCall0()
+00053a2c W Singleton<ConnectionHandler>::getInstance()
+00053aa8 W QFuture<void> QtConcurrent::run<void, ConnectionView>(ConnectionView*, void (ConnectionView::*)())
+00053b6c T CoolingView::getData()
+00053b74 T CoolingView::setTemperature(float)
+00053b7c T CoolingView::clear()
+00053b8c T CoolingView::CoolingView(QObject*)
+00053b8c T CoolingView::CoolingView(QObject*)
+00053c30 T CoolingView::save()
+00053c58 T CoolingView::refresh()
+00053c8c T CoolingView::cancel()
+00053c90 t __tcf_0
+00053cac T CoolingView::init()
+00053d6c W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, CoolingView>::runFunctor()
+00053d94 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, CoolingView>::~VoidStoredMemberFunctionPointerCall0()
+00053d94 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, CoolingView>::~VoidStoredMemberFunctionPointerCall0()
+00053dd0 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, CoolingView>::~VoidStoredMemberFunctionPointerCall0()
+00053dd8 W QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, CoolingView>::~VoidStoredMemberFunctionPointerCall0()
+00053df4 W non-virtual thunk to QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, CoolingView>::~VoidStoredMemberFunctionPointerCall0()
+00053dfc T NotificationView::getData()
+00053e70 T NotificationView::NotificationView(QObject*)
+00053e70 T NotificationView::NotificationView(QObject*)
+00053f2c t __tcf_0
+00053f48 T NotificationView::notificationChanged()
+00053f8c t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.18]
+00053fc0 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.28]
+00053ffc t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.29]
+0005402c T RemoteConnectionHandler::setActiveConnection(bool)
+00054034 T RemoteConnectionHandler::hasActiveConnection()
+0005403c T RemoteConnectionHandler::save()
+000540cc T RemoteConnectionHandler::clean(int, bool)
+000541ac t __tcf_0
+000541c8 T RemoteConnectionHandler::serialize(QMap<QString, QVariant>)
+000542ec t __tcf_1
+00054308 T RemoteConnectionHandler::sendRecipe(QMap<QString, QVariant>)
+000544fc T RemoteConnectionHandler::requestRecipe(QString)
+0005462c T RemoteConnectionHandler::load()
+000546dc T RemoteConnectionHandler::deserialize(QByteArray)
+000548c0 T RemoteConnectionHandler::sendRemoved()
+00054b3c T RemoteConnectionHandler::getRecipes()
+00055008 T RemoteConnectionHandler::start(QMap<QString, QVariant>)
+000551ec T RemoteConnectionHandler::drain(QMap<QString, QVariant>)
+00055344 T RemoteConnectionHandler::syncRecipes(QByteArray)
+00055ae4 T RemoteConnectionHandler::RemoteConnectionHandler()
+00055ae4 T RemoteConnectionHandler::RemoteConnectionHandler()
+00055c3c T RemoteConnectionHandler::acceptConnection()
+00055d70 T RemoteConnectionHandler::closeConnection(QAbstractSocket::SocketError)
+00055e1c T RemoteConnectionHandler::sendMessage()
+00055fcc T RemoteConnectionHandler::sendProcess(QString)
+00056120 T RemoteConnectionHandler::sendContinueBrewing()
+00056278 T RemoteConnectionHandler::sendPauseBrewing()
+000563d0 T RemoteConnectionHandler::sendStopBrewing()
+00056528 T RemoteConnectionHandler::sync(int, QString)
+00056d04 T RemoteConnectionHandler::processMessage()
+00057a48 W QList<QVariant>::contains(QVariant const&) const
+00057a98 W QList<QVariant>::removeFirst()
+00057b78 W QtPrivate::QVariantValueHelper<QByteArray>::metaType(QVariant const&)
+00057c14 W QtPrivate::QVariantValueHelper<long long>::metaType(QVariant const&)
+00057c60 T QtDebugLog::LogWriterIntf::setCategoryFilter(QtDebugLog::CategoryFilterIntf*)
+00057c78 T QtDebugLog::LogWriterIntf::setTypeEnabled(QtMsgType, bool)
+00057c98 T QtDebugLog::LogWriterIntf::isTypeEnabled(QtMsgType)
+00057cb0 T QtDebugLog::QtDebugLog()
+00057cb0 T QtDebugLog::QtDebugLog()
+00057d10 T QtDebugLog::LogWriterIntf::handleMessage(QtMsgType, QMessageLogContext const&, QString const&)
+00057d94 T QtDebugLog::~QtDebugLog()
+00057d94 T QtDebugLog::~QtDebugLog()
+00057e08 T QtDebugLog::~QtDebugLog()
+00057e24 t __tcf_0
+00057e40 T QtDebugLog::handleMessage(QtMsgType, QMessageLogContext const&, QString const&)
+00058150 T QtDebugLog::staticMessageHandler(QtMsgType, QMessageLogContext const&, QString const&)
+000581e4 T QtDebugLog::registerLogWriter(QSharedPointer<QtDebugLog::LogWriterIntf>)
+000582bc T QtDebugLog::unregisterLogWriter(QSharedPointer<QtDebugLog::LogWriterIntf>)
+00058300 T QtDebugLog::ConsoleWriter::write(QString const&)
+0005835c T QtDebugLog::FileWriter::write(QString const&)
+000583b4 T QtDebugLog::FileWriter::FileWriter(QString const&)
+000583b4 T QtDebugLog::FileWriter::FileWriter(QString const&)
+000586d4 T QtDebugLog::FileWriter::~FileWriter()
+000586d4 T QtDebugLog::FileWriter::~FileWriter()
+00058764 T QtDebugLog::FileWriter::~FileWriter()
+00058780 W QtDebugLog::ConsoleWriter::isReady() const
+00058788 W Singleton<QtDebugLog>::~Singleton()
+000587ac W QtDebugLog::FileWriter::isReady() const
+000587b4 W Singleton<QtDebugLog>::~Singleton()
+000587e8 W QtDebugLog::ConsoleWriter::~ConsoleWriter()
+000587e8 W QtDebugLog::ConsoleWriter::~ConsoleWriter()
+00058810 W QtDebugLog::ConsoleWriter::~ConsoleWriter()
+0005882c W QMutexLocker::QMutexLocker(QBasicMutex*)
+0005882c W QMutexLocker::QMutexLocker(QBasicMutex*)
+00058890 W QMutexLocker::unlock()
+000588ac W QHash<QSharedPointer<QtDebugLog::LogWriterIntf>, QHashDummyValue>::duplicateNode(QHashData::Node*, void*)
+000588d0 W QHash<QSharedPointer<QtDebugLog::LogWriterIntf>, QHashDummyValue>::detach()
+00058950 W QSharedPointer<QtDebugLog::LogWriterIntf>::deref(QtSharedPointer::ExternalRefCountData*)
+000589e4 W QHash<QSharedPointer<QtDebugLog::LogWriterIntf>, QHashDummyValue>::deleteNode2(QHashData::Node*)
+000589ec W QHash<QSharedPointer<QtDebugLog::LogWriterIntf>, QHashDummyValue>::findNode(QSharedPointer<QtDebugLog::LogWriterIntf> const&, unsigned int*) const
+00058aac W QHash<QSharedPointer<QtDebugLog::LogWriterIntf>, QHashDummyValue>::remove(QSharedPointer<QtDebugLog::LogWriterIntf> const&)
+00058bac T McuOutput::McuOutput(QStringList const&)
+00058bac T McuOutput::McuOutput(QStringList const&)
+00058dc8 W QList<QString>::operator[](int) const
+00058e28 t QList<QVariant>::node_destruct(QList<QVariant>::Node*, QList<QVariant>::Node*) [clone .isra.28]
+00058e64 t QList<QVariant>::dealloc(QListData::Data*) [clone .isra.29]
+00058e94 t QList<QVariant>::node_construct(QList<QVariant>::Node*, QVariant const&) [clone .isra.30]
+00058ec8 T MachineState::resetState()
+00058f30 T MachineState::setSerialState(bool)
+00058f38 T MachineState::setLastSentInstruction(int)
+00058f40 T MachineState::MachineState()
+00058f40 T MachineState::MachineState()
+00059114 T MachineState::formatTime(int)
+00059350 t __tcf_0
+0005936c t __tcf_1
+00059388 T MachineState::saveBrewingState()
+000595cc T MachineState::checkPumps(McuOutput const&)
+000597ec T MachineState::saveBrewingData()
+0005989c T MachineState::deleteBrewingState()
+0005992c T MachineState::update(QString const&)
+0005a424 T MachineState::reset()
+0005a43c T MachineState::loadBrewingState()
+0005ac00 t __tcf_2
+0005ac40 T qInitResources_qml()
+0005ac70 T qCleanupResources_qml()
+0005aca0 T Brewing::dataChanged()
+0005acb8 T Brewing::stepsChanged()
+0005acd0 T Brewing::recipeChanged()
+0005ace8 T Brewing::statusChanged()
+0005ad00 T Brewing::estimatedTimeChanged()
+0005ad18 T Brewing::waterInletChanged()
+0005ad30 T Brewing::coolingChanged()
+0005ad48 T Brewing::typeChanged()
+0005ad60 T Brewing::checkListChanged()
+0005ad78 T Brewing::metaObject() const
+0005adcc T Brewing::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005b098 T Brewing::qt_metacast(char const*)
+0005b0e0 T Brewing::qt_metacall(QMetaObject::Call, int, void**)
+0005b360 T Recipe::dataChanged()
+0005b378 T Recipe::fermentablesChanged()
+0005b390 T Recipe::mashStepsChanged()
+0005b3a8 T Recipe::hopsChanged()
+0005b3c0 T Recipe::yeastsChanged()
+0005b3d8 T Recipe::fermentationChanged()
+0005b3f0 T Recipe::detailsChanged()
+0005b408 T Recipe::mashInWaterChanged()
+0005b420 T Recipe::mashInTemperatureChanged()
+0005b438 T Recipe::spargingChanged()
+0005b450 T Recipe::spargingTemperatureChanged()
+0005b468 T Recipe::spargingTimeChanged()
+0005b480 T Recipe::spargingWaterChanged()
+0005b498 T Recipe::delayedHoppingTimeChanged()
+0005b4b0 T Recipe::coolingTemperatureChanged()
+0005b4c8 T Recipe::boundsChanged()
+0005b4e0 T Recipe::validationChanged()
+0005b4f8 T Recipe::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005b8b8 T Recipe::metaObject() const
+0005b90c T Recipe::qt_metacast(char const*)
+0005b954 T Recipe::qt_metacall(QMetaObject::Call, int, void**)
+0005bc40 T RecipeHandler::readyChanged()
+0005bc58 T RecipeHandler::activeRecipeChanged()
+0005bc70 T RecipeHandler::activeBrewingChanged()
+0005bc88 T RecipeHandler::pathChanged()
+0005bca0 T RecipeHandler::recipesChanged()
+0005bcb8 T RecipeHandler::recipeRemoved()
+0005bcd0 T RecipeHandler::recipeValidationChanged()
+0005bce8 T RecipeHandler::metaObject() const
+0005bd3c T RecipeHandler::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005c14c T RecipeHandler::qt_metacast(char const*)
+0005c1bc T RecipeHandler::qt_metacall(QMetaObject::Call, int, void**)
+0005c33c T SerialParser::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005c384 T SerialParser::metaObject() const
+0005c3d8 T SerialParser::qt_metacast(char const*)
+0005c448 T SerialParser::qt_metacall(QMetaObject::Call, int, void**)
+0005c4b0 T ButtonHandler::inProgressChanged()
+0005c4cc T ButtonHandler::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005c534 T ButtonHandler::metaObject() const
+0005c58c T ButtonHandler::qt_metacast(char const*)
+0005c5fc T ButtonHandler::qt_metacall(QMetaObject::Call, int, void**)
+0005c6fc T NotificationHandler::typeChanged()
+0005c714 T NotificationHandler::dataChanged()
+0005c72c T NotificationHandler::visibleChanged()
+0005c744 T NotificationHandler::show()
+0005c75c T NotificationHandler::back()
+0005c774 T NotificationHandler::hide()
+0005c78c T NotificationHandler::hideAll()
+0005c7a4 T NotificationHandler::killScan()
+0005c7bc T NotificationHandler::metaObject() const
+0005c810 T NotificationHandler::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005cb80 T NotificationHandler::qt_metacast(char const*)
+0005cbf0 T NotificationHandler::qt_metacall(QMetaObject::Call, int, void**)
+0005cd24 T ViewHandler::timeZonesChanged()
+0005cd40 T ViewHandler::recipeChooserViewChanged()
+0005cd5c T ViewHandler::watersViewChanged()
+0005cd78 T ViewHandler::mashingViewChanged()
+0005cd94 T ViewHandler::hoppingViewChanged()
+0005cdb0 T ViewHandler::fermentablesViewChanged()
+0005cdcc T ViewHandler::hopsViewChanged()
+0005cde8 T ViewHandler::fermentationViewChanged()
+0005ce04 T ViewHandler::detailsViewChanged()
+0005ce20 T ViewHandler::inputSelectorViewChanged()
+0005ce3c T ViewHandler::connectionViewChanged()
+0005ce58 T ViewHandler::coolingViewChanged()
+0005ce74 T ViewHandler::notificationViewChanged()
+0005ce90 T ViewHandler::metaObject() const
+0005cee8 t void QBasicAtomicOps<4>::orderedMemoryFence<int>(int const&) [clone .isra.67]
+0005cef0 T ViewHandler::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005d31c T ViewHandler::qt_metacast(char const*)
+0005d38c T ViewHandler::qt_metacall(QMetaObject::Call, int, void**)
+0005d534 T WatersView::dataChanged()
+0005d54c T WatersView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005d620 T WatersView::metaObject() const
+0005d674 T WatersView::qt_metacast(char const*)
+0005d6bc T WatersView::qt_metacall(QMetaObject::Call, int, void**)
+0005d7c0 T RecipeChooserView::recipesChanged()
+0005d7d8 T RecipeChooserView::tagsChanged()
+0005d7f0 T RecipeChooserView::metaObject() const
+0005d844 T RecipeChooserView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005d970 T RecipeChooserView::qt_metacast(char const*)
+0005d9b8 T RecipeChooserView::qt_metacall(QMetaObject::Call, int, void**)
+0005dabc T MashingView::dataChanged()
+0005dad4 T MashingView::countChanged()
+0005daec T MashingView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005dbe4 T MashingView::metaObject() const
+0005dc38 T MashingView::qt_metacast(char const*)
+0005dc80 T MashingView::qt_metacall(QMetaObject::Call, int, void**)
+0005dd9c T HopsView::dataChanged()
+0005ddb4 T HopsView::countChanged()
+0005ddcc T HopsView::metaObject() const
+0005de20 T HopsView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005dff8 T HopsView::qt_metacast(char const*)
+0005e040 T HopsView::qt_metacall(QMetaObject::Call, int, void**)
+0005e15c T HoppingView::dataChanged()
+0005e174 T HoppingView::delayedHoppingTimeChanged()
+0005e18c T HoppingView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005e254 T HoppingView::metaObject() const
+0005e2a8 T HoppingView::qt_metacast(char const*)
+0005e2f0 T HoppingView::qt_metacall(QMetaObject::Call, int, void**)
+0005e40c T FermentablesView::dataChanged()
+0005e424 T FermentablesView::countChanged()
+0005e43c T FermentablesView::metaObject() const
+0005e490 T FermentablesView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005e668 T FermentablesView::qt_metacast(char const*)
+0005e6b0 T FermentablesView::qt_metacall(QMetaObject::Call, int, void**)
+0005e7cc T FermentationView::dataChanged()
+0005e7e4 T FermentationView::countChanged()
+0005e7fc T FermentationView::metaObject() const
+0005e850 T FermentationView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005eb28 T FermentationView::qt_metacast(char const*)
+0005eb70 T FermentationView::qt_metacall(QMetaObject::Call, int, void**)
+0005ec8c T Launcher::pathChanged()
+0005eca4 T Launcher::imageIndexChanged()
+0005ecbc T Launcher::fontIndexChanged()
+0005ecd4 T Launcher::fontsReadyChanged()
+0005ecec T Launcher::qmlReadyChanged()
+0005ed04 T Launcher::readyChanged()
+0005ed1c T Launcher::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005ee70 T Launcher::metaObject() const
+0005eec4 T Launcher::qt_metacast(char const*)
+0005ef34 T Launcher::qt_metacall(QMetaObject::Call, int, void**)
+0005f0bc T SettingsHandler::dataChanged()
+0005f0d4 T SettingsHandler::userIdChanged()
+0005f0ec T SettingsHandler::temperatureUnitChanged()
+0005f104 T SettingsHandler::volumeUnitChanged()
+0005f11c T SettingsHandler::weightUnitChanged()
+0005f134 T SettingsHandler::timeZoneChanged()
+0005f14c T SettingsHandler::timeFormatChanged()
+0005f164 T SettingsHandler::waterInletChanged()
+0005f17c T SettingsHandler::waterOutletChanged()
+0005f194 T SettingsHandler::timeChanged()
+0005f1ac T SettingsHandler::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005f3c8 T SettingsHandler::metaObject() const
+0005f41c T SettingsHandler::qt_metacast(char const*)
+0005f48c T SettingsHandler::qt_metacall(QMetaObject::Call, int, void**)
+0005f744 T ConfigurationHandler::waterLevelChanged()
+0005f75c T ConfigurationHandler::calibrateChanged()
+0005f774 T ConfigurationHandler::acceptedEulaChanged()
+0005f78c T ConfigurationHandler::idChanged()
+0005f7a4 T ConfigurationHandler::versionChanged()
+0005f7bc T ConfigurationHandler::calibrationCounterChanged()
+0005f7d4 T ConfigurationHandler::validateStateChanged()
+0005f7ec T ConfigurationHandler::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005f9c4 T ConfigurationHandler::metaObject() const
+0005fa18 T ConfigurationHandler::qt_metacast(char const*)
+0005fa88 T ConfigurationHandler::qt_metacall(QMetaObject::Call, int, void**)
+0005fc20 T ConnectionHandler::scanProgressChanged()
+0005fc38 T ConnectionHandler::networksChanged()
+0005fc50 T ConnectionHandler::connectingChanged()
+0005fc68 T ConnectionHandler::wiredConnectionChanged()
+0005fc80 T ConnectionHandler::wirelessConnectionChanged()
+0005fc98 T ConnectionHandler::metaObject() const
+0005fcec T ConnectionHandler::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+0005ffcc T ConnectionHandler::qt_metacast(char const*)
+0006003c T ConnectionHandler::qt_metacall(QMetaObject::Call, int, void**)
+00060190 T DetailsView::dataChanged()
+000601a8 T DetailsView::metaObject() const
+000601fc T DetailsView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+00060320 T DetailsView::qt_metacast(char const*)
+00060368 T DetailsView::qt_metacall(QMetaObject::Call, int, void**)
+0006046c T InputSelectorView::dataChanged()
+00060484 T InputSelectorView::typeChanged()
+0006049c T InputSelectorView::keyChanged()
+000604b4 T InputSelectorView::styleCategoryChanged()
+000604cc T InputSelectorView::metaObject() const
+00060520 T InputSelectorView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+00060664 T InputSelectorView::qt_metacast(char const*)
+000606ac T InputSelectorView::qt_metacall(QMetaObject::Call, int, void**)
+000608a4 T ConnectionView::dataChanged()
+000608bc T ConnectionView::metaObject() const
+00060910 T ConnectionView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+00060a10 T ConnectionView::qt_metacast(char const*)
+00060a58 T ConnectionView::qt_metacall(QMetaObject::Call, int, void**)
+00060b5c T CoolingView::dataChanged()
+00060b78 T CoolingView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+00060bfc T CoolingView::metaObject() const
+00060c54 T CoolingView::qt_metacast(char const*)
+00060c9c T CoolingView::qt_metacall(QMetaObject::Call, int, void**)
+00060d80 T NotificationView::dataChanged()
+00060d98 T NotificationView::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+00060dec T NotificationView::metaObject() const
+00060e40 T NotificationView::qt_metacast(char const*)
+00060e88 T NotificationView::qt_metacall(QMetaObject::Call, int, void**)
+00060f8c T RemoteConnectionHandler::activeConnectionChanged()
+00060fa4 T RemoteConnectionHandler::metaObject() const
+00060ff8 T RemoteConnectionHandler::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+000610bc T RemoteConnectionHandler::qt_metacast(char const*)
+0006112c T RemoteConnectionHandler::qt_metacall(QMetaObject::Call, int, void**)
+000611fc W QtMetaTypePrivate::QMetaTypeFunctionHelper<QAbstractSocket::SocketError, true>::Destruct(void*)
+00061200 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QAbstractSocket::SocketError, true>::Construct(void*, void const*)
+00061218 W QtMetaTypePrivate::QMetaTypeFunctionHelper<QAbstractSocket::SocketError, true>::Delete(void*)
+0006121c W QtMetaTypePrivate::QMetaTypeFunctionHelper<QAbstractSocket::SocketError, true>::Create(void const*)
+00061248 W QMetaTypeId<QAbstractSocket::SocketError>::qt_metatype_id()
+000613a4 T MachineState::waterLevelChanged(int, float)
+000613fc T MachineState::serialStateChanged()
+00061414 T MachineState::dataChanged()
+0006142c T MachineState::metaObject() const
+00061480 T MachineState::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)
+000615b4 T MachineState::qt_metacast(char const*)
+00061624 T MachineState::qt_metacall(QMetaObject::Call, int, void**)
+000619e4 T __libc_csu_init
+00061a48 T __libc_csu_fini
+00061a4c T atexit
+00061a78 T _fini
+00061a80 R _IO_stdin_used
+00061a84 V typeinfo name for QFutureWatcher<void>
+00061a98 V typeinfo name for Singleton<NotificationHandler>
+00061aba V typeinfo name for QtDebugLog::CategoryFilterIntf
+00061add V typeinfo name for QtDebugLog::EmptyCategoryFilter
+00061b01 V typeinfo name for QtDebugLog::CategoryWhiteList
+00061b23 V typeinfo name for QtDebugLog::CategoryBlackList
+00061b45 V typeinfo name for QtDebugLog::LogWriterIntf
+00061b63 V typeinfo name for Singleton<RecipeHandler>
+00061b7f V typeinfo name for Singleton<MachineState>
+00061b9a V typeinfo name for Singleton<Launcher>
+00061bb0 V typeinfo name for QQmlPrivate::QQmlElement<Recipe>
+00061bd6 V typeinfo name for QQmlPrivate::QQmlElement<Brewing>
+00061bfd V typeinfo name for QQmlPrivate::QQmlElement<FermentablesView>
+00061c2e V typeinfo name for QQmlPrivate::QQmlElement<HopsView>
+00061c56 V typeinfo name for QQmlPrivate::QQmlElement<RecipeChooserView>
+00061c88 V typeinfo name for QQmlPrivate::QQmlElement<DetailsView>
+00061cb4 V typeinfo name for QQmlPrivate::QQmlElement<WatersView>
+00061cdf V typeinfo name for QQmlPrivate::QQmlElement<MashingView>
+00061d0b V typeinfo name for QQmlPrivate::QQmlElement<HoppingView>
+00061d37 V typeinfo name for QQmlPrivate::QQmlElement<FermentationView>
+00061d68 V typeinfo name for QQmlPrivate::QQmlElement<InputSelectorView>
+00061d9a V typeinfo name for QQmlPrivate::QQmlElement<ConnectionView>
+00061dc9 V typeinfo name for QQmlPrivate::QQmlElement<CoolingView>
+00061df5 V typeinfo name for QQmlPrivate::QQmlElement<NotificationView>
+00061e28 r main::__PRETTY_FUNCTION__
+00061e40 r main::{lambda()#1}::operator()() const::qstring_literal
+00062400 r CSWTCH.677
+000626ac V typeinfo name for Singleton<RemoteConnectionHandler>
+000626d2 V typeinfo name for Singleton<SettingsHandler>
+000626f0 r Brewing::start(bool)::__PRETTY_FUNCTION__
+0006270a r Brewing::setStatus(int)::__PRETTY_FUNCTION__
+00062727 r Brewing::createInstructions()::__PRETTY_FUNCTION__
+00062a4e r RecipeHandler::changeBrewingLogFile()::__PRETTY_FUNCTION__
+00062ad9 r RecipeHandler::start(bool)::__PRETTY_FUNCTION__
+00062af9 r RecipeHandler::setAbortedBrewing(QString const&, std::unique_ptr<Brewing, std::default_delete<Brewing> >&&)::__PRETTY_FUNCTION__
+00062b4b r RecipeHandler::openRecipe(QString)::__PRETTY_FUNCTION__
+00062b73 r RecipeHandler::loadRecipes()::__PRETTY_FUNCTION__
+00062d05 V typeinfo name for Singleton<SerialParser>
+00062eaf r SerialParser::openSerialPort(bool)::__PRETTY_FUNCTION__
+00062ed7 r SerialParser::closeSerialPort()::__PRETTY_FUNCTION__
+00062efc r SerialParser::handleError(QSerialPort::SerialPortError)::__PRETTY_FUNCTION__
+00062f39 r SerialParser::readErrorTimeout()::__PRETTY_FUNCTION__
+00062f5f r SerialParser::sendData()::__PRETTY_FUNCTION__
+00062f7d r SerialParser::writeData(QString)::__PRETTY_FUNCTION__
+00062fa3 r SerialParser::resendLastData()::__PRETTY_FUNCTION__
+00062fc7 r SerialParser::readData()::__PRETTY_FUNCTION__
+00062fe5 r SerialParser::handleAckTimeout()::__PRETTY_FUNCTION__
+00063262 V typeinfo name for Singleton<ButtonHandler>
+00063329 V typeinfo name for Singleton<ConfigurationHandler>
+000633c1 r NotificationHandler::setNotification(int, bool)::__PRETTY_FUNCTION__
+00063457 r NotificationHandler::setNotificationBySerialData(int, int, float, QString, bool, bool)::__PRETTY_FUNCTION__
+00064991 V typeinfo name for Singleton<ViewHandler>
+000649ab V typeinfo name for QRunnable
+000649b6 V typeinfo name for QFutureInterface<void>
+000649cc V typeinfo name for QtConcurrent::RunFunctionTaskBase<void>
+000649f5 V typeinfo name for QtConcurrent::RunFunctionTask<void>
+00064a1a V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, WatersView>
+00064aba V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, RecipeChooserView>
+00064b64 V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, MashingView>
+00064bfb V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HopsView>
+00064c8e V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HoppingView>
+00064d25 V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentablesView>
+00064de3 V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentationView>
+00064eb3 V typeinfo name for Singleton<ConnectionHandler>
+00064ed3 V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, Launcher>
+00065080 r SettingsHandler::save()::__PRETTY_FUNCTION__
+00065466 r ConnectionHandler::setScanProgress(float)::__PRETTY_FUNCTION__
+00065495 r ConnectionHandler::connectWifi(int, QString, QString, bool)::__PRETTY_FUNCTION__
+000654d6 r ConnectionHandler::checkConnection()::__PRETTY_FUNCTION__
+00065536 r ConnectionHandler::checkNetwork(bool)::__PRETTY_FUNCTION__
+00065875 V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, DetailsView>
+000659b9 V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, InputSelectorView>
+00065ac3 V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, ConnectionView>
+00065b68 r ConnectionView::connectFinished()::__PRETTY_FUNCTION__
+00065bf1 V typeinfo name for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, CoolingView>
+00065e74 r RemoteConnectionHandler::acceptConnection()::__PRETTY_FUNCTION__
+00065ea5 r RemoteConnectionHandler::closeConnection(QAbstractSocket::SocketError)::__PRETTY_FUNCTION__
+00065ef1 r RemoteConnectionHandler::sendMessage()::__PRETTY_FUNCTION__
+00065f1d r RemoteConnectionHandler::processMessage()::__PRETTY_FUNCTION__
+00065fef V typeinfo name for Singleton<QtDebugLog>
+00066008 r QtDebugLog::FileWriter::FileWriter(QString const&)::__PRETTY_FUNCTION__
+0006603b R typeinfo name for QtDebugLog::ConsoleWriter
+00066059 R typeinfo name for QtDebugLog::FileWriter
+00066074 R typeinfo name for QtDebugLog
+0006621d r MachineState::checkPumps(McuOutput const&)::__PRETTY_FUNCTION__
+0006624d r MachineState::loadBrewingState()::__PRETTY_FUNCTION__
+000663da r qt_resource_struct
+000667bc r qt_resource_name
+0006715c r qt_resource_data
+0007c6dc r qt_meta_stringdata_Brewing
+0007c9bc r qt_meta_data_Brewing
+0007cbe0 R typeinfo name for Brewing
+0007cc60 r qt_meta_stringdata_Recipe
+0007d170 r qt_meta_data_Recipe
+0007d514 R typeinfo name for Recipe
+0007d51c r qt_meta_stringdata_RecipeHandler
+0007da14 r qt_meta_data_RecipeHandler
+0007ddd8 R typeinfo name for RecipeHandler
+0007de04 r qt_meta_stringdata_SerialParser
+0007df08 r qt_meta_data_SerialParser
+0007dfc4 R typeinfo name for SerialParser
+0007dfec r qt_meta_stringdata_ButtonHandler
+0007e08c r qt_meta_data_ButtonHandler
+0007e128 R typeinfo name for ButtonHandler
+0007e154 r qt_meta_stringdata_NotificationHandler
+0007e4a8 r qt_meta_data_NotificationHandler
+0007e7ec R typeinfo name for NotificationHandler
+0007e824 r qt_meta_stringdata_ViewHandler
+0007ed84 r qt_meta_data_ViewHandler
+0007f008 R typeinfo name for ViewHandler
+0007f030 r qt_meta_stringdata_WatersView
+0007f268 r qt_meta_data_WatersView
+0007f3fc R typeinfo name for WatersView
+0007f40c r qt_meta_stringdata_RecipeChooserView
+0007f4d8 r qt_meta_data_RecipeChooserView
+0007f5a4 R typeinfo name for RecipeChooserView
+0007f5b8 r qt_meta_stringdata_MashingView
+0007f770 r qt_meta_data_MashingView
+0007f904 R typeinfo name for MashingView
+0007f914 r qt_meta_stringdata_HopsView
+0007faf0 r qt_meta_data_HopsView
+0007fcbc R typeinfo name for HopsView
+0007fcc8 r qt_meta_stringdata_HoppingView
+0007fe3c r qt_meta_data_HoppingView
+0007ff70 R typeinfo name for HoppingView
+0007ff80 r qt_meta_stringdata_FermentablesView
+00080178 r qt_meta_data_FermentablesView
+00080344 R typeinfo name for FermentablesView
+00080358 r qt_meta_stringdata_FermentationView
+000806c8 r qt_meta_data_FermentationView
+000809bc R typeinfo name for FermentationView
+000809d0 r qt_meta_stringdata_Launcher
+00080b80 r qt_meta_data_Launcher
+00080cdc R typeinfo name for Launcher
+00080cfc r qt_meta_stringdata_SettingsHandler
+00080fc0 r qt_meta_data_SettingsHandler
+000811d4 R typeinfo name for SettingsHandler
+00081204 r qt_meta_stringdata_ConfigurationHandler
+00081570 r qt_meta_data_ConfigurationHandler
+000817bc R typeinfo name for ConfigurationHandler
+000817f4 r qt_meta_stringdata_ConnectionHandler
+00081b14 r qt_meta_data_ConnectionHandler
+00081d90 R typeinfo name for ConnectionHandler
+00081dc4 r qt_meta_stringdata_DetailsView
+00081ea8 r qt_meta_data_DetailsView
+00081f8c R typeinfo name for DetailsView
+00081f9c r qt_meta_stringdata_InputSelectorView
+000820d0 r qt_meta_data_InputSelectorView
+000821e4 R typeinfo name for InputSelectorView
+000821f8 r qt_meta_stringdata_ConnectionView
+000822dc r qt_meta_data_ConnectionView
+00082398 R typeinfo name for ConnectionView
+000823ac r qt_meta_stringdata_CoolingView
+00082498 r qt_meta_data_CoolingView
+0008257c R typeinfo name for CoolingView
+0008258c r qt_meta_stringdata_NotificationView
+00082614 r qt_meta_data_NotificationView
+00082690 R typeinfo name for NotificationView
+000826a4 r qt_meta_stringdata_RemoteConnectionHandler
+000827cc r qt_meta_data_RemoteConnectionHandler
+00082880 R typeinfo name for RemoteConnectionHandler
+000828dc r qt_meta_stringdata_MachineState
+00082bf8 r qt_meta_data_MachineState
+00082dd4 R typeinfo name for MachineState
+0008d26c r __FRAME_END__
+00095270 d __frame_dummy_init_array_entry
+00095270 d __init_array_start
+00095340 d __do_global_dtors_aux_fini_array_entry
+00095340 d __init_array_end
+00095370 d __JCR_END__
+00095370 d __JCR_LIST__
+00095378 V typeinfo for QFutureWatcher<void>
+00095384 V typeinfo for Singleton<NotificationHandler>
+0009538c V typeinfo for QtDebugLog::CategoryFilterIntf
+00095394 V typeinfo for QtDebugLog::EmptyCategoryFilter
+000953a0 V typeinfo for QtDebugLog::CategoryWhiteList
+000953ac V typeinfo for QtDebugLog::CategoryBlackList
+000953b8 V typeinfo for QtDebugLog::LogWriterIntf
+000953c0 V typeinfo for Singleton<RecipeHandler>
+000953c8 V typeinfo for Singleton<MachineState>
+000953d0 V typeinfo for Singleton<Launcher>
+000953d8 V typeinfo for QQmlPrivate::QQmlElement<Recipe>
+000953e4 V typeinfo for QQmlPrivate::QQmlElement<Brewing>
+000953f0 V typeinfo for QQmlPrivate::QQmlElement<FermentablesView>
+000953fc V typeinfo for QQmlPrivate::QQmlElement<HopsView>
+00095408 V typeinfo for QQmlPrivate::QQmlElement<RecipeChooserView>
+00095414 V typeinfo for QQmlPrivate::QQmlElement<DetailsView>
+00095420 V typeinfo for QQmlPrivate::QQmlElement<WatersView>
+0009542c V typeinfo for QQmlPrivate::QQmlElement<MashingView>
+00095438 V typeinfo for QQmlPrivate::QQmlElement<HoppingView>
+00095444 V typeinfo for QQmlPrivate::QQmlElement<FermentationView>
+00095450 V typeinfo for QQmlPrivate::QQmlElement<InputSelectorView>
+0009545c V typeinfo for QQmlPrivate::QQmlElement<ConnectionView>
+00095468 V typeinfo for QQmlPrivate::QQmlElement<CoolingView>
+00095474 V typeinfo for QQmlPrivate::QQmlElement<NotificationView>
+00095480 V vtable for QFutureWatcher<void>
+000954c0 V vtable for Singleton<NotificationHandler>
+000954d0 V vtable for QtDebugLog::CategoryFilterIntf
+000954e0 V vtable for QtDebugLog::EmptyCategoryFilter
+000954f0 V vtable for QtDebugLog::CategoryWhiteList
+00095500 V vtable for QtDebugLog::CategoryBlackList
+00095510 V vtable for QtDebugLog::LogWriterIntf
+00095528 V vtable for Singleton<RecipeHandler>
+00095538 V vtable for Singleton<MachineState>
+00095548 V vtable for Singleton<Launcher>
+00095558 V vtable for QQmlPrivate::QQmlElement<Recipe>
+00095590 V vtable for QQmlPrivate::QQmlElement<Brewing>
+000955c8 V vtable for QQmlPrivate::QQmlElement<FermentablesView>
+00095600 V vtable for QQmlPrivate::QQmlElement<HopsView>
+00095638 V vtable for QQmlPrivate::QQmlElement<RecipeChooserView>
+00095670 V vtable for QQmlPrivate::QQmlElement<DetailsView>
+000956a8 V vtable for QQmlPrivate::QQmlElement<WatersView>
+000956e0 V vtable for QQmlPrivate::QQmlElement<MashingView>
+00095718 V vtable for QQmlPrivate::QQmlElement<HoppingView>
+00095750 V vtable for QQmlPrivate::QQmlElement<FermentationView>
+00095788 V vtable for QQmlPrivate::QQmlElement<InputSelectorView>
+000957c0 V vtable for QQmlPrivate::QQmlElement<ConnectionView>
+000957f8 V vtable for QQmlPrivate::QQmlElement<CoolingView>
+00095830 V vtable for QQmlPrivate::QQmlElement<NotificationView>
+00095868 V typeinfo for Singleton<RemoteConnectionHandler>
+00095870 V typeinfo for Singleton<SettingsHandler>
+00095878 V vtable for Singleton<RemoteConnectionHandler>
+00095888 V vtable for Singleton<SettingsHandler>
+00095898 V typeinfo for Singleton<SerialParser>
+000958a0 V vtable for Singleton<SerialParser>
+000958b0 V typeinfo for Singleton<ButtonHandler>
+000958b8 V vtable for Singleton<ButtonHandler>
+000958c8 V typeinfo for Singleton<ConfigurationHandler>
+000958d0 V vtable for Singleton<ConfigurationHandler>
+000958e0 V typeinfo for Singleton<ViewHandler>
+000958e8 V vtable for Singleton<ViewHandler>
+000958f8 V typeinfo for QRunnable
+00095900 V typeinfo for QFutureInterface<void>
+0009590c V typeinfo for QtConcurrent::RunFunctionTaskBase<void>
+0009592c V typeinfo for QtConcurrent::RunFunctionTask<void>
+00095938 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, WatersView>
+00095948 V vtable for QRunnable
+00095960 V vtable for QFutureInterface<void>
+00095970 V vtable for QtConcurrent::RunFunctionTaskBase<void>
+000959a0 V vtable for QtConcurrent::RunFunctionTask<void>
+000959d0 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, WatersView>
+00095a00 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, RecipeChooserView>
+00095a10 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, RecipeChooserView>
+00095a40 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, MashingView>
+00095a50 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, MashingView>
+00095a80 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HopsView>
+00095a90 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HopsView>
+00095ac0 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HoppingView>
+00095ad0 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, HoppingView>
+00095b00 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentablesView>
+00095b10 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentablesView>
+00095b40 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentationView>
+00095b50 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, FermentationView>
+00095b80 V typeinfo for Singleton<ConnectionHandler>
+00095b88 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, Launcher>
+00095b98 V vtable for Singleton<ConnectionHandler>
+00095ba8 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, Launcher>
+00095bd8 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, DetailsView>
+00095be8 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, DetailsView>
+00095c18 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, InputSelectorView>
+00095c28 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, InputSelectorView>
+00095c58 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, ConnectionView>
+00095c68 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, ConnectionView>
+00095c98 V typeinfo for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, CoolingView>
+00095ca8 V vtable for QtConcurrent::VoidStoredMemberFunctionPointerCall0<void, CoolingView>
+00095cd8 V typeinfo for Singleton<QtDebugLog>
+00095ce0 V vtable for Singleton<QtDebugLog>
+00095cf0 D vtable for QtDebugLog::ConsoleWriter
+00095d08 D vtable for QtDebugLog
+00095d18 D vtable for QtDebugLog::FileWriter
+00095d30 D typeinfo for QtDebugLog::ConsoleWriter
+00095d3c D typeinfo for QtDebugLog::FileWriter
+00095d48 D typeinfo for QtDebugLog
+00095d58 D Brewing::staticMetaObject
+00095d70 D vtable for Brewing
+00095da8 D typeinfo for Brewing
+00095db8 D Recipe::staticMetaObject
+00095dd0 D vtable for Recipe
+00095e08 D typeinfo for Recipe
+00095e18 D RecipeHandler::staticMetaObject
+00095e30 D vtable for RecipeHandler
+00095e78 D typeinfo for RecipeHandler
+00095e98 D SerialParser::staticMetaObject
+00095eb0 D typeinfo for SerialParser
+00095ed0 D vtable for SerialParser
+00095f18 D vtable for ButtonHandler
+00095f60 D ButtonHandler::staticMetaObject
+00095f78 D typeinfo for ButtonHandler
+00095f98 D NotificationHandler::staticMetaObject
+00095fb0 D vtable for NotificationHandler
+00095ff8 D typeinfo for NotificationHandler
+00096018 D vtable for ViewHandler
+00096060 D ViewHandler::staticMetaObject
+00096078 D typeinfo for ViewHandler
+00096098 D WatersView::staticMetaObject
+000960b0 D vtable for WatersView
+000960e8 D typeinfo for WatersView
+000960f8 D RecipeChooserView::staticMetaObject
+00096110 D vtable for RecipeChooserView
+00096148 D typeinfo for RecipeChooserView
+00096158 D MashingView::staticMetaObject
+00096170 D vtable for MashingView
+000961a8 D typeinfo for MashingView
+000961b8 D HopsView::staticMetaObject
+000961d0 D vtable for HopsView
+00096208 D typeinfo for HopsView
+00096218 D HoppingView::staticMetaObject
+00096230 D vtable for HoppingView
+00096268 D typeinfo for HoppingView
+00096278 D FermentablesView::staticMetaObject
+00096290 D vtable for FermentablesView
+000962c8 D typeinfo for FermentablesView
+000962d8 D FermentationView::staticMetaObject
+000962f0 D vtable for FermentationView
+00096328 D typeinfo for FermentationView
+00096338 D Launcher::staticMetaObject
+00096350 D vtable for Launcher
+00096398 D typeinfo for Launcher
+000963b8 D SettingsHandler::staticMetaObject
+000963d0 D vtable for SettingsHandler
+00096418 D typeinfo for SettingsHandler
+00096438 D ConfigurationHandler::staticMetaObject
+00096450 D vtable for ConfigurationHandler
+00096498 D typeinfo for ConfigurationHandler
+000964b8 D ConnectionHandler::staticMetaObject
+000964d0 D vtable for ConnectionHandler
+00096518 D typeinfo for ConnectionHandler
+00096538 D DetailsView::staticMetaObject
+00096550 D vtable for DetailsView
+00096588 D typeinfo for DetailsView
+00096598 D InputSelectorView::staticMetaObject
+000965b0 D vtable for InputSelectorView
+000965e8 D typeinfo for InputSelectorView
+000965f8 D ConnectionView::staticMetaObject
+00096610 D vtable for ConnectionView
+00096648 D typeinfo for ConnectionView
+00096658 D vtable for CoolingView
+00096690 D CoolingView::staticMetaObject
+000966a8 D typeinfo for CoolingView
+000966b8 D NotificationView::staticMetaObject
+000966d0 D vtable for NotificationView
+00096708 D typeinfo for NotificationView
+00096718 D RemoteConnectionHandler::staticMetaObject
+00096730 D vtable for RemoteConnectionHandler
+00096778 D typeinfo for RemoteConnectionHandler
+00096798 D MachineState::staticMetaObject
+000967b0 D vtable for MachineState
+000967f8 D typeinfo for MachineState
+00096818 d _DYNAMIC
+00096980 d _GLOBAL_OFFSET_TABLE_
+00097480 D __data_start
+00097480 W data_start
+00097484 d __dso_handle
+00097488 D crcTable
+00097588 A __bss_start
+00097588 A __bss_start__
+00097588 A _edata
+00097588 D __TMC_END__
+00097588 B vtable for __cxxabiv1::__vmi_class_type_info@@CXXABI_1.3
+000975b8 B vtable for __cxxabiv1::__class_type_info@@CXXABI_1.3
+000975e4 B QObject::staticMetaObject
+00097600 B typeinfo for QObject
+00097608 B typeinfo for QFutureInterfaceBase
+00097610 B typeinfo for QFutureWatcherBase
+00097620 B vtable for __cxxabiv1::__si_class_type_info@@CXXABI_1.3
+0009764c b completed.9713
+00097650 b qQmlEnableDebuggingHelper
+00097654 b wifiDir
+00097658 V Singleton<Launcher>::getInstance()::inst
+00097684 V QMetaTypeIdQObject<NotificationView*, true>::qt_metatype_id()::metatype_id
+00097688 V QMetaTypeIdQObject<CoolingView*, true>::qt_metatype_id()::metatype_id
+0009768c V QMetaTypeIdQObject<ConnectionView*, true>::qt_metatype_id()::metatype_id
+00097690 V QMetaTypeIdQObject<InputSelectorView*, true>::qt_metatype_id()::metatype_id
+00097694 V QMetaTypeIdQObject<FermentationView*, true>::qt_metatype_id()::metatype_id
+00097698 V QMetaTypeIdQObject<HoppingView*, true>::qt_metatype_id()::metatype_id
+0009769c V QMetaTypeIdQObject<MashingView*, true>::qt_metatype_id()::metatype_id
+000976a0 V QMetaTypeIdQObject<WatersView*, true>::qt_metatype_id()::metatype_id
+000976a4 V QMetaTypeIdQObject<DetailsView*, true>::qt_metatype_id()::metatype_id
+000976a8 V QMetaTypeIdQObject<RecipeChooserView*, true>::qt_metatype_id()::metatype_id
+000976ac V QMetaTypeIdQObject<HopsView*, true>::qt_metatype_id()::metatype_id
+000976b0 V QMetaTypeIdQObject<FermentablesView*, true>::qt_metatype_id()::metatype_id
+000976b4 V QMetaTypeIdQObject<NotificationHandler*, true>::qt_metatype_id()::metatype_id
+000976b8 V QMetaTypeIdQObject<Brewing*, true>::qt_metatype_id()::metatype_id
+000976bc V QMetaTypeIdQObject<MachineState*, true>::qt_metatype_id()::metatype_id
+000976c0 V QMetaTypeIdQObject<RecipeHandler*, true>::qt_metatype_id()::metatype_id
+000976c4 V QMetaTypeIdQObject<Recipe*, true>::qt_metatype_id()::metatype_id
+000976c8 V Singleton<RecipeHandler>::getInstance()::inst
+000976fc V Singleton<QtDebugLog>::getInstance()::inst
+00097708 V Singleton<MachineState>::getInstance()::inst
+0009779c V Singleton<NotificationHandler>::getInstance()::inst
+000977c8 V guard variable for Singleton<NotificationHandler>::getInstance()::inst
+000977cc V guard variable for Singleton<MachineState>::getInstance()::inst
+000977d0 V guard variable for Singleton<Launcher>::getInstance()::inst
+000977d4 V guard variable for Singleton<RecipeHandler>::getInstance()::inst
+000977d8 V guard variable for Singleton<QtDebugLog>::getInstance()::inst
+000977dc b qQmlEnableDebuggingHelper
+000977e0 V QMetaTypeId<QtMetaTypePrivate::QAssociativeIterableImpl>::qt_metatype_id()::metatype_id
+000977e4 V QMetaTypeId<QtMetaTypePrivate::QSequentialIterableImpl>::qt_metatype_id()::metatype_id
+000977e8 b qQmlEnableDebuggingHelper
+000977ec V Singleton<RemoteConnectionHandler>::getInstance()::inst
+00097810 V Singleton<SerialParser>::getInstance()::inst
+0009783c V Singleton<SettingsHandler>::getInstance()::inst
+00097878 V guard variable for Singleton<RemoteConnectionHandler>::getInstance()::inst
+0009787c V guard variable for Singleton<SerialParser>::getInstance()::inst
+00097880 V guard variable for Singleton<SettingsHandler>::getInstance()::inst
+00097884 b LOG_BREWING_JSON()::category
+00097894 b guard variable for LOG_BREWING_JSON()::category
+00097898 b qQmlEnableDebuggingHelper
+0009789c b LOG_SERIAL()::category
+000978ac b LOG_CONTROL_DATA()::category
+000978bc b guard variable for LOG_SERIAL()::category
+000978c0 b guard variable for LOG_CONTROL_DATA()::category
+000978c4 b qQmlEnableDebuggingHelper
+000978c8 B FileParser::m_records
+000978cc b qQmlEnableDebuggingHelper
+000978cd b qQmlEnableDebuggingHelper
+000978d0 V Singleton<ConfigurationHandler>::getInstance()::inst
+00097924 V Singleton<ButtonHandler>::getInstance()::inst
+00097948 V guard variable for Singleton<ConfigurationHandler>::getInstance()::inst
+0009794c V guard variable for Singleton<ButtonHandler>::getInstance()::inst
+00097950 b qQmlEnableDebuggingHelper
+00097954 b wifiDir
+00097958 b qQmlEnableDebuggingHelper
+00097959 b qQmlEnableDebuggingHelper
+0009795a b qQmlEnableDebuggingHelper
+0009795b b qQmlEnableDebuggingHelper
+0009795c b qQmlEnableDebuggingHelper
+0009795d b qQmlEnableDebuggingHelper
+0009795e b qQmlEnableDebuggingHelper
+00097960 b qQmlEnableDebuggingHelper
+00097964 b wifiDir
+00097968 V Singleton<ViewHandler>::getInstance()::inst
+000979a4 V Singleton<ConnectionHandler>::getInstance()::inst
+000979cc V guard variable for Singleton<ViewHandler>::getInstance()::inst
+000979d0 V guard variable for Singleton<ConnectionHandler>::getInstance()::inst
+000979d4 b qQmlEnableDebuggingHelper
+000979d5 b qQmlEnableDebuggingHelper
+000979d8 b wifiDir
+000979dc b qQmlEnableDebuggingHelper
+000979e0 b qQmlEnableDebuggingHelper
+000979e4 b qQmlEnableDebuggingHelper
+000979e8 b wifiDir
+000979ec b qQmlEnableDebuggingHelper
+000979ed b qQmlEnableDebuggingHelper
+000979ee b qQmlEnableDebuggingHelper
+000979ef b qQmlEnableDebuggingHelper
+000979f0 b qQmlEnableDebuggingHelper
+000979f1 b qQmlEnableDebuggingHelper
+000979f2 b qQmlEnableDebuggingHelper
+000979f3 b qQmlEnableDebuggingHelper
+000979f4 b qQmlEnableDebuggingHelper
+000979f5 b qQmlEnableDebuggingHelper
+000979f6 b qQmlEnableDebuggingHelper
+000979f8 b qQmlEnableDebuggingHelper
+000979fc b wifiDir
+00097a00 b qQmlEnableDebuggingHelper
+00097a01 b qQmlEnableDebuggingHelper
+00097a02 b qQmlEnableDebuggingHelper
+00097a03 b qQmlEnableDebuggingHelper
+00097a04 b qQmlEnableDebuggingHelper
+00097a05 b qQmlEnableDebuggingHelper
+00097a08 b qQmlEnableDebuggingHelper
+00097a0c b wifiDir
+00097a10 b qQmlEnableDebuggingHelper
+00097a11 b qQmlEnableDebuggingHelper
+00097a14 b qQmlEnableDebuggingHelper
+00097a18 b wifiDir
+00097a1c b qQmlEnableDebuggingHelper
+00097a20 b qQmlEnableDebuggingHelper
+00097a24 b wifiDir
+00097a28 b qQmlEnableDebuggingHelper
+00097a29 b qQmlEnableDebuggingHelper
+00097a2a b qQmlEnableDebuggingHelper
+00097a2c V QMetaTypeId<QAbstractSocket::SocketError>::qt_metatype_id()::metatype_id
+00097a30 b qQmlEnableDebuggingHelper
+00097a34 A __bss_end__
+00097a34 A _bss_end__
+00097a34 A __end__
+00097a34 A _end

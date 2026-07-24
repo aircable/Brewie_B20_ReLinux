@@ -1,0 +1,33 @@
+{
+  "sqlite_refs": [],
+  "sql_queries": [
+    "delete it?",
+    "Update\nasdasdasd",
+    "create log",
+    "create log",
+    "update\nsetDrainLed",
+    "delete\n_ZN6QDebuglsEt",
+    "Delete\n_ZNK5QDate7isValidEv",
+    "create\nSolidPattern",
+    "Create\nMarshallIslands",
+    "Delete\n_ZNK10QJsonArrayixEi",
+    "insert\n_ZN5QListI7QStringE13node_destructEPNS1_4NodeES3_",
+    "delete\nisMark",
+    "update\nreadLine",
+    "Insert\nUngrabKeyboard",
+    "Select\nKey_unknown",
+    "Update\nEnterWhatsThisMode",
+    "Delete\nWinEventAct",
+    "Update\nModifiedChange",
+    "Delete\nGraphicsSceneContextMenu"
+  ],
+  "file_operations": [],
+  "config_files": [
+    "utils/conf",
+    "utils/conf",
+    "utils/conf",
+    "utils/conf",
+    "etc/version.json",
+    "utils/conf"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "binary": {
+    "name": "BrewieApplication",
+    "size": 13385442
+  },
+  "elf": {
+    "architecture": "ARM",
+    "class": "ELF32",
+    "endian": "little",
+    "abi": "UNIX - System V",
+    "float_abi": "hard",
+    "entry_point": "0x18608",
+    "pie": false,
+    "dwarf": true
+  },
+  "build": {
+    "compiler": "GNU C++ 4.8.2",
+    "cxx_standard": "C++11",
+    "rpath": "",
+    "runpath": ""
+  },
+  "qt": {
+    "version": "5",
+    "modules": [
+      "Qt5Concurrent",
+      "Qt5Core",
+      "Qt5Gui",
+      "Qt5Network",
+      "Qt5Qml",
+      "Qt5Quick",
+      "Qt5SerialPort",
+      "Qt5Widgets",
+      "Qt5Xml"
+    ],
+    "qml_types": [
+      "Brewing",
+      "ConnectionView",
+      "CoolingView",
+      "DetailsView",
+      "FermentablesView",
+      "FermentationView",
+      "HoppingView",
+      "HopsView",
+      "InputSelectorView",
+      "MashingView",
+      "NotificationView",
+      "Recipe",
+      "RecipeChooserView",
+      "WatersView"
+    ],
+    "qobject_subclasses": [
+      "Brewing",
+      "ButtonHandler",
+      "ConfigurationHandler",
+      "ConnectionHandler",
+      "ConnectionView",
+      "CoolingView",
+      "DetailsView",
+      "FermentablesView",
+      "FermentationView",
+      "HoppingView",
+      "HopsView",
+      "InputSelectorView",
+      "Launcher",
+      "MachineState",
+      "MashingView",
+      "NotificationHandler",
+      "NotificationView",
+      "Recipe",
+      "RecipeChooserView",
+      "RecipeHandler",
+      "RemoteConnectionHandler",
+      "SerialParser",
+      "SettingsHandler",
+      "ViewHandler",
+      "WatersView"
+    ]
+  },
+  "libraries": [
+    "libGLESv2.so",
+    "libQt5Concurrent.so.5",
+    "libQt5Core.so.5",
+    "libQt5Gui.so.5",
+    "libQt5Network.so.5",
+    "libQt5Qml.so.5",
+    "libQt5Quick.so.5",
+    "libQt5SerialPort.so.5",
+    "libQt5Widgets.so.5",
+    "libQt5Xml.so.5",
+    "libc.so.6",
+    "libdl.so.2",
+    "libgcc_s.so.1",
+    "libm.so.6",
+    "libpthread.so.0",
+    "librt.so.1",
+    "libstdc++.so.6"
+  ],
+  "source_files": [
+    "../core/brewing.cpp",
+    "../core/recipe.cpp",
+    "../main.cpp",
+    "../recipehandler.cpp",
+    "../utils/serialparser.cpp"
+  ],
+  "sqlite_references": [],
+  "firmware_strings": [],
+  "warnings": []
+}

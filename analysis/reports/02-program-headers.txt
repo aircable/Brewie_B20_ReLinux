@@ -1,0 +1,27 @@
+
+Elf file type is EXEC (Executable file)
+Entry point 0x18608
+There are 8 program headers, starting at offset 52
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  ARM_EXIDX      0x083914 0x0008b914 0x0008b914 0x01958 0x01958 R   0x4
+  PHDR           0x000034 0x00008034 0x00008034 0x00100 0x00100 R E 0x4
+  INTERP         0x000134 0x00008134 0x00008134 0x00019 0x00019 R   0x1
+      [Requesting program interpreter: /lib/ld-linux-armhf.so.3]
+  LOAD           0x000000 0x00008000 0x00008000 0x85270 0x85270 R E 0x8000
+  LOAD           0x085270 0x00095270 0x00095270 0x02318 0x027c4 RW  0x8000
+  DYNAMIC        0x086818 0x00096818 0x00096818 0x00168 0x00168 RW  0x4
+  NOTE           0x000150 0x00008150 0x00008150 0x00020 0x00020 R   0x4
+  GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000 RW  0x4
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .ARM.exidx 
+   01     
+   02     .interp 
+   03     .interp .note.ABI-tag .hash .dynsym .dynstr .gnu.version .gnu.version_r .rel.dyn .rel.plt .init .plt .text .fini .rodata .ARM.extab .ARM.exidx .eh_frame 
+   04     .init_array .fini_array .jcr .data.rel.ro .dynamic .got .data .bss 
+   05     .dynamic 
+   06     .note.ABI-tag 
+   07     

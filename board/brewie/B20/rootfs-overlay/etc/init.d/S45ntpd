@@ -1,0 +1,23 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        printf 'Starting SNTP: '
+        start-stop-daemon -S -b -m -p /var/run/ntpd.pid -- \
+            /usr/sbin/ntpd -p pool.ntp.org
+        echo OK
+        ;;
+    stop)
+        start-stop-daemon -K -p /var/run/ntpd.pid
+        ;;
+    restart|reload)
+        "$0" stop
+        "$0" start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|reload}"
+        exit 1
+        ;;
+esac
+
+exit 0

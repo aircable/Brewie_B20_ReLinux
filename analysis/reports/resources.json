@@ -1,0 +1,32 @@
+{
+  "images": [
+    "drain.png",
+    "drain_button.png",
+    "attention.png",
+    "check.png",
+    "wipe.png",
+    "tablette.png",
+    "cleaning.png",
+    "manual_water.png",
+    "do_not_touch.png",
+    "unclogging.png",
+    "unclogging_machine.png",
+    "unclogging_mashing.png",
+    "unclogging_boiling.png",
+    "unclogging_bubbly.png",
+    "unclogging_dirty.png",
+    "unclogging_remove.png",
+    "error.png",
+    "measuring.png",
+    "process.png",
+    "inlet.png",
+    "before.png",
+    "grain.png",
+    "hops.png",
+    "continue.png",
+    "jar.png"
+  ],
+  "qml_files": [],
+  "ui_files": [],
+  "database_files": []
+}

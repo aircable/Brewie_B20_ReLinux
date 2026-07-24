@@ -1,0 +1,28 @@
+Libraries required by BrewieApplication:
+- libQt5Quick.so.5
+- libQt5Qml.so.5
+- libQt5Widgets.so.5
+- libQt5Concurrent.so.5
+- libQt5Xml.so.5
+- libQt5SerialPort.so.5
+- libQt5Network.so.5
+- libQt5Gui.so.5
+- libQt5Core.so.5
+- librt.so.1
+- libdl.so.2
+- libGLESv2.so
+- libpthread.so.0
+- libstdc++.so.6
+- libm.so.6
+- libgcc_s.so.1
+- libc.so.6
+
+Total: 17 libraries
+
+Buildroot Package Mapping:
+- Qt5Core/Qt5Gui/Qt5Widgets/Qt5Concurrent -> qt5base
+- Qt5Quick/Qt5Qml -> qt5declarative
+- Qt5Network -> qt5network
+- Qt5SerialPort -> qt5serialport
+- Qt5Xml -> qt5xml
+- libGLESv2 -> sunxi-mali (Allwinner Mali driver)

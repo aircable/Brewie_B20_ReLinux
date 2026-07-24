@@ -1,0 +1,37 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        for brightness in /sys/class/backlight/*/brightness; do
+            [ -w "$brightness" ] || continue
+            max="${brightness%/brightness}/max_brightness"
+            [ -r "$max" ] && cat "$max" > "$brightness"
+        done
+
+        fb=/dev/fb0
+        [ -w "$fb" ] || exit 0
+
+        # 480x272 RGB565 color bars: red, green, blue, white, yellow, black.
+        exec 3>"$fb"
+        colors='\x00\xf8 \xe0\x07 \x1f\x00 \xff\xff \xe0\xff \x00\x00'
+        set -- $colors
+        for color in "$@"; do
+            row=
+            n=0
+            while [ "$n" -lt 80 ]; do
+                row="${row}${color}"
+                n=$((n + 1))
+            done
+            rows=45
+            [ "$color" = '\x00\x00' ] && rows=47
+            n=0
+            while [ "$n" -lt "$rows" ]; do
+                printf '%b' "$row" >&3
+                n=$((n + 1))
+            done
+        done
+        exec 3>&-
+        ;;
+esac
+
+exit 0
