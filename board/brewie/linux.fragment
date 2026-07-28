@@ -9,7 +9,8 @@ CONFIG_MAC80211=y
 CONFIG_LEDS_CLASS=y
 CONFIG_RTL8XXXU=m
 CONFIG_VIDEO_SUNXI_CEDRUS=y
-CONFIG_SOUND=y
+# Audio is intentionally disabled; the board's AVR is the next test target.
+# CONFIG_SOUND is not set
 CONFIG_DRM_FBDEV_EMULATION=y
 CONFIG_FB_DEVICE=y
 CONFIG_DEBUG_FS=y
@@ -17,6 +18,8 @@ CONFIG_DEBUG_GPIO=y
 CONFIG_EXPERT=y
 CONFIG_GPIO_SYSFS=y
 CONFIG_GPIO_CDEV=y
+CONFIG_KEYBOARD_GPIO=y
 CONFIG_PWM_SYSFS=y
+CONFIG_BACKLIGHT_GPIO=y
 # Kernel keyrings are not needed by the target; isolate late-init failure.
 CONFIG_KEYS=n

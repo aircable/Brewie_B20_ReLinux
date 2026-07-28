@@ -1,0 +1,105 @@
+#!/bin/sh
+
+# Exercise each AVR valve sequentially.
+#
+# This is deliberately a manual test utility.  It is not started by any
+# init script.  The first physical valve is VALVE_MASH_IN (P112/P113); the
+# remaining protocol names follow the AVR firmware's valve table.
+
+DEV=${1:-/dev/ttyS1}
+PAUSE=${2:-2}
+SEQ=7
+
+if [ ! -e "$DEV" ]; then
+    echo "AVR UART not found: $DEV" >&2
+    exit 1
+fi
+
+case "$PAUSE" in
+    ''|*[!0-9]*)
+        echo "Usage: $0 [uart-device] [pause-seconds]" >&2
+        exit 2
+        ;;
+esac
+
+stty -F "$DEV" 115200 cs8 -cstopb -parenb \
+    -ixon -ixoff -crtscts raw -echo \
+    -icanon min 1 time 0 -opost || exit 1
+
+crc8_command() {
+    command=$1
+    crc=0
+    i=1
+    while [ "$i" -le 4 ]; do
+        char=$(printf '%s' "$command" | cut -b "$i")
+        case "$char" in
+            P) byte=80 ;;
+            0) byte=48 ;; 1) byte=49 ;; 2) byte=50 ;; 3) byte=51 ;;
+            4) byte=52 ;; 5) byte=53 ;; 6) byte=54 ;; 7) byte=55 ;;
+            8) byte=56 ;; 9) byte=57 ;;
+            *) return 1 ;;
+        esac
+        crc=$((crc ^ byte))
+        bit=0
+        while [ "$bit" -lt 8 ]; do
+            if [ $((crc & 128)) -ne 0 ]; then
+                crc=$((((crc << 1) & 255) ^ 0x5e))
+            else
+                crc=$(((crc << 1) & 255))
+            fi
+            bit=$((bit + 1))
+        done
+        i=$((i + 1))
+    done
+    # The B20 protocol applies a final XOR of 0x48 after the MSB-first
+    # polynomial calculation.  This gives P112=46 and P113=18.
+    crc=$((crc ^ 0x48))
+    printf '%02x' "$crc"
+}
+
+send_command() {
+    command=$1
+    crc=$(crc8_command "$command") || exit 1
+    seq_hex=$(printf '%02x' "$SEQ")
+    # B20 frame: '$', sequence byte, ASCII payload length, payload, CRC, '*'.
+    # The original Qt application writes exactly these 9 bytes, without CR/LF.
+    command_hex=$(printf '%s' "$command" | od -An -tx1 | tr -d ' \t\n')
+    echo "send ${command}: 24 ${seq_hex} 04 ${command_hex} ${crc} 2a"
+    # Assemble the complete frame first, then perform one write exactly like
+    # the known-good manual printf command.
+    frame=$(printf '%b' "\\x24\\x${seq_hex}\\x04${command}\\x${crc}\\x2a")
+    printf '%s' "$frame" > "$DEV"
+    SEQ=$((SEQ + 1))
+    [ "$SEQ" -eq 10 ] && SEQ=11
+    [ "$SEQ" -gt 254 ] && SEQ=1
+}
+
+test_valve() {
+    name=$1
+    open_cmd=$2
+    close_cmd=$3
+
+    echo "${name}: open (${open_cmd})"
+    send_command "$open_cmd"
+    sleep "$PAUSE"
+
+    echo "${name}: close (${close_cmd})"
+    send_command "$close_cmd"
+    sleep "$PAUSE"
+}
+
+echo "Testing AVR valves on $DEV"
+echo "Each valve is opened, held for ${PAUSE}s, then closed."
+
+test_valve "valve 1 / mash inlet"    P112 P113
+test_valve "valve 2 / boil return"   P136 P137
+test_valve "valve 3 / outlet"        P132 P133
+test_valve "valve 4 / cooling"       P130 P131
+test_valve "valve 5 / hop 4"         P122 P123
+test_valve "valve 6 / hop 3"         P120 P121
+test_valve "valve 7 / hop 2"         P118 P119
+test_valve "valve 8 / hop 1"         P116 P117
+test_valve "valve 9 / mash return"   P134 P135
+test_valve "valve 10 / boil inlet"   P114 P115
+
+echo "Valve test complete."

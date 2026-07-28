@@ -1,0 +1,66 @@
+#!/bin/sh
+
+# Brewie B20 early board initialization.
+#
+# The legacy system used named GPIO sysfs links such as
+# /dev/brewie-power.  The modern kernel uses the numeric A13 GPIO
+# offsets instead.  The static output states are:
+#   GPIO 36  PB4   LED1              high
+#   GPIO 204 PG12  USB control       low
+#   GPIO 48  PB16  LED2              low
+#   GPIO 137 PE9   AVR reset release high
+#
+# GPIO 35 (PB3) and GPIO 47 (PB15) are left for their
+# input/peripheral functions.  GPIO 42 (PB10) is owned by the PWM
+# backlight driver and must not be exported here.
+
+set_gpio() {
+    gpio="$1"
+    direction="$2"
+    value="$3"
+
+    [ -d /sys/class/gpio ] || return 0
+
+    if [ ! -d "/sys/class/gpio/gpio${gpio}" ]; then
+        echo "$gpio" > /sys/class/gpio/export 2>/dev/null || return 0
+    fi
+
+    echo "$direction" > "/sys/class/gpio/gpio${gpio}/direction" 2>/dev/null || return 0
+    echo "$value" > "/sys/class/gpio/gpio${gpio}/value" 2>/dev/null || true
+}
+
+case "$1" in
+    start)
+        # Keep the text console awake and avoid a visible cursor.
+        printf '\033[9;0' > /dev/tty1 2>/dev/null || true
+
+        # Export the two legacy button inputs for diagnostic compatibility.
+        if [ -d /sys/class/gpio ]; then
+            for gpio in 35 47; do
+                [ -d "/sys/class/gpio/gpio${gpio}" ] || \
+                    echo "$gpio" > /sys/class/gpio/export 2>/dev/null || true
+                echo in > "/sys/class/gpio/gpio${gpio}/direction" 2>/dev/null || true
+            done
+        fi
+
+        # Reproduce the legacy output states.
+        # PC7 / GPIO71 is intentionally not driven here.  Testing showed
+        # that claiming it from the Device Tree prevents Linux from booting;
+        # the board's hardware latch maintains power after startup.
+        set_gpio 36 out 1       # PB4: LED1
+        set_gpio 204 out 0      # PG12: USB control
+        set_gpio 48 out 0       # PB16: LED2
+        set_gpio 137 out 1      # PE9: release AVR reset
+
+        # Keep the legacy device name used by the firmware updater.  The
+        # numeric GPIO path remains the fallback for systems without sysfs.
+        if [ -e /sys/class/gpio/gpio137/value ] && [ ! -e /dev/brewie-mcu-reset ]; then
+            ln -s /sys/class/gpio/gpio137 /dev/brewie-mcu-reset 2>/dev/null || true
+        fi
+
+        [ -p /dev/rfid ] || mkfifo /dev/rfid 2>/dev/null || true
+
+        ;;
+esac
+
+exit 0

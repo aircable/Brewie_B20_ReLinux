@@ -6,7 +6,7 @@
 
 This document captures the known hardware architecture of the Brewie B20 and serves as the primary hardware reference for BSP development.
 
-**Last Updated**: 2026-07-14
+**Last Updated**: 2026-07-27
 
 ---
 
@@ -48,40 +48,75 @@ This document captures the known hardware architecture of the Brewie B20 and ser
 
 # Software Architecture
 
-## Current
+## Verified current BSP
 
 ```
-U-Boot
+U-Boot 2026.01
 ↓
-Linux 3.4 Vendor BSP
-↓
-script.bin
-↓
-BusyBox RootFS
-↓
-                 Brewie Application
-        ┌────────────────────────────┐
-        │         Qt5 GUI           │
-        │    Framebuffer Display     │
-        │    FT5x06 Touchscreen      │
-        │    I²C RTC                 │
-        │    USB WiFi                │
-        └────────────────────────────┘
-```
-
-## Target
-
-```
-Mainline U-Boot
-↓
-Linux LTS (6.x)
+Linux 6.6.27
 ↓
 Device Tree
 ↓
-Buildroot RootFS
+Buildroot root filesystem
 ↓
-Brewie Application (or replacement)
+Board services and hardware tests
+        ┌────────────────────────────┐
+        │ DRM/fbdev LCD + Qt5 test   │
+        │ FT5x06 touchscreen         │
+        │ PCF8563 RTC                │
+        │ USB WiFi                   │
+        │ GPIO power key/LEDs        │
+        └────────────────────────────┘
 ```
+
+The LCD, backlight, touchscreen, RTC, USB host, WiFi, power key, AVR UART, and
+bootable SD-card image have been verified on the hardware.  The original B20
+AVR command protocol and valve operation were also verified.  Final Brewie
+application integration remains to be tested.
+
+## Boot and power control
+
+- The power button is PB3 / GPIO35.  It is described by the Device Tree as a
+  `gpio-keys` input generating `KEY_POWER`.
+- The hardware requires the button to be held during startup.  Release it
+  after the board's power indication appears.
+- PC7 / GPIO71 was investigated as a possible software power-hold signal.
+  A Device Tree GPIO hog on that pin prevented Linux from booting, so it is
+  intentionally left unclaimed.  The hardware latch, not Linux, maintains
+  power after startup.
+- PB4 / GPIO36 is the power LED.  `S01brewie-init` drives it high after Linux
+  has booted, providing the normal boot indication.
+- The same init script configures the known board controls: PB16 / GPIO48
+  drain LED low, PG12 / GPIO204 USB control low, and PE9 / GPIO137 high to
+  release the AVR reset line.
+
+## AVR controller
+
+The AVR controller is connected to UART3, exposed by Linux as `/dev/ttyS1`,
+using 115200 8N1.  The B20 command frame is:
+
+```text
+$ <sequence> <payload-length> <ASCII-payload> <CRC-8> *
+```
+
+The CRC is calculated over the ASCII payload using CRC-8 polynomial `0x5e`
+with an initial value of zero.  For example, the original B20 MeshIn valve
+commands are `P112` (open) and `P113` (close).  The ten B20 valve mappings are
+documented in `AVR_commands.md` and exercised by `/usr/bin/avr-valve-test`.
+
+The image includes avrdude 8.1 using the `wiring` programmer and the
+ATmega2560 part definition.  `/usr/bin/brewie-upload-fw` resets the AVR via
+GPIO137 and supports both safe flash read-back and firmware upload:
+
+```sh
+brewie-upload-fw read /tmp/b20-existing.hex
+brewie-upload-fw write /tmp/firmware.hex
+```
+
+The read operation does not erase or write flash.  The ReBrewieAVR source
+currently selects B20 Plus definitions by default, so it must not be flashed
+to B20 hardware until its pin mapping and actuator behavior have been
+validated.
 
 ---
 
@@ -122,7 +157,7 @@ Brewie Application (or replacement)
 # Display
 
 ## Type
-RGB Parallel TFT (MCU interface)
+RGB parallel TFT driven by the A13 display engine and TCON
 
 ## Resolution
 480 x 272 pixels
@@ -147,46 +182,51 @@ RGB Parallel TFT (MCU interface)
 - HSync: PD26
 - VSync: PD27
 
+## Verified Linux path
+
+The upstream display stack is `sun4i-drm`, with the display connector exposed
+as `/sys/class/drm/card1-Unknown-1`.  DRM fbdev emulation creates `/dev/fb0`.
+The board test `/usr/bin/qt-screen-test` runs the Qt5 QML test fullscreen on
+that framebuffer and was verified to display six colored squares.
+
+The non-Qt test `/etc/init.d/S70display-test` writes color bars directly to
+`/dev/fb0` and sets the backlight.  The backlight can be tested manually with:
+
+    echo 9 > /sys/class/backlight/backlight/brightness
+
 ---
 
 # Backlight
 
 ## Control
-PWM on PB02 (PWM0, channel 0) + AXP209 GPIO1 for enable
+PWM0 on PB02 / GPIO34, with PB10 / GPIO42 as the active-high panel-enable
+GPIO.  The enable GPIO is owned by the `pwm-backlight` driver.
 
 ## Configuration
 - Channel: 0
-- Frequency: 10000 Hz
-- Polarity: Active high (PWM_POLARITY_INVERTED in DTS)
-- Enable GPIO: AXP209 GPIO1 (`port:power1` in FEX maps to AXP GPIO1)
-- Initial brightness: 5 (lcd0_backlight = 5)
-
-## Alternative Configuration (from OlimexOrig.txt)
-Some A13 boards use simple GPIO on PB3 (Linux GPIO 35) for backlight control:
-- `echo 35 > /sys/class/gpio/export`
-- `echo out > /sys/class/gpio/gpio35/direction`
-- `echo 5 > /sys/class/gpio/gpio35/value` (5 = brightness level)
-
-**Note**: The FEX configuration uses a hybrid approach combining PWM for brightness and AXP GPIO for power switching.
+- PWM period: 9000 ns, as described in the Device Tree
+- Brightness levels: 0 through 10
+- Observed hardware behavior: 0 and 10 are off; values 1 through 9 turn the
+  backlight on.  `echo 9 .../brightness` is the known working setting.
 
 ---
 
 # Touchscreen
 
 ## Controller
-FocalTech FT5x06
+EDT FT5x06-compatible capacitive touch controller
 
 ## Bus
-I²C2 (PB17/PB18)
-
-## Address
-0x38 (primary), 0x14 and 0x5d (alternatives per OlimexOrig.txt)
+I²C2 (PB17/PB18), address 0x38
 
 ## Interrupt
 PG11 (falling edge, IRQ_TYPE_EDGE_FALLING)
 
 ## Reset
 PC03 (active low, GPIO_ACTIVE_LOW)
+
+The Device Tree binding is `edt,edt-ft5x06`.  Touch input was verified with
+`evtest`; Linux creates an input device and reports touch events.
 
 ---
 
@@ -232,10 +272,11 @@ RTL8188EU via USB (usbc1)
 # UART
 
 ## Console
-UART1: PG03 (TX), PG04 (RX) at 115200n8
+UART1: PG03 (TX), PG04 (RX) at 115200n8, exposed as the boot console.
 
 ## Application UART
-UART2: PG09 (TX), PG10 (RX)
+UART3: PG09 (TX), PG10 (RX), enabled in the Device Tree for the AVR link.
+The physical AVR protocol and end-to-end communication are not yet validated.
 
 ---
 
@@ -254,33 +295,32 @@ UART2: PG09 (TX), PG10 (RX)
 
 # Audio
 
-## Codec
-External codec (codec_para)
-- Capture enabled
-- Playback enabled
+The legacy beeper/audio path was investigated but was not included in the
+current Buildroot image.  It is not required for system operation; the power
+LED provides the boot indication.
 
 ---
 
 # GPIO
 
-## Configured GPIOs (from gpio_para)
+## Configured GPIOs (verified board mapping)
 
 | Pin | Function | Pull | Level |
 |-----|----------|------|-------|
-| PB03 | Input | default | 0 |
-| PB15 | Input | default | 0 |
-| PB04 | Output | default | 1 |
-| PB16 | Output | default | 0 |
-| PB02 | Output | default | 1 (PWM0) |
-| PE09 | Output | default | 1 |
-| PB10 | Output | default | 1 |
-| PC07 | Output | default | 1 |
-| PG12 | Output | default | 0 |
+| PB03 / GPIO35 | Power button input, `KEY_POWER` | default | active high |
+| PB15 / GPIO47 | Drain button input | default | input |
+| PB04 / GPIO36 | Power LED | default | high after init |
+| PB16 / GPIO48 | Drain LED | default | low after init |
+| PB02 / GPIO34 | LCD PWM0 | PWM peripheral | backlight |
+| PB10 / GPIO42 | LCD enable | output, driver-owned | high when enabled |
+| PE09 / GPIO137 | AVR reset release | output | high after init |
+| PC07 / GPIO71 | Candidate power hold | intentionally unclaimed | hardware-controlled |
+| PG12 / GPIO204 | USB control | output | low after init |
 
 ## GPIO Initialization
-- PB04: High (power LED?)
-- PB10: High (LCD power enable)
-- PC07: High (system status?)
+- PB04: High after `S01brewie-init` (power LED)
+- PB10: Controlled by `pwm-backlight` (LCD enable)
+- PC07: Not claimed; a DT GPIO hog caused a boot failure
 
 ---
 
@@ -292,11 +332,12 @@ External codec (codec_para)
 | Hardware Discovery | ✅ |
 | Hardware Documentation | ✅ |
 | Device Tree Creation | ✅ |
-| Mainline Kernel | ⏳ |
-| LCD Bring-up | ⏳ |
-| Touchscreen | ⏳ |
-| Buildroot BSP | ⏳ |
-| Bootable SD Image | ⏳ |
+| Mainline Kernel | ✅ |
+| LCD/DRM and Qt5 test | ✅ |
+| Touchscreen and evtest | ✅ |
+| Buildroot BSP | ✅ |
+| Bootable SD Image | ✅ |
+| AVR UART protocol | ⏳ |
 
 ---
 
@@ -314,8 +355,5 @@ External codec (codec_para)
 
 # Open Questions
 
-- Which GPIOs are application specific?
+- Validate the AVR UART protocol and application-level serial exchange.
 - Which SPI device is attached?
-- Does the LCD panel have an exact model match upstream?
-- Any custom U-Boot board initialization needed?
-- Verify AXP209 connection on I2C bus

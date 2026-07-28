@@ -15,7 +15,6 @@
 #include "allwinner/sunxi-common-regulators.dtsi"
 
 #include <dt-bindings/gpio/gpio.h>
-#include <dt-bindings/input/input.h>
 #include <dt-bindings/pwm/pwm.h>
 #include <dt-bindings/interrupt-controller/irq.h>
 
@@ -63,19 +62,6 @@
         };
     };
 
-    /* The power button is held while the board starts.  The input event is
-     * later consumed by the Brewie application. */
-    buttons {
-        compatible = "gpio-keys";
-
-        power-button {
-            label = "Power Button";
-            linux,code = <KEY_POWER>;
-            gpios = <&pio 1 3 GPIO_ACTIVE_HIGH>; /* PB3 / GPIO35 */
-            debounce-interval = <10>;
-        };
-    };
-
     /* Simple framebuffer for early console */
     framebuffer-lcd0@40000000 {
         compatible = "allwinner,simple-framebuffer", "simple-framebuffer";
@@ -104,7 +90,6 @@
     vcc-pd-supply = <&reg_vcc3v3>;
     vcc-pf-supply = <&reg_vcc3v3>;
     vcc-pg-supply = <&reg_vcc3v3>;
-
 };
 
 &i2c0 {

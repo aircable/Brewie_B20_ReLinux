@@ -1,0 +1,96 @@
+#!/bin/sh
+
+# Send one AVR protocol command and capture the response as hexadecimal.
+# This is intentionally manual and may actuate hardware depending on CMD.
+
+DEV=${1:-/dev/ttyS1}
+CMD=${2:-P112}
+CAPTURE=${3:-/tmp/avr-response.hex}
+TIMEOUT=${4:-15}
+SEQ=7
+
+if [ ! -e "$DEV" ]; then
+    echo "AVR UART not found: $DEV" >&2
+    exit 1
+fi
+
+case "$CMD" in
+    P[0-9][0-9][0-9]) ;;
+    *)
+        echo "Usage: $0 [uart-device] [Pxxx-command] [capture-file] [timeout-seconds]" >&2
+        exit 2
+        ;;
+esac
+
+case "$TIMEOUT" in
+    ''|*[!0-9]*)
+        echo "timeout must be an integer number of seconds" >&2
+        exit 2
+        ;;
+esac
+
+stty -F "$DEV" 115200 cs8 -cstopb -parenb \
+    -ixon -ixoff -crtscts raw -echo \
+    -icanon min 1 time 0 -opost || exit 1
+
+rm -f "$CAPTURE"
+
+# Start receiving before transmitting so the ACK cannot be missed.  Read one
+# byte at a time: od normally reads blocks, which can make a diagnostic dump
+# look delayed even when the tty is delivering bytes promptly.  tee keeps the
+# hexadecimal stream visible while also saving it for later inspection.
+( timeout "${TIMEOUT}s" sh -c '
+    # Keep the tty open.  Reopening it for every byte can restart/reset the
+    # UART read path and repeatedly return the first status character.
+    exec 3<"$1"
+    while dd bs=1 count=1 status=none <&3 2>/dev/null |
+          od -An -tx1 -v; do
+        :
+    done
+' sh "$DEV" | tee "$CAPTURE" ) &
+reader=$!
+sleep 1
+
+crc8_command() {
+    command=$1
+    crc=0
+    i=1
+    while [ "$i" -le 4 ]; do
+        char=$(printf '%s' "$command" | cut -b "$i")
+        case "$char" in
+            P) byte=80 ;;
+            0) byte=48 ;; 1) byte=49 ;; 2) byte=50 ;; 3) byte=51 ;;
+            4) byte=52 ;; 5) byte=53 ;; 6) byte=54 ;; 7) byte=55 ;;
+            8) byte=56 ;; 9) byte=57 ;;
+            *) echo "Unsupported command character: $char" >&2; exit 2 ;;
+        esac
+        crc=$((crc ^ byte))
+        bit=0
+        while [ "$bit" -lt 8 ]; do
+            if [ $((crc & 128)) -ne 0 ]; then
+                crc=$((((crc << 1) & 255) ^ 0x5e))
+            else
+                crc=$(((crc << 1) & 255))
+            fi
+            bit=$((bit + 1))
+        done
+        i=$((i + 1))
+    done
+    # The B20 protocol applies a final XOR of 0x48 after the MSB-first
+    # polynomial calculation.  This gives P112=46 and P113=18.
+    crc=$((crc ^ 0x48))
+    printf '%02x' "$crc"
+}
+
+crc=$(crc8_command "$CMD")
+seq_hex=$(printf '%02x' "$SEQ")
+# B20 frame: '$', sequence byte, payload length 4, Pxxx, CRC, '*'.
+printf '%b' "\\x24\\x${seq_hex}\\x04${CMD}\\x${crc}\\x2a" > "$DEV"
+
+sleep 1
+wait "$reader"
+
+echo "Raw response saved in $CAPTURE"
+cat "$CAPTURE"
+echo
+echo "The response includes a short ACK; its second byte varies by firmware."

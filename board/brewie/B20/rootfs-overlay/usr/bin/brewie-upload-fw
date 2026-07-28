@@ -1,0 +1,66 @@
+#!/bin/sh
+
+# Update or read the ATmega2560 on the Brewie B20.
+#
+#   brewie-upload-fw firmware.hex       # legacy write form
+#   brewie-upload-fw write firmware.hex
+#   brewie-upload-fw read firmware.hex
+
+UPLOADPORT=${BREWIE_AVR_PORT:-/dev/ttyS1}
+# Prefer the numeric sysfs path used by the verified manual procedure.  The
+# legacy /dev symlink remains a fallback for older images.
+RESET_PATH=/sys/class/gpio/gpio137/value
+[ -e "$RESET_PATH" ] || RESET_PATH=/dev/brewie-mcu-reset/value
+AVRDUDE_CONF=${AVRDUDE_CONF:-/usr/etc/avrdude.conf}
+RESET_WAIT=${BREWIE_AVR_RESET_WAIT:-2.4}
+
+usage() {
+    echo "Usage: $0 [write] firmware.hex" >&2
+    echo "       $0 read firmware.hex" >&2
+    exit 2
+}
+
+if [ "$1" = read ] || [ "$1" = write ]; then
+    action=$1
+    file=$2
+else
+    action=write
+    file=$1
+fi
+
+[ -n "$file" ] || usage
+[ -e "$RESET_PATH" ] || { echo "AVR reset GPIO not found: $RESET_PATH" >&2; exit 1; }
+[ -c "$UPLOADPORT" ] || { echo "AVR serial device not found: $UPLOADPORT" >&2; exit 1; }
+
+run_avrdude() {
+    operation=$1
+
+    # The external reset must be asserted before avrdude starts.  avrdude
+    # spends about two seconds loading avrdude.conf before it opens ttyS1.
+    # Keep the AVR in reset during that time, then release it while avrdude's
+    # wiring driver is in its snooze interval.
+    echo 0 > "$RESET_PATH"
+    avrdude -C "$AVRDUDE_CONF" -p atmega2560 -c wiring -P "$UPLOADPORT" \
+        -b 115200 -D -x noautoreset -x snooze=350 \
+        -U "$operation" &
+    avrdude_pid=$!
+
+    sleep "$RESET_WAIT"
+    echo 1 > "$RESET_PATH"
+    wait "$avrdude_pid"
+}
+
+case "$action" in
+    write)
+        [ -r "$file" ] || { echo "firmware file not readable: $file" >&2; exit 1; }
+        echo "Uploading $file to ATmega2560 on $UPLOADPORT"
+        run_avrdude "flash:w:${file}:i"
+        exit $?
+        ;;
+    read)
+        echo "Reading ATmega2560 flash to $file"
+        run_avrdude "flash:r:${file}:i"
+        exit $?
+        ;;
+    *) usage ;;
+esac
