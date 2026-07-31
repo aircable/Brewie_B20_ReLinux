@@ -91,3 +91,10 @@ Offset | Type | Argument
 18     | Int  | ??? (`0`, `2`, `3`) (`2` seems to be "sparge", `3` seems to be "boil")
 19     | Bool | Mash return valve (`0` = close, `1` = open)
 20     | Bool | Boil return valve (`0` = close, `1` = open)
+
+
+scp -P 22020 juergen@192.168.1.220:/tmp/rebrewie-b20-currents-build/ReBrewie.ino.hex /usr/share/brewie/ReBrewie-B20.hex
+brewie-upload-fw /usr/share/brewie/ReBrewie-B20.hex
+stty -F /dev/ttyS1 115200 cs8 -parenb -cstopb raw -echo -ixon -ixoff -crtscts
+printf '\x24\x01\x1fP80 18996.1 0 0.818541 1.70194 \x7b\x2a' > /dev/ttyS1
+strace -tt -xx -s 4096 -e trace=write -p 243 2>&1 | grep -E 'write\(21'

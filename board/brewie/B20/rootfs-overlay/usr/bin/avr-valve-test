@@ -93,13 +93,13 @@ echo "Each valve is opened, held for ${PAUSE}s, then closed."
 
 test_valve "valve 1 / mash inlet"    P112 P113
 test_valve "valve 2 / boil return"   P136 P137
-test_valve "valve 3 / outlet"        P132 P133
-test_valve "valve 4 / cooling"       P130 P131
+test_valve "valve 10 / outlet"       P132 P133
+test_valve "valve 11 / cooling"      P130 P131
 test_valve "valve 5 / hop 4"         P122 P123
 test_valve "valve 6 / hop 3"         P120 P121
 test_valve "valve 7 / hop 2"         P118 P119
 test_valve "valve 8 / hop 1"         P116 P117
-test_valve "valve 9 / mash return"   P134 P135
-test_valve "valve 10 / boil inlet"   P114 P115
+test_valve "mash return"              P134 P135
+test_valve "boil inlet"               P114 P115
 
 echo "Valve test complete."

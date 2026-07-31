@@ -10,9 +10,8 @@
 #   GPIO 48  PB16  LED2              low
 #   GPIO 137 PE9   AVR reset release high
 #
-# GPIO 35 (PB3) and GPIO 47 (PB15) are left for their
-# input/peripheral functions.  GPIO 42 (PB10) is owned by the PWM
-# backlight driver and must not be exported here.
+# GPIO 35 (PB3) and GPIO 47 (PB15) are legacy button inputs. GPIO 42
+# (PB10) is owned by the PWM backlight driver and must not be exported.
 
 set_gpio() {
     gpio="$1"
@@ -29,19 +28,35 @@ set_gpio() {
     echo "$value" > "/sys/class/gpio/gpio${gpio}/value" 2>/dev/null || true
 }
 
+link_gpio() {
+    name="$1"
+    gpio="$2"
+    [ -e "/sys/class/gpio/gpio${gpio}" ] || return 0
+    [ -e "/dev/${name}" ] || ln -s "/sys/class/gpio/gpio${gpio}" "/dev/${name}" 2>/dev/null || true
+}
+
 case "$1" in
     start)
         # Keep the text console awake and avoid a visible cursor.
         printf '\033[9;0' > /dev/tty1 2>/dev/null || true
 
-        # Export the two legacy button inputs for diagnostic compatibility.
+        # Export the legacy GPIOs used by the original application.
         if [ -d /sys/class/gpio ]; then
-            for gpio in 35 47; do
+            for gpio in 35 36 47 48 137 204; do
                 [ -d "/sys/class/gpio/gpio${gpio}" ] || \
                     echo "$gpio" > /sys/class/gpio/export 2>/dev/null || true
-                echo in > "/sys/class/gpio/gpio${gpio}/direction" 2>/dev/null || true
             done
+            echo in > /sys/class/gpio/gpio35/direction 2>/dev/null || true
+            echo in > /sys/class/gpio/gpio47/direction 2>/dev/null || true
         fi
+
+        # Compatibility names expected by the unmodified Brewie application.
+        link_gpio brewie-button1 35
+        link_gpio brewie-led1 36
+        link_gpio brewie-button2 47
+        link_gpio brewie-led2 48
+        link_gpio brewie-mcu-reset 137
+        link_gpio brewie-usb 204
 
         # Reproduce the legacy output states.
         # PC7 / GPIO71 is intentionally not driven here.  Testing showed
