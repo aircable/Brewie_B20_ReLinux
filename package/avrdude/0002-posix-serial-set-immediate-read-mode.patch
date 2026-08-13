@@ -1,0 +1,32 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Brewie BSP <bsp@example.invalid>
+Date: Mon, 27 Jul 2026 12:05:00 -0700
+Subject: [PATCH] posix serial: use immediate byte reads
+
+The POSIX serial backend disabled canonical mode but left VMIN and VTIME
+unchanged.  On a native UART those inherited settings can make avrdude wait
+for a block or a timer before returning from read(), preventing reliable
+STK500v2 synchronization.
+
+Force the same immediate-read behavior used by the AVR protocol diagnostic.
+
+Signed-off-by: Brewie BSP <bsp@example.invalid>
+---
+ src/ser_posix.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/ser_posix.c b/src/ser_posix.c
+--- a/src/ser_posix.c
++++ b/src/ser_posix.c
+@@ -177,6 +177,9 @@ static int ser_setparams(const union filedescriptor *fd, long baud, unsigned lon
+ #endif                          // ECHOKE
+ 
+   termios.c_oflag &= ~(OPOST | ONLCR | OCRNL);
++  termios.c_cc[VMIN] = 1;
++  termios.c_cc[VTIME] = 0;
++
+   termios.c_iflag &= ~(INLCR | IGNCR | ICRNL | IGNBRK);
+ 
+ #ifdef IUCLC
+-- 
+2.39.5

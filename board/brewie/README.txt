@@ -12,7 +12,33 @@ Configure Buildroot with:
 
 Then build the image with:
 
-  make
+  make -j4
+
+QtWebKit build integration
+==========================
+
+QtWebKit itself is not source-patched.  Its CMake install places the qmake
+module metadata (`qt_lib_webkit*.pri`) below the target sysroot, while the
+host qmake used to build qt-webkit-kiosk searches below QT_HOST_DATA.  Without
+the Buildroot integration fix, kiosk configuration fails with:
+
+  Project ERROR: Unknown module(s) in QT: webkit webkitwidgets
+
+The permanent fix is the QT5WEBKIT_INSTALL_QMAKE_MODULES post-install-staging
+hook in:
+
+  package/qt5/qt5webkit/qt5webkit.mk
+
+The hook copies the generated module metadata into the host qmake module
+directory and rewrites its include and library paths to use qmake's target
+sysroot variables.  Files repaired or generated below output/ are build
+artifacts and are not source inputs to the image.
+
+The GCC processes used for QtWebKit and the kernel have occasionally exited
+with transient internal compiler errors during highly parallel builds.  The
+same source files compile successfully with reduced parallelism.  Use
+`make -j4`; these host-side compiler crashes do not indicate unsupported ARM
+instructions on the Allwinner A13.
 
 Result
 ======

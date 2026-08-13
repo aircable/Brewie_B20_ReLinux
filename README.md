@@ -35,6 +35,10 @@ Note: we do not publish either buildroot or the kernel code here, just the files
 │       ├── sun5i-brewie.dts      # Main device tree (mainline)
 ├── configs/
 │   └── brewie_b20_defconfig      # Buildroot configuration
+├── package/
+│   └── avrdude/                  # Brewie native-UART fixes
+├── patches/
+│   └── buildroot/                # Changes to upstream Buildroot files
 ├── scripts/
 │   ├── fex-report.py             # FEX analysis tool
 │   ├── fex2dts.py                # FEX to DTS converter
@@ -54,7 +58,12 @@ Note: we do not publish either buildroot or the kernel code here, just the files
   - genimage.cfg defines sdcard.img.
   - post-image.sh runs genimage.
   - The root README now identifies the repo as the Brewie BSP toolkit instead of only generic Buildroot.
-  - board/brewie/B20/rootfs-overlay/.gitkeep is only there so the overlay path exists in git; it is not a meaningful runtime file.
+  - board/brewie/B20/rootfs-overlay contains board initialization, networking,
+    AVR maintenance, and Qt display diagnostics installed into the target image.
+  - package/avrdude contains additional Buildroot package patches for reliable
+    programming through the B20 native UART.
+  - patches/buildroot contains changes that must be applied to upstream
+    Buildroot source, including the QtWebKit qmake metadata fix.
 
 
 ## Quick Start
@@ -70,10 +79,17 @@ python3 fex2dts.py SDcard/script.fex > board/brewie/sun5i-brewie.dts
 ### Buildroot Integration
 ```bash
 # In buildroot directory
-cp configs/brewie_b20_defconfig configs/
+cp -a /path/to/legacy-bsp-toolkit/board/brewie board/
+cp /path/to/legacy-bsp-toolkit/configs/brewie_b20_defconfig configs/
+cp /path/to/legacy-bsp-toolkit/package/avrdude/*.patch package/avrdude/
+git apply /path/to/legacy-bsp-toolkit/patches/buildroot/qt5webkit-qmake-metadata.patch
 make brewie_b20_defconfig
-make
+make -j4
 ```
+
+Before building, edit
+`board/brewie/B20/rootfs-overlay/etc/wpa_supplicant.conf` and replace the
+placeholder network credentials. Do not commit real Wi-Fi credentials.
 
 ## Hardware Summary
 

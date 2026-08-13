@@ -1,0 +1,22 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Brewie BSP <bsp@example.invalid>
+Date: Mon, 27 Jul 2026 14:58:00 -0700
+Subject: [PATCH] wiring: skip initial drain with external reset
+
+When noautoreset is selected, reset is controlled externally.  Draining the
+UART after that reset can consume the bootloader's startup traffic and adds a
+250 ms idle interval before STK500v2 SIGN_ON.  The B20 bootloader needs the
+first request at a precise time after reset, so do not drain in this mode.
+
+Signed-off-by: Brewie BSP <bsp@example.invalid>
+---
+ src/wiring.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/wiring.c b/src/wiring.c
+--- a/src/wiring.c
++++ b/src/wiring.c
+@@ -179,1 +179,2 @@
+-  stk500v2_drain(pgm, 0);
++  if(!mywiring.noautoreset)
++    stk500v2_drain(pgm, 0);

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+  case "$1" in
+      start)
+          sleep 3
+
+          # Restart any stale DHCP client left by the initial ifup.
+          killall udhcpc 2>/dev/null || true
+
+          # Request a lease once wlan0/WPA is ready.
+          udhcpc -i wlan0 -n -q
+          ;;
+
+      stop)
+          ;;
+
+      restart)
+          "$0" stop
+          "$0" start
+          ;;
+
+      *)
+          echo "Usage: $0 {start|stop|restart}"
+          exit 1
+          ;;
+  esac
+
+  exit 0
+

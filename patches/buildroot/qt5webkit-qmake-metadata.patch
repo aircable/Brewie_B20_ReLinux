@@ -1,0 +1,28 @@
+diff --git a/package/qt5/qt5webkit/qt5webkit.mk b/package/qt5/qt5webkit/qt5webkit.mk
+index 6912359674..602ee472f4 100644
+--- a/package/qt5/qt5webkit/qt5webkit.mk
++++ b/package/qt5/qt5webkit/qt5webkit.mk
+@@ -57,4 +57,23 @@ QT5WEBKIT_CONF_OPTS += \
+ 	-DSHARED_CORE=ON \
+ 	-DUSE_LIBHYPHEN=OFF
+ 
++# qmake looks for module metadata below QT_HOST_DATA. QtWebKit's CMake
++# install instead places these files below the target prefix.
++define QT5WEBKIT_INSTALL_QMAKE_MODULES
++	$(INSTALL) -m 0644 \
++		$(STAGING_DIR)/usr/mkspecs/modules/qt_lib_webkit*.pri \
++		$(HOST_DIR)/mkspecs/modules/
++	$(SED) 's#^QT\.webkit\.includes =.*#QT.webkit.includes = $$$$[QT_INSTALL_PREFIX]/include $$$$[QT_INSTALL_PREFIX]/include/QtWebKit#' \
++		$(HOST_DIR)/mkspecs/modules/qt_lib_webkit.pri
++	$(SED) 's#^QT\.webkit_private\.includes =.*#QT.webkit_private.includes = $$$$[QT_INSTALL_PREFIX]/include/QtWebKit/$(QT5WEBKIT_VERSION) $$$$[QT_INSTALL_PREFIX]/include/QtWebKit/$(QT5WEBKIT_VERSION)/QtWebKit#' \
++		$(HOST_DIR)/mkspecs/modules/qt_lib_webkit_private.pri
++	$(SED) 's#^QT\.webkitwidgets\.includes =.*#QT.webkitwidgets.includes = $$$$[QT_INSTALL_PREFIX]/include $$$$[QT_INSTALL_PREFIX]/include/QtWebKitWidgets#' \
++		$(HOST_DIR)/mkspecs/modules/qt_lib_webkitwidgets.pri
++	$(SED) 's#^QT\.webkitwidgets_private\.includes =.*#QT.webkitwidgets_private.includes = $$$$[QT_INSTALL_PREFIX]/include/QtWebKitWidgets/$(QT5WEBKIT_VERSION) $$$$[QT_INSTALL_PREFIX]/include/QtWebKitWidgets/$(QT5WEBKIT_VERSION)/QtWebKitWidgets#' \
++		$(HOST_DIR)/mkspecs/modules/qt_lib_webkitwidgets_private.pri
++	$(SED) 's#\.libs =.*#\.libs = $$$$QT_MODULE_LIB_BASE#' \
++		$(HOST_DIR)/mkspecs/modules/qt_lib_webkit*.pri
++endef
++QT5WEBKIT_POST_INSTALL_STAGING_HOOKS += QT5WEBKIT_INSTALL_QMAKE_MODULES
++
+ $(eval $(cmake-package))
