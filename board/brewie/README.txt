@@ -14,6 +14,13 @@ Then build the image with:
 
   make -j4
 
+The image uses Dropbear with gesftpserver.  This supports both legacy SCP and
+the SFTP transport used by current OpenSSH scp clients.  On older images that
+do not contain /usr/libexec/sftp-server, force the legacy protocol from the
+client with:
+
+  scp -O source-file root@brewie-host:/destination/
+
 QtWebKit build integration
 ==========================
 
