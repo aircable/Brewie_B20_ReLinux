@@ -59,7 +59,10 @@ Note: we do not publish either buildroot or the kernel code here, just the files
   - post-image.sh runs genimage.
   - The root README now identifies the repo as the Brewie BSP toolkit instead of only generic Buildroot.
   - board/brewie/B20/rootfs-overlay contains board initialization, networking,
-    AVR maintenance, and Qt display diagnostics installed into the target image.
+    AVR maintenance, Qt display diagnostics, and generic BrewieNext web,
+    backend, kiosk, and release-installation services.
+  - brewie_b20_defconfig includes Python 3, Flask, Flask-CORS, PyYAML, and
+    jsonschema for the BrewieNext runtime API.
   - package/avrdude contains additional Buildroot package patches for reliable
     programming through the B20 native UART.
   - patches/buildroot contains changes that must be applied to upstream

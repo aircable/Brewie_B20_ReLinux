@@ -99,10 +99,11 @@ using 115200 8N1.  The B20 command frame is:
 $ <sequence> <payload-length> <ASCII-payload> <CRC-8> *
 ```
 
-The CRC is calculated over the ASCII payload using CRC-8 polynomial `0x5e`
-with an initial value of zero.  For example, the original B20 MeshIn valve
-commands are `P112` (open) and `P113` (close).  The ten B20 valve mappings are
-documented in `AVR_commands.md` and exercised by `/usr/bin/avr-valve-test`.
+The original B20 CRC is calculated over the ASCII payload using CRC-8
+polynomial `0x5e`. ReBrewie preserves the checksum byte for compatibility but
+does not validate it. For example, the MeshIn valve commands are `P112` (open)
+and `P113` (close). Transport diagnostics are documented in `AVR_commands.md`;
+the canonical command reference is maintained in the ReBrewieAVR repository.
 
 The image includes avrdude 8.1 using the `wiring` programmer and the
 ATmega2560 part definition.  `/usr/bin/brewie-upload-fw` resets the AVR via
@@ -276,7 +277,8 @@ UART1: PG03 (TX), PG04 (RX) at 115200n8, exposed as the boot console.
 
 ## Application UART
 UART3: PG09 (TX), PG10 (RX), enabled in the Device Tree for the AVR link.
-The physical AVR protocol and end-to-end communication are not yet validated.
+The AVR UART, command acknowledgement, status stream, and firmware upload path
+have been validated on the B20 hardware.
 
 ---
 
@@ -337,7 +339,7 @@ LED provides the boot indication.
 | Touchscreen and evtest | ✅ |
 | Buildroot BSP | ✅ |
 | Bootable SD Image | ✅ |
-| AVR UART protocol | ⏳ |
+| AVR UART protocol | ✅ |
 
 ---
 

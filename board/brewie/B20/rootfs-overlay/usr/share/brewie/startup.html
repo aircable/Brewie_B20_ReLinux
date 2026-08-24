@@ -46,7 +46,7 @@
           status.textContent = 'BrewieNext starting in ' + seconds + '...';
           window.setInterval(function () {
             seconds -= 1;
-            if (seconds <= 0) window.location.href = '/current/';
+            if (seconds <= 0) window.location.href = '/current/?kiosk=1';
             else status.textContent = 'BrewieNext starting in ' + seconds + '...';
           }, 1000);
         } else { status.textContent = 'No BrewieNext release installed'; }

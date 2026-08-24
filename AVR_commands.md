@@ -1,100 +1,37 @@
-# Brewie Commands
+# Brewie AVR Transport
 
-## B20 serial framing
+The canonical command and recipe-step reference is maintained with the
+[ReBrewieAVR firmware](https://github.com/aircable/ReBrewieAVR/blob/main/AVR_commands.md).
 
-The Linux controller communicates with the AVR on `/dev/ttyS1` at 115200 8N1.
-Commands use this binary frame, with no trailing newline:
+## ReLinux serial interface
+
+The Brewie controller is available as `/dev/ttyS1` at 115200 baud, 8N1. A
+host-to-AVR frame has this binary layout:
 
 ```text
-$ <sequence> <length> <ASCII command> <CRC-8> *
+$ <sequence> <payload-length> <ASCII payload> <checksum/reserved byte> *
 ```
 
-The length is the number of bytes in the ASCII command.  The CRC is calculated
-over the command bytes only, with initial value `0` and polynomial `0x5e`
-(MSB-first).  For example, the original B20 sends `P112` to open the mash
-inlet and `P113` to close it.  The Linux test tools generate the CRC and frame
-automatically.
+The original B20 firmware uses a CRC-8 byte calculated over the ASCII payload
+with polynomial `0x5e`. ReBrewie retains the byte position but does not validate
+it. Accepted commands produce this acknowledgement:
 
-The AVR acknowledges accepted commands with a short framed response.  The
-original application also receives periodic tab-separated status records;
-those records include weight, temperature, pump, heater, and notification
-fields.  The complete status-prefix behavior is retained as a compatibility
-detail of the original firmware and is not required for direct valve testing.
+```text
+$ 0x01 <sequence> * CR LF
+```
 
-CMD  | Name                   | Arguments
----- | ---------------------- | ---------
-P80  | Initialize | `toLiter` with one decimal, ???, `mashTemperatureDelta` with 5 decimals, `boilTemperatureDelta` with 5 decimals
-P103 | Enqueue a step | See below
-P110 | Open water inlet
-P111 | Close water inlet
-P112 | Open mash inlet
-P113 | Close mash inlet
-P114 | Open boil inlet
-P115 | Close boil inlet
-P116 | Open hop 1
-P117 | Close hop 1
-P118 | Open hop 2
-P119 | Close hop 2
-P120 | Open hop 3
-P121 | Close hop 3
-P122 | Open hop 4
-P123 | Close hop 4
-P124 | Start mash pump
-P125 | Stop mash pump
-P126 | Start boil pump
-P127 | Stop boil pump
-P128 | Open cool inlet
-P129 | Close cool inlet
-P130 | Open cool valve
-P131 | Close cool valve
-P132 | Open outlet valve
-P133 | Close outlet valve
-P134 | Open mash return
-P135 | Close mash return
-P136 | Open boil return
-P137 | Close boil return
-P150 | Set mash heater target | Target temp, e.g. `320` for 32ºC, `0` to turn off, or `398.2` for 39.82ºC
-P151 | Set boil heater target | Target temp, e.g. `320` for 32ºC, `0` to turn off, or `398.2` for 39.82ºC
-P205 | Controls the fans, and some kind of extra logging from the IO board | `0` to turn off, `1` to turn on
-P999 | Close all valves
+The AVR also sends tab-separated status records approximately once per second.
 
-## Startup
+## Diagnostic tools
 
-The computer sends the P80 message once a second, until a response is received from the IO card. The parameters for this command is read from the file `/usr/share/brewie/config.json`.
+`/usr/bin/avr-protocol-test` generates the original B20 CRC framing and captures
+the raw response. `/usr/bin/avr-valve-test` provides a guarded manual valve
+test. Both tools may actuate hardware and must be used only on a supervised,
+safe machine.
 
-The `toLiter` variable is used by the IO card to calculate "Weight in kg" from "Weight Raw value".
+Firmware installation is handled by `/usr/bin/brewie-upload-fw`:
 
-## Step
-
-The `P103` command is used to enqueue a step. It seems like the computer first sends two steps, and then one more as each step is completed. This way the IO board always knowns what to do immediately after the step it is currently working on.
-
-Offset | Type | Argument
------- | ---- | ----
-0      | Int  | Step number, starting at `0`
-1      | Bool | Water inlet (`0` = close, `1` = open)
-2      | Bool | Mash inlet valve (`0` = close, `1` = open)
-3      | Bool | Boil inlet valve (`0` = close, `1` = open)
-4      | Int  | Mash tank target temp (`670` for 67ºC, `0` to turn off)
-5      | Int  | Boil tank target temp (`670` for 67ºC, `0` to turn off)
-6      | Bool | Hop Cage 1 (`0` = close, `1` = open)
-7      | Bool | Hop Cage 2 (`0` = close, `1` = open)
-8      | Bool | Hop Cage 3 (`0` = close, `1` = open)
-9      | Bool | Hop Cage 4 (`0` = close, `1` = open)
-10     | Bool | Cool valve (or inlet?) (`0` = close, `1` = open)
-11     | Int  | Cool inlet (or valve?) (`0` = close, `255` = open)
-12     | Bool | ??? (could be the eleventh valve, thus always `0`)
-13     | Int  | Mash tank pump (`0` = off, `255` = on)
-14     | Int  | Boil tank pump (`0` = off, `255` = on)
-15     | Int  | ??? (potentially water intake)
-16     | Int  | Step time in seconds
-17     | Int  | ??? (maybe step completion type? `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `10`)
-18     | Int  | ??? (`0`, `2`, `3`) (`2` seems to be "sparge", `3` seems to be "boil")
-19     | Bool | Mash return valve (`0` = close, `1` = open)
-20     | Bool | Boil return valve (`0` = close, `1` = open)
-
-
-scp -P 22020 juergen@192.168.1.220:/tmp/rebrewie-b20-currents-build/ReBrewie.ino.hex /usr/share/brewie/ReBrewie-B20.hex
-brewie-upload-fw /usr/share/brewie/ReBrewie-B20.hex
-stty -F /dev/ttyS1 115200 cs8 -parenb -cstopb raw -echo -ixon -ixoff -crtscts
-printf '\x24\x01\x1fP80 18996.1 0 0.818541 1.70194 \x7b\x2a' > /dev/ttyS1
-strace -tt -xx -s 4096 -e trace=write -p 243 2>&1 | grep -E 'write\(21'
+```sh
+brewie-upload-fw read /tmp/b20-existing.hex
+brewie-upload-fw write /tmp/ReBrewie.ino.hex
+```
