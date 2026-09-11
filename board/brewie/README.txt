@@ -60,6 +60,40 @@ The image contains:
   - a VFAT boot partition with the kernel and DTB
   - an ext4 root filesystem
 
+The root filesystem is 14 GiB.  The complete image therefore fits nominal
+16 GB SD cards while leaving enough space for BrewieNext releases, logs, and
+diagnostic captures.  One percent is reserved for root so a runaway log does
+not immediately prevent system recovery.
+
+Reliability and crash diagnostics
+=================================
+
+This image uses Linux 6.6.156 and reduces the default contiguous-memory area
+from 96 MiB to 16 MiB.  The B20 display does not require the larger reservation,
+and the recovered memory remains available to the 512 MiB system.
+
+Kernel oopses trigger a reboot after ten seconds.  A 1 MiB ramoops region at
+the top of RAM preserves the kernel console across that reboot.  Early boot
+archives recovered records below:
+
+  /var/lib/brewie/pstore/
+
+The periodic memory monitor writes a compact sample every five minutes to:
+
+  /var/lib/brewie/diagnostics/memory.log
+
+Run a single sample interactively with:
+
+  brewie-memory-monitor
+
+The image also includes memtester.  Do not run a large memory test during a
+brew.  With the backend and kiosk stopped, a useful maintenance test is:
+
+  memtester 256M 1
+
+The BrewieNext release installer retains the active and immediately previous
+application releases and removes older versions after successful activation.
+
 Verified bring-up
 ==================
 

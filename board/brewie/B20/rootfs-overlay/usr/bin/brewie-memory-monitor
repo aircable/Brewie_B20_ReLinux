@@ -1,0 +1,45 @@
+#!/bin/sh
+set -eu
+
+DIAG_DIR=${BREWIE_DIAG_DIR:-/var/lib/brewie/diagnostics}
+LOG="$DIAG_DIR/memory.log"
+
+field() {
+  key="$1"
+  file="$2"
+  awk -v wanted="$key" '$1 == wanted ":" { print $2; exit }' "$file" 2>/dev/null || true
+}
+
+process_kb() {
+  process="$1"
+  pid=$(pidof "$process" 2>/dev/null | awk '{ print $1 }')
+  [ -n "$pid" ] && field VmRSS "/proc/$pid/status" || true
+}
+
+snapshot() {
+  mkdir -p "$DIAG_DIR"
+  available=$(field MemAvailable /proc/meminfo)
+  free=$(field MemFree /proc/meminfo)
+  cma_free=$(field CmaFree /proc/meminfo)
+  kiosk=$(process_kb qt-webkit-kiosk)
+  backend=$(process_kb python3)
+  root_free=$(df -k / | awk 'NR == 2 { print $4 }')
+  printf '%s uptime_s=%s mem_available_kb=%s mem_free_kb=%s cma_free_kb=%s kiosk_rss_kb=%s backend_rss_kb=%s root_free_kb=%s\n' \
+    "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$(cut -d. -f1 /proc/uptime)" \
+    "${available:-0}" "${free:-0}" "${cma_free:-0}" "${kiosk:-0}" \
+    "${backend:-0}" "${root_free:-0}" >> "$LOG"
+  if [ "$(wc -c < "$LOG")" -gt 1048576 ]; then
+    tail -n 4000 "$LOG" > "$LOG.tmp"
+    mv "$LOG.tmp" "$LOG"
+  fi
+}
+
+if [ "${1:-}" = "--loop" ]; then
+  while :; do
+    snapshot
+    sleep 300
+  done
+else
+  snapshot
+  tail -n 1 "$LOG"
+fi

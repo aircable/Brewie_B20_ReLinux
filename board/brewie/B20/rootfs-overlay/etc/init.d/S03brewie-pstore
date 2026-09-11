@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Archive persistent kernel oops/panic records before clearing ramoops.
+
+case "$1" in
+  start)
+    mkdir -p /sys/fs/pstore /var/lib/brewie/pstore
+    grep -q ' /sys/fs/pstore ' /proc/mounts 2>/dev/null || \
+      mount -t pstore pstore /sys/fs/pstore 2>/dev/null || true
+    stamp=$(date -u +%Y%m%dT%H%M%SZ)
+    for record in /sys/fs/pstore/*; do
+      [ -f "$record" ] || continue
+      name=${record##*/}
+      if cp "$record" "/var/lib/brewie/pstore/${stamp}-${name}"; then
+        sync
+        rm -f "$record"
+      fi
+    done
+    ;;
+esac
+
+exit 0

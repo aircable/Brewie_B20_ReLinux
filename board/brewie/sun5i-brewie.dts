@@ -78,6 +78,24 @@
     };
 };
 
+/* The upstream sun5i default is 96 MiB for video workloads. Brewie uses a
+ * sub-megabyte RGB framebuffer and no video playback, so keep more memory
+ * available to QtWebKit and the runtime. */
+&{/reserved-memory/default-pool} {
+    size = <0x01000000>; /* 16 MiB CMA */
+};
+
+/* Preserve the last kernel oops/panic across a warm watchdog reboot. */
+&{/reserved-memory} {
+    ramoops@5ff00000 {
+        compatible = "ramoops";
+        reg = <0x5ff00000 0x00100000>;
+        record-size = <0x00040000>;
+        console-size = <0x00040000>;
+        pmsg-size = <0x00020000>;
+    };
+};
+
 /* U-Boot cannot adjust core voltage without the PMIC; stay at the boot rate. */
 &cpu0 {
     operating-points = <384000 1200000>;

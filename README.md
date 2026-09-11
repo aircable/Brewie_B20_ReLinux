@@ -71,6 +71,22 @@ Note: we do not publish either buildroot or the kernel code here, just the files
 
 ## Quick Start
 
+### Current SD image release
+
+ReLinux v0.8.0 is built with Buildroot 2026.02 and Linux 6.6.156.  Its 14 GiB
+root filesystem is sized to fit nominal 16 GB or larger SD cards.  It includes
+persistent kernel crash capture, periodic memory diagnostics, and memtester.
+
+To write the compressed release image on Linux (replace `/dev/sdX` with the
+whole SD-card device, not a partition):
+
+```bash
+xzcat BrewieNext-ReLinux-v0.8.0-sdcard.img.xz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
+```
+
+Verify the downloaded archive against the accompanying SHA-256 file before
+flashing.  Selecting the wrong output device will overwrite it.
+
 ### Analysis
 The analysis of the original 2014 Linux is already done. But the tools used are published here for similar projects.
 ```bash

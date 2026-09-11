@@ -5,6 +5,7 @@ ARCHIVE=${1:?Usage: brewie-install-release package.tar.gz}
 BASE=${BREWIE_RELEASE_ROOT:-/usr/share/brewie}
 RELEASES="$BASE/releases"
 PROGRAM_BASE=${BREWIE_PROGRAM_ROOT:-/var/lib/brewie/programs}
+MACHINE_CONFIG_DIR=${BREWIE_MACHINE_CONFIG_DIR:-/etc/brewie}
 [ -f "$ARCHIVE" ] || { echo "Package not found: $ARCHIVE" >&2; exit 1; }
 
 case "$ARCHIVE" in
@@ -27,7 +28,13 @@ case "$VERSION" in
   ''|*[!A-Za-z0-9._-]*) echo "Invalid release version: $VERSION" >&2; exit 1 ;;
 esac
 
-mkdir -p "$RELEASES"
+mkdir -p "$RELEASES" "$MACHINE_CONFIG_DIR"
+
+PREVIOUS_VERSION=
+CURRENT_TARGET=$(readlink "$BASE/current" 2>/dev/null || true)
+case "$CURRENT_TARGET" in
+  releases/*) PREVIOUS_VERSION=${CURRENT_TARGET#releases/} ;;
+esac
 
 activate_app() {
   rm -f "$BASE/.current.new"
@@ -43,6 +50,17 @@ activate_programs() {
   mv "$PROGRAM_BASE/.current.new" "$PROGRAM_BASE/current"
 }
 
+prune_app_releases() {
+  for candidate in "$RELEASES"/*; do
+    [ -d "$candidate" ] || continue
+    candidate_version=${candidate##*/}
+    case "$candidate_version" in
+      "$VERSION"|"$PREVIOUS_VERSION") continue ;;
+    esac
+    rm -rf "$candidate"
+  done
+}
+
 restart_services() {
   [ "${BREWIE_RESTART_SERVICES:-1}" = "1" ] || return 0
   if [ -x /etc/init.d/S85brewie-backend ]; then
@@ -51,6 +69,11 @@ restart_services() {
   if [ -x /etc/init.d/S90brewie-kiosk ]; then
     /etc/init.d/S90brewie-kiosk restart || true
   fi
+}
+
+install_landing_page() {
+  [ -f "$RELEASE/landing.html" ] || return 0
+  cp "$RELEASE/landing.html" "$BASE/index.html"
 }
 
 install_pinned_programs() {
@@ -100,7 +123,10 @@ install_pinned_programs() {
 }
 
 if [ -e "$RELEASES/$VERSION" ]; then
+  RELEASE="$RELEASES/$VERSION"
+  install_landing_page
   activate_app
+  prune_app_releases
   restart_services
   echo "Activated existing BrewieNext release $VERSION"
   exit 0
@@ -115,8 +141,10 @@ RELEASE="$STAGE/$TOP"
 [ -f "$RELEASE/manifest.json" ] || { echo "Release has no manifest.json" >&2; exit 1; }
 
 install_pinned_programs
+install_landing_page
 mv "$RELEASE" "$RELEASES/$VERSION"
 activate_app
+prune_app_releases
 trap - EXIT INT TERM
 rm -rf "$STAGE"
 

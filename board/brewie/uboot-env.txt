@@ -1,4 +1,4 @@
 # Boot the Brewie image from the first MMC device.
 # U-Boot numbers the SD card as mmc0 after SPL has initialized it.
-bootargs=console=ttyS0,115200 earlycon=uart8250,mmio32,0x01c28400 deferred_probe_timeout=5 root=/dev/mmcblk0p2 rootfstype=ext4 rootwait rw
+bootargs=console=ttyS0,115200 earlycon=uart8250,mmio32,0x01c28400 deferred_probe_timeout=5 oops=panic panic=10 root=/dev/mmcblk0p2 rootfstype=ext4 rootwait rw
 bootcmd=fatload mmc 0:1 0x42000000 zImage; fatload mmc 0:1 0x43000000 sun5i-brewie.dtb; bootz 0x42000000 - 0x43000000
